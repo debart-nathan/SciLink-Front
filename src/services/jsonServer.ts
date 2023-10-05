@@ -1,5 +1,5 @@
 export default class JsonServer {
-    private static url = "http://localhost:3002/centerReachers";              // http://localhost:3002/centerReachers
+    private static url = "http://localhost:3002/ResearchCenter";              // http://localhost:3002/ResearchCenter
 
 
 
@@ -7,23 +7,23 @@ export default class JsonServer {
  *  creer un nouveau centerReacher    
  * @param centerReacher 
  * @returns   
- * @example http://localhost:3002/centerReachers     
+ * @example http://localhost:3002/ResearchCenter     
  */
-    static async centerReachersSelect() {
+    static async ResearchCentersSelect() {
         return fetch(JsonServer.url)
           .then((response) => {
             return response.json();
           })
-          .then((centerReachers) => {
-            return centerReachers;
+          .then((ResearchCenter) => {
+            return ResearchCenter;
           })
           .catch((error) => {
-            console.error(`Erreur attrapée dans centerReachersSelect : ` + error);
+            console.error(`Erreur attrapée dans ResearchCenterSelect : ` + error);
           });
       }
 
-      
-      static async centerReacherSelect(centerReacher_id: string) {
+
+      static async ResearchCenterSelect(centerReacher_id: string) {
         return fetch(`${JsonServer.url}/${centerReacher_id}`)
           .then((response) => {
             return response.json();
@@ -32,7 +32,7 @@ export default class JsonServer {
             return centerReacher;
           })
           .catch((error) => {
-            console.error(`Erreur attrapée dans centerReachersSelect : ` + error);
+            console.error(`Erreur attrapée dans ResearchCenterSelect : ` + error);
           });
       }
     }
