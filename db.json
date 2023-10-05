@@ -1,0 +1,208 @@
+{
+    "RelationStatus": [
+      {
+        "status": "Status1"
+      },
+      {
+        "status": "Status2"
+      }
+    ],
+    "ResearchCenter": [
+      {
+        "research_center_Id": 1,
+        "libele": "Center 1",
+        "sigle": "C1",
+        "founding_year": "2020-01-01",
+        "is_active": true,
+        "website": "http://www.center1.com",
+        "fiche_msr": "fiche1.pdf"
+      },
+      {
+        "research_center_Id": 2,
+        "libele": "Center 2",
+        "sigle": "C2",
+        "founding_year": "2019-01-01",
+        "is_active": false,
+        "website": "http://www.center2.com",
+        "fiche_msr": "fiche2.pdf"
+      }
+    ],
+    "Personels": [
+      {
+        "Id_Directeurs": 1,
+        "first_name": "John",
+        "last_name": "Doe"
+      },
+      {
+        "Id_Directeurs": 2,
+        "first_name": "Jane",
+        "last_name": "Smith"
+      }
+    ],
+    "Domaine": [
+      {
+        "domain_id": 1,
+        "name": "Domaine1"
+      },
+      {
+        "domain_id": 2,
+        "name": "Domaine2"
+      }
+    ],
+    "Location": [
+      {
+        "id": 1,
+        "adresse": "Adresse1",
+        "code_postale": "12345",
+        "commune": "Ville1"
+      },
+      {
+        "id": 2,
+        "adresse": "Adresse2",
+        "code_postale": "67890",
+        "commune": "Ville2"
+      }
+    ],
+    "Users": [
+      {
+        "user_Id": 1,
+        "last_name": "Doe",
+        "email": "john@example.com",
+        "first_name": "John",
+        "password": "password1",
+        "id": 1
+      },
+      {
+        "user_Id": 2,
+        "last_name": "Smith",
+        "email": "jane@example.com",
+        "first_name": "Jane",
+        "password": "password2",
+        "id": 2
+      }
+    ],
+    "Contact": [
+      {
+        "Id": 1,
+        "send_date": "2023-10-05T10:00:00",
+        "object": "Subject1",
+        "status": "Status1",
+        "user_Id": 1,
+        "user_Id_1": 2
+      },
+      {
+        "Id": 2,
+        "send_date": "2023-10-05T11:00:00",
+        "object": "Subject2",
+        "status": "Status2",
+        "user_Id": 2,
+        "user_Id_1": 1
+      }
+    ],
+    "Researcher": [
+      {
+        "searcher_id": 1,
+        "user_Id": 1
+      },
+      {
+        "searcher_id": 2,
+        "user_Id": 2
+      }
+    ],
+    "Investisseur": [
+      {
+        "ivestisseur_id": 1,
+        "nom": "Investisseur1",
+        "sigle": "I1",
+        "nature": "Nature1",
+        "label": "Label1",
+        "user_Id": 1
+      },
+      {
+        "ivestisseur_id": 2,
+        "nom": "Investisseur2",
+        "sigle": "I2",
+        "nature": "Nature2",
+        "label": "Label2",
+        "user_Id": 2
+      }
+    ],
+    "parent": [
+      {
+        "research_center_Id": 1,
+        "research_center_Id_1": 2
+      },
+      {
+        "research_center_Id": 2,
+        "research_center_Id_1": 1
+      }
+    ],
+    "tutele": [
+      {
+        "research_center_Id": 1,
+        "ivestisseur_id": 1,
+        "uai": "UAI1",
+        "siret": "SIRET1",
+        "type": "Type1"
+      },
+      {
+        "research_center_Id": 2,
+        "ivestisseur_id": 2,
+        "uai": "UAI2",
+        "siret": "SIRET2",
+        "type": "Type2"
+      }
+    ],
+    "practice": [
+      {
+        "searcher_id": 1,
+        "domain_id": 1
+      },
+      {
+        "searcher_id": 2,
+        "domain_id": 2
+      }
+    ],
+    "study": [
+      {
+        "research_center_Id": 1,
+        "domain_id": 1
+      },
+      {
+        "research_center_Id": 2,
+        "domain_id": 2
+      }
+    ],
+    "manage": [
+      {
+        "research_center_Id": 1,
+        "Id_Directeurs": 1,
+        "grade": "Grade1"
+      },
+      {
+        "research_center_Id": 2,
+        "Id_Directeurs": 2,
+        "grade": "Grade2"
+      }
+    ],
+    "located": [
+      {
+        "research_center_Id": 1,
+        "id": 1
+      },
+      {
+        "research_center_Id": 2,
+        "id": 2
+      }
+    ],
+    "represented_by": [
+      {
+        "user_Id": 1,
+        "research_center_Id": 1
+      },
+      {
+        "user_Id": 2,
+        "research_center_Id": 2
+      }
+    ]
+}
