@@ -1,0 +1,15 @@
+
+@font-face {         /* police*/
+    font-family:"bonzai" ;
+    src: url(./../font/Mermaid1001.ttf);
+}
+@font-face {         /* police*/
+    font-family:"bonzai1" ;
+    src: url(./../font/nulshock\ bd.otf);
+}
+h1,h2,h3,h4,h5,nav{
+    text-transform: uppercase;
+font-family: bonzai1;
+}
+body{
+font-family: bonzai;}
