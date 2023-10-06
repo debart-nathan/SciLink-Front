@@ -182,7 +182,7 @@
         "grade": "Grade1"
       },
       {
-        "research_center_Id": 2,
+        "research_center_id": 2,
         "directeur_id": 2,
         "grade": "Grade2"
       }
