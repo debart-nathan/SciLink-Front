@@ -2,7 +2,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 import Home from '../Home';
-import PageDetailResearchCenter from '../detailPageResearchCenter.tsx/PageDetailResearchCenter';
+import PageDetailResearchCenter from './PageDetailResearchCenter';
 
 function App() {
   return (
