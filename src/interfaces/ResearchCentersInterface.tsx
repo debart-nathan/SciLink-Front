@@ -1,4 +1,4 @@
-import JsonServer from "../services/jsonServer";
+import JsonServer from "../services/ResearchCentersJsonServer";
 const loader = async ()=> {
   return JsonServer.ResearchCentersSelect();
 }

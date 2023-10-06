@@ -1,4 +1,4 @@
-import JsonServer from "../services/jsonServer";
+import JsonServer from "../services/ResearchCentersJsonServer";
 import { LoaderFunctionArgs } from 'react-router-dom';
 const loader = async (arg: LoaderFunctionArgs) => {
   let ResearchCenter_id = arg.params.id as string;
