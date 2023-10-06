@@ -131,12 +131,12 @@
     ],
     "Parents": [
       {
-        "id": 1,
-        "research_center_id": 2
+        "research_center_id": 1,
+        "research_center_id_1": 2
       },
       {
-        "id": 2,
-        "research_center_id": 1
+        "research_center_id": 2,
+        "research_center_id_1": 1
       }
     ],
     "Tuteles": [
@@ -157,37 +157,31 @@
     ],
     "Practices": [
       {
-        "id": 1,
         "researcher_id": 1,
         "domain_id": 1
       },
       {
-        "id": 2,
         "researcher_id": 2,
         "domain_id": 2
       }
     ],
     "Studies": [
       {
-        "id": 1,
         "research_center_id": 1,
         "domain_id": 1
       },
       {
-        "id": 2,
         "research_center_id": 2,
         "domain_id": 2
       }
     ],
     "Manages": [
       {
-        "id": 1,
         "research_center_id": 1,
         "directeur_id": 1,
         "grade": "Grade1"
       },
       {
-        "id": 2,
         "research_center_Id": 2,
         "directeur_id": 2,
         "grade": "Grade2"
