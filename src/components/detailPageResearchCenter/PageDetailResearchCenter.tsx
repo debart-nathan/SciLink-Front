@@ -1,47 +1,47 @@
-import JsonServerB from "../../services/jsonServerB";
-import { useEffect, useState } from "react";
-import DetailLocateds from "./DetailLocateds";
-import DetailLocation from "./DetailLocation";
-import DetailResearchCenters from "./DetailResearchCenter";
-import DetailManages from "./DetailManages";
-import DetailStudies from "./DetailStudies";
-const PageDetailResearchCenters = () => {
-  const id = idSelect();
-  const [ResearchCenterState, setResearchCenterState] = useState<any>(
-    {
-      id: 1,
-      libele: "",
-      sigle: "",
-      founding_year: "",
-      is_active: false,
-      website: "",
-      fiche_msr: "",
-    },
-  );
+import { useState } from "react";
+import Locateds from "./Locateds";
+import ResearchCenters from "./ResearchCenter";
+import Manages from "./Manages";
+import Studies from "./Studies";
+import Parents from "./Parents";
+import Children from "./Children";
+import ResearchCenterInterface from "./interfaces/ResearchCenterInterface";
 
-/**
- * Retrieves the full path of the current page.
- *
- * @return {string} The last segment of the full path.
- */
-  function idSelect() {
-    // Récupère le chemin complet de la page actuelle
-    const cheminComplet = window.location.pathname;
-    const segments = cheminComplet.split("/");
-    const dernierSegment = segments[segments.length - 1];
-    return Number(dernierSegment);
-  }
+const PageDetailResearchCenters = ({connected} : {connected: boolean}) => {
+  const id = idSelect();
+  const [researchCenterState, setResearchCenterState] =
+    useState<ResearchCenterInterface>();
+
+    /**
+   * Récupère le dernier segment du chemin d'URL actuel en tant que nombre.
+   *
+   * @return {number} Le dernier segment du chemin d'URL en tant que nombre.
+   */
+    function idSelect() {
+      const pathname = window.location.pathname;
+      const segments = pathname.split("/");
+      const lastSegment = segments[segments.length - 1];
+      return Number(lastSegment);
+    }
 
   return (
     <>
-      <DetailResearchCenters
-        id={id}
-        ResearchCenterState={ResearchCenterState}
-        setResearchCenterState={setResearchCenterState}
-      />
-      <DetailLocateds id={id} ResearchCenterState={ResearchCenterState} />
-      <DetailManages id={id} ResearchCenterState={ResearchCenterState} />
-      <DetailStudies id={id} ResearchCenterState={ResearchCenterState} />
+      <div>
+        <ResearchCenters
+          id={id}
+          researchCenterState={researchCenterState}
+          setResearchCenterState={setResearchCenterState}
+        />
+        <div className="row">
+          <Locateds id={id}/>
+          <Manages id={id}/>
+          <Studies id={id}/>
+        </div>
+        <div className="row">
+          <Parents id={id}/>
+          <Children id={id}/>
+        </div>
+      </div>
     </>
   );
 };
