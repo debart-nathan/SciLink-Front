@@ -23,8 +23,20 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
 
     // Utiliser une référence pour stocker la valeur précédente de "category"
     const prevCategoryRef = useRef();
+
+
+
+    // Utilisation de l'effet pour soumettre le formulaire avec les données initiales au chargement de la page
     useEffect(() => {
-        prevCategoryRef.current = category; // Mettre à jour la référence avec la valeur actuelle de "category"
+        // Récupérer les données initiales du formulaire
+        const initialData = methods.getValues();
+        // Soumettre le formulaire avec les données initiales
+        onSubmit(initialData);
+    }, []); // Un tableau de dépendances vide signifie que cet effet s'exécute une fois au montage
+
+    // Mettre à jour la référence avec la valeur actuelle de "category"
+    useEffect(() => {
+        prevCategoryRef.current = category;
     });
     const prevCategory = prevCategoryRef.current; // Récupérer la valeur précédente de "category"
 
@@ -40,11 +52,12 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
             is_active: "",
             domain: "",
             date_start: "",
-            date_end: ""
+            date_end: "",
         };
 
         return values;
     }, [methods]);
+
 
     // Effet pour gérer le changement de "category"
     useEffect(() => {
@@ -56,6 +69,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
         }
     }, [category, methods, prevCategory, resetResearchCenterFields]);
 
+    // Cette fonction prend un objet de données et le "aplatit", c'est-à-dire qu'elle transforme les structures de données imbriquées en une structure de niveau supérieur.
     const flattenData = (data: any, path: string = ""): any => {
         let flattened: any = {};
 
@@ -75,6 +89,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
         return flattened;
     };
 
+    // Cette fonction prend un objet de données et le "nettoie", c'est-à-dire qu'elle supprime toutes les propriétés dont la valeur est une chaîne vide.
     const cleanData = (data: any): any => {
         let cleaned: any = {};
 
@@ -93,7 +108,6 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
         let queryString = new URLSearchParams(cleanedData).toString();
 
         navigate(`?${queryString}`);
-        onSubmit(data);
     };
 
     /*FormProvider : Passe les variables dans tous les composent qui se trouve a l’intérieur de lui.
