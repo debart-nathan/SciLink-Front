@@ -1,7 +1,12 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 
-const SearchFilterBar: React.FC = () => {
+interface SearchFilterBarInterface{
+    searchCategoryClassName:string,
+    searchClassName:string
+}
+
+const SearchFilterBar: React.FC<SearchFilterBarInterface>= ({searchCategoryClassName,searchClassName}) => {
     // recuperation de register des variables passé par FormProvider
     const { register } = useFormContext();
 
@@ -20,11 +25,11 @@ const SearchFilterBar: React.FC = () => {
     */
     return (
         <>
-            <select {...register("category")}>
+            <select className={searchCategoryClassName} {...register("category")}>
                 <option value="">Tous</option>
                 <option value="research-center">Centre de Recherche</option>
             </select>
-            <input {...register("search")}/>
+            <input className={searchClassName} placeholder="rechercher"{...register("search")}/>
         </>
     );
 };

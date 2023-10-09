@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogOut from "./LogOut";
 import logoName from "./../../../assets/img/logoName.png";
+import SearchBar from './SearchBar';
 
 const Header = () => {
   return (
@@ -26,12 +27,9 @@ const Header = () => {
         </div>
         <div className="col-12 col-md-1"></div>
         <div className="col-12 col-md-2">
-          <form action="" className="row">
-            <input className=" col-10" type="text" placeholder="Search" />
-            <button type="submit" className="btn btn-outline-dark btn-sm col-2">
-              GO
-            </button>
-          </form>
+          <div className="row">
+              <SearchBar/>
+          </div>
         </div>
         <div className="col-12 col-md-2 row justify-content-right align-items-center">
           <Link className="col-7 offset-3" to="/Accounts">comptes</Link>

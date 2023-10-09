@@ -116,7 +116,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
     return (
         <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(onFormSubmit)}>
-                <SearchFilterBar />
+                <SearchFilterBar searchCategoryClassName="" searchClassName=""/>
                 {category === "research-center" && (
                     <SearchFilterResearchCenter
                         resetResearchCenterFields={resetResearchCenterFields}
