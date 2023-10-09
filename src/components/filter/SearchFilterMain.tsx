@@ -30,9 +30,8 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
     useEffect(() => {
         // Récupérer les données initiales du formulaire
         const initialData = methods.getValues();
-
         // Soumettre le formulaire avec les données initiales
-        onFormSubmit(initialData);
+        onSubmit(initialData);
     }, []); // Un tableau de dépendances vide signifie que cet effet s'exécute une fois au montage
 
     // Mettre à jour la référence avec la valeur actuelle de "category"

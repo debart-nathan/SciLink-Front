@@ -1,6 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
-import LocationInterface from "./interfaces/LocationInterface";
+import LocationInterface from "../interfaces/LocationInterface";
 const Location = ({
   id
 }: {

@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import DetailLocation from "./Location";
-import LocatedInterface from "./interfaces/LocatedInterface";
+import LocatedInterface from "../interfaces/LocatedInterface";
 const Locateds = ({ id  } : { id: number }) => {
 
   const [locatedsState, setLocatedsState] = useState<Array<LocatedInterface>>();

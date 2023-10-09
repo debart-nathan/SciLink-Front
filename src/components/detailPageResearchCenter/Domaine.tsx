@@ -1,7 +1,7 @@
 import { Domain } from "domain";
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
-import DomaineInterface from "./interfaces/DomaineInterface";
+import DomaineInterface from "../interfaces/DomaineInterface";
 const Domaine = ({ id } : { id: number  }) => {
     
   const [domaineState, setDomaineState] = useState<DomaineInterface>();

@@ -5,7 +5,7 @@ import Manages from "./Manages";
 import Studies from "./Studies";
 import Parents from "./Parents";
 import Children from "./Children";
-import ResearchCenterInterface from "./interfaces/ResearchCenterInterface";
+import ResearchCenterInterface from "../interfaces/ResearchCenterInterface";
 
 const PageDetailResearchCenters = ({connected} : {connected: boolean}) => {
   const id = idSelect();
