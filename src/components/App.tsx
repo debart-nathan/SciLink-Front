@@ -3,6 +3,8 @@ import Header from "./common/Header";
 import Footer from "./common/Footer";
 import Home from "./Home";
 import SearchPage from "./SearchPage";
+import ContactUs from './common/Footers/ContactUs';
+import Mentions from './common/Footers/Mentions';
 
 function App() {
     return (
@@ -10,11 +12,13 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/recherche" element={<SearchPage />}></Route>
+                <Route path="/contact-us" element={<ContactUs />} />
+                <Route path="/Mentions" element={<Mentions />} />
                 <Route path="/" element={<Home />}></Route>
             </Routes>
-            <Footer />
+          <Footer/>
         </BrowserRouter>
-    );
+   );
 }
 
 export default App;
