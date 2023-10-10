@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UserInterface from "../detailPageResearchCenter/interfaces/UserInterface";
+import UserInterface from "../interfaces/UserInterface";
 import User from "./User";
 import Researcher from "./ResearcherLinks";
 import Investor from "./InvestorLinks";
