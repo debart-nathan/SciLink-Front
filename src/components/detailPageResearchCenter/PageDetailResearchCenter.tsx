@@ -7,7 +7,7 @@ import Parents from "./Parents";
 import Children from "./Children";
 import ResearchCenterInterface from "../interfaces/ResearchCenterInterface";
 
-const PageDetailResearchCenters = ({connected} : {connected: boolean}) => {
+const PageDetailResearchCenters = () => {
   const id = idSelect();
   const [researchCenterState, setResearchCenterState] =
     useState<ResearchCenterInterface>();
