@@ -17,7 +17,7 @@ const DisplayListE: React.FC<CardProp> = ({ card }) => {
         return (
           <li
             key={data.id}
-            className="list-group-item col-12 border border-underline"
+            className="list-group-item col-12 border-bottom"
           >
             <ResearchCenterListE data={data} />
           </li>
@@ -26,7 +26,7 @@ const DisplayListE: React.FC<CardProp> = ({ card }) => {
         return (
           <li
             key={data.id}
-            className="list-group-item col-12 border border-underline"
+            className="list-group-item col-12 border-bottom"
           >
             <SearcherListE data={data} data1={data} />
           </li>
@@ -35,7 +35,7 @@ const DisplayListE: React.FC<CardProp> = ({ card }) => {
         return (
           <li
             key={data.id}
-            className="list-group-item col-12 border border-underline"
+            className="list-group-item col-12 border-bottom"
           >
             <InvestorListE data={data} />
           </li>

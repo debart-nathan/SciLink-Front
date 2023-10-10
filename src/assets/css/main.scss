@@ -37,8 +37,15 @@ body{
 #nav, footer {
     background-color: $primary !important;
 }
-#nav nav div a,footer a {
+#nav nav div a,footer a, .cardss a {
     color: $light !important;
+}
+a{
+    text-decoration: none !important;
+
+}
+a:hover, nav div a:hover{
+    color: $info !important;
 }
 
 

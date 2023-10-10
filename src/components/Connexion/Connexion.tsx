@@ -33,7 +33,6 @@ function Connexion() {
 
   return (
     <div className="Connexion_container ">
-      <h1>Claire</h1>
 
       {!isLogin && (
         <>
