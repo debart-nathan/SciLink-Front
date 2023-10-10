@@ -5,7 +5,7 @@ import Researcher from "./ResearcherLinks";
 import Investor from "./InvestorLinks";
 
 
-const PageDetailUser = ({connected} : {connected: boolean}) => {
+const PageDetailUser = () => {
   const id = idSelect();
   const [userState, setUserState] =
     useState<UserInterface>();

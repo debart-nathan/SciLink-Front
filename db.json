@@ -141,14 +141,14 @@
     ],
     "Tuteles": [
       {
-        "research_center_1d": 1,
+        "research_center_id": 1,
         "investisseur_id": 1,
         "uai": "UAI1",
         "siret": "SIRET1",
         "type": "Type1"
       },
       {
-        "research_center_Id": 2,
+        "research_center_id": 2,
         "ivestisseur_id": 2,
         "uai": "UAI2",
         "siret": "SIRET2",
