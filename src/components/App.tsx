@@ -7,18 +7,21 @@ import ContactUs from './common/Footers/ContactUs';
 import Mentions from './common/Footers/Mentions';
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path="/recherche" element={<SearchPage />}></Route>
-                <Route path="/contact-us" element={<ContactUs />} />
-                <Route path="/Mentions" element={<Mentions />} />
-                <Route path="/" element={<Home />}></Route>
-            </Routes>
-          <Footer/>
-        </BrowserRouter>
-   );
+  return (
+    <BrowserRouter>
+      <Header />
+      <div className="container">
+        <Routes>
+          
+          <Route path="/recherche" element={<SearchPage />}></Route>
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/Mentions" element={<Mentions />} />
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;

@@ -58,10 +58,7 @@ const Home = () => {
           </li>
         </ul>
       </article>
-      </section>
-      <img src={logo} className="img-fluid col-6 w-50" alt="Image d'accueil" />
-
-      <section>
+      <article>
         <h2>Rejoignez la Communauté ScilinK</h2>
         <p>
           Prêt à explorer l'avenir de la science et de l'investissement ?
@@ -69,9 +66,9 @@ const Home = () => {
           partenariats stratégiques qui ouvriront la voie à l'innovation.
         </p>
         <a href="lien_vers_la_page_d_inscription">Inscrivez-vous maintenant</a>
-      </section>
+      </article>
 
-      <section>
+      <article>
         <h2>Contactez-nous</h2>
         <p>
           Si vous avez des questions ou avez besoin d'assistance, notre équipe
@@ -85,8 +82,11 @@ const Home = () => {
         <p>
           Suivez-nous sur les réseaux sociaux : [Liens vers les réseaux sociaux]
         </p>
+      </article>
+    
       </section>
-    </main>
+      <img src={logo} className="mt-5 col-6 w-50 h-50" alt="Image d'accueil" />
+</main>
   );
 };
 
