@@ -1,6 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
-import TuteleInterface from "../interfaces/TuteleInterface";
+import TuteleInterface from "../../interfaces/TuteleInterface";
 import ResearchCenterLink from "./ResearchCenterLink";
 const Tuteles = ({ id  } : { id: number }) => {
 

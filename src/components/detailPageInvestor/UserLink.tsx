@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect } from "react";
 import { useState } from "react";
-import UserInterface from "../interfaces/UserInterface";
+import UserInterface from "../../interfaces/UserInterface";
 
 const User = ({id} : {id: number} ) => {
     const [userState, setUserState] = useState<UserInterface>();

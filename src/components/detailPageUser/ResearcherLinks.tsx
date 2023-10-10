@@ -1,6 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
-import { useEffect, useState } from "react";
-import ResearcherInterface from "../interfaces/ResearcherInterface";
+import { useEffect , useState } from "react";
+import ResearcherInterface from "./../interfaces/ResearcherInterface";
 
 const ResearcherLinks = ({ id }: { id: number }) => {
   const [researchersState, setResearchersState] =

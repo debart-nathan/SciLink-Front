@@ -1,8 +1,8 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import DetailPersonels from "./Personel";
-import ResearchCenterInterface from "../interfaces/ResearchCenterInterface";
-import ManageInterface from "../interfaces/ManageInterface";
+import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
+import ManageInterface from "../../interfaces/ManageInterface";
 
 const Manages = ({ id  } : { id: number }) => {
 

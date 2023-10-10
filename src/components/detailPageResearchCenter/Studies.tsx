@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import DetailDomaine from "./Domaine";
-import StudyInterface from "../interfaces/StudyInterface";
+import StudyInterface from "../../interfaces/StudyInterface";
 
 const Studies = ({ id }: { id: number }) => {
   const [studiesState, setStudiesState] = useState<StudyInterface[]>();

@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import ResearchCenterLink from "./ResearchCenterLink";
-import ParentInterface from "../interfaces/ParentInterface";
+import ParentInterface from "../../interfaces/ParentInterface";
 const Parents = ({ id } : { id: number }) => {
 
   const [parentsState, setParentsState] = useState<ParentInterface[]>();
