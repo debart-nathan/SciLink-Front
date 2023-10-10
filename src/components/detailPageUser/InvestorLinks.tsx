@@ -1,6 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
-import InvestorInterface from "./../interfaces/InvestorInterface";
+import InvestorInterface from "../../interfaces/InvestorInterface";
 
 const InvestorLinks = ({ id }: { id: number }) => {
   const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();
@@ -28,14 +28,14 @@ const InvestorLinks = ({ id }: { id: number }) => {
   return (
     <>
       {InvestorsState ? (
-        <div className="row">
+        <div className="row border border-danger border-bottom-0">
           {InvestorsState.map((Investors: any) => (
             <a
               className="col-12 col-md-6"
               key={Investors.id}
               href={`/investor/${Investors.id}`}
             >
-              Lien vers detail Investor
+              Lien vers {Investors.name}
             </a>
           ))}
         </div>

@@ -27,7 +27,7 @@ const User = ({
     <>
       {userState ? (
         <>
-          <h1 className="col-12 col-md-6 offset-md-3 mb-5">
+          <h1 className="col-12 col-md-6 offset-md-3 mb-5 text-warning">
             Profils de {userState.first_name}
           </h1>
           <section className="row">
@@ -36,41 +36,41 @@ const User = ({
                 <p className="col-12 col-md-3">
                   Prénom : {userState.first_name}
                 </p>
-                <button className="btn btn-outline-info col-md-1">
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
-                <p className="col-12 col-md-3"></p>
-                <button className="btn btn-outline-info col-md-1">
+                <p className="col-12 col-md-3">Adresse : {userState.address}</p>
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
                 <p className="col-12 col-md-3">Email : {userState.email}</p>
-                <button className="btn btn-outline-info col-md-1">
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
                 <p className="col-12 col-md-3">
                 Nom : {userState.last_name}
                 </p>
-                <button className="btn btn-outline-info col-md-1">
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
-                <p className="col-12 col-md-3"></p>
-                <button className="btn btn-outline-info col-md-1">
+                <p className="col-12 col-md-3">Code Postal : {userState.postal_code}</p>
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
                 <p className="col-12 col-md-3">Mot de passe : {userState.password}</p>
-                <button className="btn btn-outline-info col-md-1">
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
-                <p className="col-12 col-md-3"></p>
-                <button className="btn btn-outline-info col-md-1">
+                <p className="col-12 col-md-3">Pseudo : {userState.username}</p>
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
-                <p className="col-12 col-md-3"></p>
-                <button className="btn btn-outline-info col-md-1">
+                <p className="col-12 col-md-3">Pays : {userState.country}</p>
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
-                <p className="col-12 col-md-3"></p>
-                <button className="btn btn-outline-info col-md-1">
+                <p className="col-12 col-md-3">Photo de Profils : {userState.photo}</p>
+                <button className="btn btn-outline-warning col-md-1">
                   modifier
                 </button>
               </div>

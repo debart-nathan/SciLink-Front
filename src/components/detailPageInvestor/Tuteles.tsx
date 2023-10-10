@@ -8,7 +8,7 @@ const Tuteles = ({ id  } : { id: number }) => {
 
   useEffect(() => {
     TutelesSelect("Tuteles", "investisseur_id", id);
-  }, []);
+  }, [id]);
 
   async function TutelesSelect(
     entityName: string,

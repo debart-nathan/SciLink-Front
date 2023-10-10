@@ -1,6 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect , useState } from "react";
-import ResearchCenterInterface from "./../interfaces/ResearchCenterInterface";
+import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
 
 const ResearchCenterLinks = ({ id }: { id: number }) => {
   const [ResearchCentersState, setResearchCentersState] =
@@ -29,14 +29,14 @@ const ResearchCenterLinks = ({ id }: { id: number }) => {
   return (
     <>
       {ResearchCentersState ? (
-        <div className="row">
+        <div className="row border border-danger border-bottom-0">
           {ResearchCentersState.map((ResearchCenters: any) => (
             <a
               className="col-12 col-md-6"
               key={ResearchCenters.id}
               href={`/researchCenter/${ResearchCenters.id}`}
             >
-              Lien vers detail ResearchCenter
+              Lien vers {ResearchCenters.label}
             </a>
           ))}
         </div>
