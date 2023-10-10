@@ -1,4 +1,5 @@
 export default interface UserInterface {
+    find: any;
     id : number,
     last_name : string,
     email : string,

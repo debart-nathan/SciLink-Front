@@ -8,7 +8,7 @@ interface CenterProps {
 
 const ResearchCenterListE: React.FC<CenterProps> = ({ data }) => {
     return (
-        <article>
+        <article key={data.id}>
             <h2>{data.libele}</h2>
             <p className="col-6">Sigle: {data.sigle}</p>
             <p className="col-6">Année de fondation: {data.founding_year}</p>

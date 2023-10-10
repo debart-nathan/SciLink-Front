@@ -60,19 +60,19 @@ const SearchPage = () => {
                 switch (displayMode) {
                     case "card":
                         return (
-                            <ul>
+                            <div className="row">
                                 {cards.map((card) => {
                                     return <DisplayCardE key={card.id} card={card} />;
                                 })}
-                            </ul>
+                            </div>
                         );
                     case "list":
                         return (
-                            <div className="row">
+                            <ul>
                                 {cards.map((card) => {
                                     return <DisplayListE key={card.id} card={card} />;
                                 })}
-                            </div>
+                            </ul>
                         );
                     default:
                         return "";
