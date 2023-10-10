@@ -85,7 +85,7 @@ const Home = () => {
       </article>
     
       </section>
-      <img src={logo} className="mt-5 col-6 w-50 h-50" alt="Image d'accueil" />
+      <img src={logo} className="mt-5 col-6 w-50 h-50" alt="logo du site" />
 </main>
   );
 };

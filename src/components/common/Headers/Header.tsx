@@ -31,7 +31,7 @@ const Header = () => {
           </div>
         </div>
         <div className="col-12 col-md-2 row justify-content-right align-items-center">
-          <Link className="col-7 offset-3" to="/Accounts">comptes</Link>
+          <Link className="col-7 offset-2" to="/Accounts">comptes</Link>
         <LogOut />
         </div>
       </nav>
