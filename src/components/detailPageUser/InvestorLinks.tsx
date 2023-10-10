@@ -22,15 +22,16 @@ const InvestorLinks = ({id} : {id: number} ) => {
   }
   
   return (
-      <div >
+    <article className="col-12 col-md-4">
+      <h4 className="text-center">Investisseur</h4>
         {InvestorsState ? (
-          <div>
+          <div className="row">
           {InvestorsState.map((Investors: any) => (
-          <a key={Investors.id} href={`/investor/${Investors.id}`}>Lien vers detail Investor</a>
+          <a className="col-12 col-md-6" key={Investors.id} href={`/investor/${Investors.id}`}>Lien vers detail Investor</a>
         ))}
         </div>
         ) : null} 
-      </div>
+      </article>
   );
 };
 

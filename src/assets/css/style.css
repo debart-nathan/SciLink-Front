@@ -5,7 +5,7 @@
 }
 @font-face {         /* police*/
     font-family:"bonzai1" ;
-    src: url(./../font/nulshock\ bd.otf);
+    src: url(./../font/nulshock_bd.otf);
 }
 h1,h2,h3,h4,h5,nav{
     text-transform: uppercase;

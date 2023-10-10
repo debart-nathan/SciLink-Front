@@ -10,10 +10,12 @@ import PageDetailResearchCenter from "./detailPageResearchCenter/PageDetailResea
 import PageDetailUser from "./detailPageUser/PageDetailUser";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Header />
-            <Routes>
+
+  return (
+    <BrowserRouter>
+      <Header />
+      <div className="container">
+        </Routes>
                 <Route path="/user/:id" element={<PageDetailUser />} />
                 <Route path="/researchCenter/:id" element={<PageDetailResearchCenter />} />
                 <Route path="/investor/:id" element={<PageDetailInvestor />} />
@@ -22,9 +24,11 @@ function App() {
                 <Route path="/Mentions" element={<Mentions />} />
                 <Route path="/" element={<Home />}></Route>
             </Routes>
+        </div>
           <Footer/>
         </BrowserRouter>
    );
+
 }
 
 export default App;

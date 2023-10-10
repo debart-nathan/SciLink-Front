@@ -22,15 +22,16 @@ const ResearcherLinks = ({id} : {id: number} ) => {
   }
   
   return (
-      <div >
+    <article className="col-12 col-md-4">
+      <h4 className="text-center">Recherche</h4>
         {researchersState ? (
-          <div>
+          <div className="row">
           {researchersState.map((researchers: any) => (
-          <a key={researchers.id} href={`/researcher/${researchers.id}`}>Lien vers detail researcher</a>
+          <a className="col-12 col-md-6" key={researchers.id} href={`/researcher/${researchers.id}`}>Lien vers detail researcher</a>
         ))}
         </div>
         ) : null} 
-      </div>
+      </article>
   );
 };
 

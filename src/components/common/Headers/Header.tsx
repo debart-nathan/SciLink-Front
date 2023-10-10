@@ -6,7 +6,7 @@ import SearchBar from './SearchBar';
 
 const Header = () => {
   return (
-    <header className="mt-3 mb-5">
+    <header id="nav" className="mt-3 mb-5">
       <nav className="row justify-content-around align-items-center text-center">
         <div className="col-12 col-md-1">
           <Link to="/">
@@ -16,7 +16,7 @@ const Header = () => {
         <div className="col-12 col-md-1">
           <Link to="/Projects">Projets</Link>
         </div>
-        <div className="col-12 col-md-2">
+        <div className="col-12 col-md-1">
           <Link to="/Investors">Investisseurs</Link>
         </div>
         <div className="col-12 col-md-2">

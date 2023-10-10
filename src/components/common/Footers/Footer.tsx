@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="footer row">
           <Link className="col-2 offset-8" to="/Mentions">Mentions Légales</Link>
           <Link className="col-2" to="/contact-us">Contactez nous</Link>
-            <p>&copy; 2023 Copyright SciLink - Tous droits réservés - &copy;Kapikes,&copy;...,&copy;...,&copy;... - </p>
+            <p>&copy; 2023 Copyright SciLink - Tous droits réservés - &copy;Kapikes,&copy;Debart Nathan,&copy;BenoitGueheneux,&copy;... - </p>
         </footer>
     );
 }
