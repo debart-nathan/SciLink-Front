@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import queryString from "query-string";
 import SearchFilterBar from "./SearchFilterBar";
 import SearchFilterResearchCenter from "./SearchFIlterResearchCenter";
+import SearchFilterSearcher from "./SearchFilterSearcher";
 
 interface FormProps {
     onSubmit: (data: any) => void;
@@ -23,8 +24,6 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
 
     // Utiliser une référence pour stocker la valeur précédente de "category"
     const prevCategoryRef = useRef();
-
-
 
     // Utilisation de l'effet pour soumettre le formulaire avec les données initiales au chargement de la page
     useEffect(() => {
@@ -58,16 +57,36 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
         return values;
     }, [methods]);
 
+    /**
+     * prépare les valeur par default de SearcherFields
+     * placés dans un call back pour qu'il ne soit généré que une seule fois
+     * et non pas a chaque rendus.
+     * @returns les valeurs des field avec SearcherFields reset
+     */
+    const resetSearcherFields = useCallback(() => {
+        const values = methods.getValues();
+        values["searcher"] = {
+            domain: "",
+        };
+
+        return values;
+    }, [methods]);
 
     // Effet pour gérer le changement de "category"
     useEffect(() => {
         if (prevCategory !== category) {
-            if (category !== "research-center") {
-                methods.reset(resetResearchCenterFields());
-                return;
+            switch (category) {
+                case "research-center":
+                    methods.reset(resetResearchCenterFields());
+                    break;
+                case "searcher":
+                    methods.reset(resetSearcherFields());
+                    break;
+                default:
+                    return;
             }
         }
-    }, [category, methods, prevCategory, resetResearchCenterFields]);
+    }, [category]);
 
     // Cette fonction prend un objet de données et le "aplatit", c'est-à-dire qu'elle transforme les structures de données imbriquées en une structure de niveau supérieur.
     const flattenData = (data: any, path: string = ""): any => {
@@ -116,10 +135,18 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
     return (
         <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(onFormSubmit)}>
-                <SearchFilterBar searchCategoryClassName="" searchClassName=""/>
+                <SearchFilterBar
+                    searchCategoryClassName=""
+                    searchClassName=""
+                />
                 {category === "research-center" && (
                     <SearchFilterResearchCenter
                         resetResearchCenterFields={resetResearchCenterFields}
+                    />
+                )}
+                {category === "searcher" && (
+                    <SearchFilterSearcher
+                        resetSearcherFields={resetSearcherFields}
                     />
                 )}
                 <button type="submit">rechercher</button>
