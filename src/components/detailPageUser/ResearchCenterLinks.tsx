@@ -7,7 +7,7 @@ const ResearchCenterLinks = ({ id }: { id: number }) => {
     useState<ResearchCenterInterface[]>();
   useEffect(() => {
     ResearchCenterSelect("RepresentedBys", "user_id", id);
-  }, [id]);
+  }, []);
 
   async function ResearchCenterSelect(
     entityName: string,
@@ -33,8 +33,8 @@ const ResearchCenterLinks = ({ id }: { id: number }) => {
           {ResearchCentersState.map((ResearchCenters: any) => (
             <a
               className="col-12 col-md-6"
-              key={ResearchCenters.id}
-              href={`/researchCenter/${ResearchCenters.id}`}
+              key={ResearchCenters.research_center_id}
+              href={`/researchCenter/${ResearchCenters.research_center_id}`}
             >
               Lien vers {ResearchCenters.label}
             </a>
