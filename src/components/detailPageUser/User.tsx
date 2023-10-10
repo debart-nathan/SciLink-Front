@@ -27,7 +27,7 @@ const User = ({
     <>
       {userState ? (
         <>
-          <h1 className="col-12 col-md-6 offset-md-3">
+          <h1 className="col-12 col-md-6 offset-md-3 mb-5">
             Profils de {userState.first_name}
           </h1>
           <section className="row">
