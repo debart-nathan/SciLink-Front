@@ -30,6 +30,8 @@ font-family: 'nulshock';
 }
 body{
     background-color: $secondary;
+    font-family: $font-family-base;
+    font-size: 1.3em !important;
 }
 #nav, footer {
     background-color: $primary !important;
