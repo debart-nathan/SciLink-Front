@@ -8,7 +8,7 @@ const ResearchCenter = ({id} : {id: number} ) => {
 
   useEffect(() => {
     ResearchCenterSelect("ResearchCenters", id);
-  }, []);
+  }, [id]);
 
   async function ResearchCenterSelect(
     entityName: string,
