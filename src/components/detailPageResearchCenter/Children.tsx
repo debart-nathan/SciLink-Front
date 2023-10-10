@@ -10,7 +10,7 @@ const Children = ({
   const [childrenState, setChildrenState] = useState<ParentInterface[]>();
   useEffect(() => {
     childrenSelect("Parents", "research_center_parent_id", id);
-  }, [id]);
+  }, []);
 
   async function childrenSelect(
     entityName: string,

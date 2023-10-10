@@ -7,7 +7,7 @@ const Personel = ({ id }: { id: number }) => {
 
   useEffect(() => {
     personelSelect("Personels", id);
-  }, [id]);
+  }, []);
 
   async function personelSelect(
     entityName: string,

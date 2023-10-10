@@ -8,7 +8,7 @@ const Locateds = ({ id  } : { id: number }) => {
 
   useEffect(() => {
     locatedsSelect("Locateds", "research_center_id", id);
-  }, [id]);
+  }, []);
 
   async function locatedsSelect(
     entityName: string,

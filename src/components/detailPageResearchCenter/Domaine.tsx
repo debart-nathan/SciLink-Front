@@ -7,7 +7,7 @@ const Domaine = ({ id } : { id: number  }) => {
 
   useEffect(() => {
     domaineSelect("Domaines", id);
-  }, [id]);
+  }, []);
 
 
   async function domaineSelect(

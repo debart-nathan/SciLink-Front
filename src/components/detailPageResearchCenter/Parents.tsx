@@ -25,7 +25,7 @@ const Parents = ({ id } : { id: number }) => {
 
   useEffect(() => {
     parentsSelect("Parents", "research_center_child_id", id);
-  }, [id]);
+  }, []);
     
   return (
     <>
