@@ -6,8 +6,8 @@ export default class JsonServerB {
           .then((response) => {
             return response.json();
           })
-          .then((ResearchCenter) => {
-            return ResearchCenter;
+          .then((response) => {
+            return response;
           })
           .catch((error) => {
             console.error(`Erreur attrapée dans ${entityName}SelectAll : ` + error);
@@ -20,8 +20,8 @@ export default class JsonServerB {
           .then((response) => {
             return response.json();
           })
-          .then((ResearchCenter) => {
-            return ResearchCenter;
+          .then((response) => {
+            return response;
           })
           .catch((error) => {
             console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
@@ -34,12 +34,32 @@ export default class JsonServerB {
           .then((response) => {
             return response.json();
           })
-          .then((ResearchCenter) => {
-            return ResearchCenter;
+          .then((response) => {
+            return response;
           })
           .catch((error) => {
             console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
           });
         
       }
+
+      static async EntityUpdate(entityName: string,id: number, data: any) {
+        return fetch(`${JsonServerB.url}/${entityName}/${id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((response) => {
+            return response;
+          })
+          .catch((error) => {
+            console.error(`Erreur attrapée dans ${entityName}Update : ` + error);
+          });
+      }
+
     }
