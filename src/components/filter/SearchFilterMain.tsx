@@ -5,6 +5,7 @@ import queryString from "query-string";
 import SearchFilterBar from "./SearchFilterBar";
 import SearchFilterResearchCenter from "./SearchFIlterResearchCenter";
 import SearchFilterSearcher from "./SearchFilterSearcher";
+import SearchFilterInvestor from "./SearchFilterInvestor";
 
 interface FormProps {
     onSubmit: (data: any) => void;
@@ -72,6 +73,21 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
         return values;
     }, [methods]);
 
+    /**
+     * prépare les valeur par default de SearcherFields
+     * placés dans un call back pour qu'il ne soit généré que une seule fois
+     * et non pas a chaque rendus.
+     * @returns les valeurs des field avec SearcherFields reset
+     */
+    const resetInvestorFields = useCallback(() => {
+        const values = methods.getValues();
+        values["investor"] = {
+            domain: "",
+        };
+
+        return values;
+    }, [methods]);
+
     // Effet pour gérer le changement de "category"
     useEffect(() => {
         if (prevCategory !== category) {
@@ -81,6 +97,9 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
                     break;
                 case "searcher":
                     methods.reset(resetSearcherFields());
+                    break;
+                case "investor":
+                    methods.reset(resetInvestorFields());
                     break;
                 default:
                     return;
@@ -147,6 +166,11 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
                 {category === "searcher" && (
                     <SearchFilterSearcher
                         resetSearcherFields={resetSearcherFields}
+                    />
+                )}
+                {category === "investor" && (
+                    <SearchFilterInvestor
+                        resetInvestorFields={resetInvestorFields}
                     />
                 )}
                 <button type="submit">rechercher</button>
