@@ -6,7 +6,7 @@ const InvestorLinks = ({ id }: { id: number }) => {
   const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();
   useEffect(() => {
     InvestorSelect("Investors", "user_id", id);
-  }, [id]);
+  }, []);
 
   async function InvestorSelect(
     entityName: string,
