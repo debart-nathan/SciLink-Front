@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LogOut from "./LogOut";
 import logoName from "./../../../assets/img/logoName.png";
-import SearchBar from './SearchBar';
+import SearchBar from "./SearchBar";
 
 const Header = () => {
+  const [isConnected, setIsConnected] = useState(false);
+
+  const handleLogin = () => {
+    setIsConnected(true);
+  };
+
+  const handleLogout = () => {
+    setIsConnected(false);
+  };
+
   return (
     <header id="nav" className="mt-3 mb-5">
       <nav className="row justify-content-around align-items-center text-center">
@@ -14,25 +24,39 @@ const Header = () => {
           </Link>
         </div>
         <div className="col-12 col-md-1">
-          <Link to="/Projects">Projets</Link>
+          <Link className="disabled display-none" to="/Projects">
+            Projets
+          </Link>
         </div>
         <div className="col-12 col-md-1">
-          <Link to="/Investors">Investisseurs</Link>
+          <Link to="/recherche?category=investor">Investisseurs</Link>
         </div>
         <div className="col-12 col-md-2">
-          <Link to="/ResearchCenterListe">Centre de Recherches</Link>
+          <Link to="/recherche?category=research-center">
+            Centre de Recherches
+          </Link>
         </div>
         <div className="col-12 col-md-1">
-          <Link to="/Domains">Domaines</Link>
+          <Link to="/recherche?category=searcher">Chercheurs</Link>
         </div>
         <div className="col-12 col-md-3">
           <div className="row justify-content-end">
-              <SearchBar/>
+            <SearchBar />
           </div>
         </div>
         <div className="col-12 col-md-2 row justify-content-right align-items-center">
-          <Link className="col-7 offset-2" to="/Accounts">comptes</Link>
-        <LogOut />
+          {isConnected ? (
+            <>
+              <Link className="col-7 offset-2" to="/Accounts">
+                comptes
+              </Link>
+              <LogOut />
+            </>
+          ) : (
+            <Link className="btn btn-primary" to="/login">
+              Connexion
+            </Link>
+          )}
         </div>
       </nav>
     </header>
