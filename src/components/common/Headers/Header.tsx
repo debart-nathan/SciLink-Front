@@ -7,7 +7,7 @@ import SearchBar from './SearchBar';
 const Header = () => {
   return (
     <header className="mt-3 mb-5">
-      <nav className="row justify-content-around align-items-center">
+      <nav className="row justify-content-around align-items-center text-center">
         <div className="col-12 col-md-1">
           <Link to="/">
             <img src={logoName} className="img-fluid" alt="logo Accueil" />
@@ -25,9 +25,8 @@ const Header = () => {
         <div className="col-12 col-md-1">
           <Link to="/Domains">Domaines</Link>
         </div>
-        <div className="col-12 col-md-1"></div>
-        <div className="col-12 col-md-2">
-          <div className="row">
+        <div className="col-12 col-md-3">
+          <div className="row justify-content-end">
               <SearchBar/>
           </div>
         </div>
