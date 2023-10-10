@@ -8,6 +8,7 @@ import Mentions from './common/Footers/Mentions';
 import PageDetailInvestor from "./detailPageInvestor/PageDetailInvestor";
 import PageDetailResearchCenter from "./detailPageResearchCenter/PageDetailResearchCenter";
 import PageDetailUser from "./detailPageUser/PageDetailUser";
+import AdminPage from "./AdminPage";
 
 function App() {
 
@@ -22,7 +23,9 @@ function App() {
                 <Route path="/recherche" element={<SearchPage />}></Route>
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/Mentions" element={<Mentions />} />
+                <Route path="/admin" element={<AdminPage />}></Route>
                 <Route path="/" element={<Home />}></Route>
+                
             </Routes>
         </div>
           <Footer/>
