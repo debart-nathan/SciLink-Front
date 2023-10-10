@@ -1,4 +1,4 @@
-export default interface ResearchCenter {
+export default interface ResearchCenterInterface {
     id: number;
     libele: string;
     sigle: string;

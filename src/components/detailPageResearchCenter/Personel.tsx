@@ -1,6 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
-import PersonnelInterface from '../interfaces/PersonnelInterface';
+import PersonnelInterface from '../../interfaces/PersonnelInterface';
 const Personel = ({ id }: { id: number }) => {
 
   const [personelState, setPersonelState] = useState<PersonnelInterface>();

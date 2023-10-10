@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect } from "react";
 import { useState } from "react";
-import ResearchCenterInterface from "../interfaces/ResearchCenterInterface";
+import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
 
 const ResearchCenter = ({id} : {id: number} ) => {
     const [ResearchCenterState, setResearchCenterState] = useState<ResearchCenterInterface>();
