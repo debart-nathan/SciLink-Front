@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InvestorInterface from "../interfaces/InvestorInterface";
+import InvestorInterface from "../../interfaces/InvestorInterface";
 import Investor from "./Investor";
 import UserLink from "./UserLink";
 import Tuteles from "./Tuteles";

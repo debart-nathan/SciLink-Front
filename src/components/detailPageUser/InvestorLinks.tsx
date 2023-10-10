@@ -1,6 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect , useState } from "react";
-import InvestorInterface from "../interfaces/InvestorInterface";
+import InvestorInterface from "../../interfaces/InvestorInterface";
 
 const InvestorLinks = ({id} : {id: number} ) => {
     const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();

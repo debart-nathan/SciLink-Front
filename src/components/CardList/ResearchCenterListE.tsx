@@ -1,5 +1,5 @@
 import React from "react";
-import ResearchCenterInterface from "../interfaces/ResearchCenterInterface"; // Assurez-vous d'importer votre interface de centre de recherche si elle existe.
+import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface"; // Assurez-vous d'importer votre interface de centre de recherche si elle existe.
 
 
 interface CenterProps {
