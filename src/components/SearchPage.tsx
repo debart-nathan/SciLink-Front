@@ -49,7 +49,7 @@ const SearchPage = () => {
   };
   return (
     <main className="row">
-      <h2>Liste des Centres de Recherche</h2>
+      <h2>Listes de Recherches</h2>
       <div className="col-10">
         <SearchFilterMain onSubmit={onSearch} />
       </div>
@@ -58,19 +58,19 @@ const SearchPage = () => {
         className="btn btn-outline-primary col-1"
         onClick={() => setDisplayMode("list")}
       >
-        Afficher en Liste
+        Afficher en <i className="bi bi-list-task"></i>
       </button>
       <button
         className="btn btn-outline-primary col-1"
         onClick={() => setDisplayMode("card")}
       >
-        Afficher en Carte
+        Afficher en <i className="bi bi-card-list"></i>
       </button>
       {(() => {
         switch (displayMode) {
           case "card":
             return (
-              <div className="row">
+              <div className="row cardss">
                 {cards.map((card) => {
                   return <DisplayCardE key={card.id} card={card} />;
                 })}
@@ -78,7 +78,7 @@ const SearchPage = () => {
             );
           case "list":
             return (
-              <ul>
+              <ul className="text-light cardss">
                 {cards.map((card) => {
                   return <DisplayListE key={card.id} card={card} />;
                 })}

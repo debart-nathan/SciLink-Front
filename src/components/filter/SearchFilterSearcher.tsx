@@ -20,33 +20,33 @@ const SearchFilterSearcher: React.FC<SearchFilterSearcherProps> = ({
 
     return (
         <>
-            <Button ref={target} onClick={() => setShow(!show)}>
-                Toggle Form Fields
+            <Button className="btn btn-outline-info text-warning" ref={target} onClick={() => setShow(!show)}>
+                Filtres
             </Button>
 
             <Overlay target={target.current} show={show} placement="bottom">
                 {(props) => (
                     <Popover id="popover-contained" {...props}>
-                        <label>Domaine :</label>
-                        <select
+                        <label className="form-label">Domaine :</label>
+                        <select className="form-control"
                             id="searcher-domain"
                             {...register("searcher.domain")}>
-                            <option value="">choisissez une Option</option>
+                            <option className="form-check" value="">choisissez une Option</option>
                             {domains.map((domain) => {
                                 return (
-                                    <option value={domain.id}>
+                                    <option className="form-check" value={domain.id}>
                                         {domain.name}
                                     </option>
                                 );
                             })}
                         </select>
 
-                        <button
+                        <button className="btn btn-outline-info"
                             onClick={(ev) => {
                                 ev.preventDefault();
                                 reset(resetSearcherFields());
                             }}>
-                            Reset Filters
+                            Reset les Filtres
                         </button>
                     </Popover>
                 )}

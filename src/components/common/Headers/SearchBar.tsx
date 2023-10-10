@@ -34,12 +34,12 @@ const SearchBar: React.FC = () => {
         <FormProvider {...methods}>
             <form className="row" onSubmit={methods.handleSubmit(onFormSubmit)}>
                 <SearchFilterBar
-                    searchCategoryClassName="col-4"
+                    searchCategoryClassName="col-4 form-group"
                     searchClassName="col-6"
                 />
                 <button
                     type="submit"
-                    className="btn btn-outline-dark btn-sm col-2">
+                    className="btn btn-outline-warning btn-sm col-2">
                     Go
                 </button>
             </form>
