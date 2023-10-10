@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <div className="container">
-        </Routes>
+        <Routes>
                 <Route path="/user/:id" element={<PageDetailUser />} />
                 <Route path="/researchCenter/:id" element={<PageDetailResearchCenter />} />
                 <Route path="/investor/:id" element={<PageDetailInvestor />} />
