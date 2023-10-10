@@ -29,8 +29,8 @@ const Manages = ({ id  } : { id: number }) => {
   return (
     <>
      {managesState ? (
-       <div className="col-md-4 text-center border border-dark">
-      <h3>Personel :</h3>
+       <div className="col-md-4 ">
+      <h3 className="text-warning text-center">Dirigeant :</h3>
         {managesState.map((manages: any) => (
           <DetailPersonels key={manages.directeur_id} id={manages.directeur_id}  />
         ))}</div>

@@ -12,35 +12,35 @@ const PageDetailResearchCenters = () => {
   const [researchCenterState, setResearchCenterState] =
     useState<ResearchCenterInterface>();
 
-    /**
+  /**
    * Récupère le dernier segment du chemin d'URL actuel en tant que nombre.
    *
    * @return {number} Le dernier segment du chemin d'URL en tant que nombre.
    */
-    function idSelect() {
-      const pathname = window.location.pathname;
-      const segments = pathname.split("/");
-      const lastSegment = segments[segments.length - 1];
-      return Number(lastSegment);
-    }
+  function idSelect() {
+    const pathname = window.location.pathname;
+    const segments = pathname.split("/");
+    const lastSegment = segments[segments.length - 1];
+    return Number(lastSegment);
+  }
 
   return (
     <>
+        <div className="row justify-content-around">
+          <Parents id={id} />
+          <Children id={id} />
+        </div>
       <div>
         <ResearchCenters
           id={id}
           researchCenterState={researchCenterState}
           setResearchCenterState={setResearchCenterState}
         />
-        <div className="row">
-          <Locateds id={id}/>
-          <Manages id={id}/>
-          <Studies id={id}/>
-        </div>
-        <div className="row">
-          <Parents id={id}/>
-          <Children id={id}/>
-        </div>
+        <section className="row">
+          <Manages id={id} />
+          <Studies id={id} />
+          <Locateds id={id} />
+        </section>
       </div>
     </>
   );
