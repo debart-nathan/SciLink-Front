@@ -29,12 +29,11 @@ const PageDetailInvestor = () => {
           setInvestorState={setInvestorState}
         />
       </div>
-      <div>
+      <section className="row">
         <Tuteles id={id} />
-      </div>
-      <div>
+      
         <UserLink id={id} />
-      </div>
+      </section>
     </>
   );
 };

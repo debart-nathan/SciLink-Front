@@ -23,14 +23,14 @@ const User = ({id} : {id: number} ) => {
   }
   
   return (
-      <div>
+      <>
         {userState ? (
-            <div className="border border-dark">
-            <h3>Utilisateur :</h3>
+    <div className="col-md-4 offset-md-4 border border-bottom-0 border-danger">
+          <h3 className="text-center text-warning">Utilisateur :</h3>
             <a href={`/user/${userState.id}`}>Lien vers {userState.first_name} {userState.last_name}</a>
             </div>
         ) : null}
-      </div>
+      </>
   );
 };
 
