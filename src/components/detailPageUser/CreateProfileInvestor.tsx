@@ -35,12 +35,12 @@ const CreateProfileInvestor: React.FC<CreateProfileInvestorProps> = ({
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
-                Créer un profil investisseur
+                Créer un profil d'investisseur
             </Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Créer un profil investisseur</Modal.Title>
+                    <Modal.Title>Créer un profil d'investisseur</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -53,7 +53,7 @@ const CreateProfileInvestor: React.FC<CreateProfileInvestorProps> = ({
                                 }>
                                 <Form.Label>Nom</Form.Label>
                             </OverlayTrigger>
-                            <Form.Control
+                            <Form.Control className="fomr-control mb-2"
                                 type="text"
                                 placeholder="Entrer le nom"
                                 {...register("nom", { required: false })}
@@ -72,7 +72,7 @@ const CreateProfileInvestor: React.FC<CreateProfileInvestorProps> = ({
                                 }>
                                 <Form.Label>Sigle</Form.Label>
                             </OverlayTrigger>
-                            <Form.Control
+                            <Form.Control className="fomr-control mb-2"
                                 type="text"
                                 placeholder="Entrer le sigle"
                                 {...register("sigle", { required: false })}
@@ -91,7 +91,7 @@ const CreateProfileInvestor: React.FC<CreateProfileInvestorProps> = ({
                                 }>
                                 <Form.Label>Nature(*)</Form.Label>
                             </OverlayTrigger>
-                            <Form.Control
+                            <Form.Control className="fomr-control mb-2"
                                 type="text"
                                 placeholder="Entrer la nature"
                                 {...register("nature")}
@@ -110,17 +110,17 @@ const CreateProfileInvestor: React.FC<CreateProfileInvestorProps> = ({
                                 }>
                                 <Form.Label>Label</Form.Label>
                             </OverlayTrigger>
-                            <Form.Control
+                            <Form.Control className="fomr-control mb-2"
                                 type="text"
                                 placeholder="Entrer le label"
                                 {...register("label")}
                             />
                         </Form.Group>
 
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button className="btn btn-outline-warning mx-2" variant="secondary" onClick={handleClose}>
                             Fermer
                         </Button>
-                        <Button variant="primary" type="submit">
+                        <Button className="btn btn-outline-warning" variant="primary" type="submit">
                             Sauvegarder les modifications
                         </Button>
                     </Form>

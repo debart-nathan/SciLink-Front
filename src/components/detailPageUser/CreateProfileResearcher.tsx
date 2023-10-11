@@ -45,12 +45,12 @@ const CreateProfileResearcher: React.FC<CreateProfileResearcherProps> = ({
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
-                Créer un profil chercheur
+                Créer un profil de chercheur
             </Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Créer un profil chercheur</Modal.Title>
+                    <Modal.Title>Créer un profil de chercheur</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -65,16 +65,17 @@ const CreateProfileResearcher: React.FC<CreateProfileResearcherProps> = ({
                             </OverlayTrigger>
                             <Form.Control
                                 as="textarea"
+                                className="form-control mb-2"
                                 title="Tooltip text for Presentation"
                                 placeholder="Enter your presentation"
                                 {...register("presentation", { required: true })}
                             />
                         </Form.Group>
 
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button className="btn btn-outline-warning mx-2" variant="secondary" onClick={handleClose}>
                             Fermer
                         </Button>
-                        <Button variant="primary" type="submit">
+                        <Button className="btn btn-outline-warning" variant="primary" type="submit">
                             Sauvegarder les modifications
                         </Button>
                     </Form>
