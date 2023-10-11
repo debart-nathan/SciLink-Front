@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   z-index: 1;
   background-color: #053B53;
-  border-radius: 40px;
+  border-radius: 20px;
 }
 .container .cardss .card {
   position: relative;

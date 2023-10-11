@@ -37,7 +37,7 @@ function Connexion() {
       {!isLogin && (
         <>
            {activeForm === "login" ? (
-        <FormLogin onToggleForm={toggleForm} onSubmitLoginUser={undefined} inputNameRef={undefined} />
+        <FormLogin onToggleForm={toggleForm} onSubmitLoginUser={handleSubmitLoginUser} inputNameRef={inputNameRef} />
       ) : (
         <FormSignUp onToggleForm={toggleForm} />
       )}
