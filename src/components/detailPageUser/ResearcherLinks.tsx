@@ -1,6 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect , useState } from "react";
 import ResearcherInterface from "../../interfaces/ResearcherInterface";
+import CreateProfileResearcher from './CreateProfileResearcher';
 
 const ResearcherLinks = ({ id }: { id: number }) => {
   const [researchersState, setResearchersState] =
@@ -28,8 +29,10 @@ const ResearcherLinks = ({ id }: { id: number }) => {
 
   return (
     <>
+      <CreateProfileResearcher userId={id}/>
       {researchersState ? (
         <div className="row border border-danger border-bottom-0">
+          
           {researchersState.map((researchers: any) => (
             <a
               className="col-12 col-md-6"
