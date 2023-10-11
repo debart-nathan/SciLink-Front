@@ -3,17 +3,15 @@ import ResearcherInterface from "../../interfaces/ResearcherInterface";
 import UserInterface from "../../interfaces/UserInterface";
 
 interface CenterProps {
-    data: ResearcherInterface;
-    data1:  UserInterface;
+    data: {user:UserInterface, profil:ResearcherInterface};
 }
 
-const SearcherListE: React.FC<CenterProps> = ({ data, data1 }) => {
-    const dat = data1.find((user: { id: number; })=>user.id === data.user_id);
+const SearcherListE: React.FC<CenterProps> = ({ data }) => {
     return (
-        <article key={data.id}>
-            <h2>{dat.last_name}</h2>
-            <h3>{dat.first_name}</h3>
-            <p className="col-6">{dat.email}</p>
+        <article key={data.user.id}>
+            <h2>{data.user.last_name}</h2>
+            <h3>{data.user.first_name}</h3>
+            <p className="col-6">{data.user.email}</p>
            
             <a className="btn " href="">
                 voir plus

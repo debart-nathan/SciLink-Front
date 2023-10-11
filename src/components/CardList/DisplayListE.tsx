@@ -28,7 +28,7 @@ const DisplayListE: React.FC<CardProp> = ({ card }) => {
             key={data.id}
             className="list-group-item col-12 border-bottom"
           >
-            <SearcherListE data={data} data1={data} />
+            <SearcherListE data={data} />
           </li>
         );
       case "investor":
