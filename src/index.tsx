@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './assets/css/main.scss';
-//import './assets/css/sigin.css';
+import './assets/css/styleConnexion.css';
+import './assets/css/styleCard.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

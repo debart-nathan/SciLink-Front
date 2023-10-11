@@ -26,13 +26,13 @@ const Studies = ({ id }: { id: number }) => {
 
   useEffect(() => {
     studiesSelect("Studies", "research_center_id", id);
-  }, []);
+  }, [id]);
 
   return (
     <>
       {studiesState ? (
-        <div className="col-md-4 text-center border border-dark">
-          <h3>Domaines étudier :</h3>
+        <div className="col-md-4 border border-bottom-0 border-danger">
+          <h3 className="text-center text-warning">Domaines étudier :</h3>
           {studiesState.map((Studies: any) => (
             <DetailDomaine key={Studies.domain_id} id={Studies.domain_id} />
           ))}

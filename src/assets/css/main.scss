@@ -16,8 +16,8 @@
 $font-family-base: "mermaid";
 $primary: #6DA0B2   ;
 $secondary: #CAD7E2;
-$warning: #000000;
-$dark: #053B53;
+$warning: #053B53;
+$dark: #000000;
 $info: #03BCE8;
 $danger: #EB1D36;
 $light: #fff;
@@ -27,15 +27,25 @@ $light: #fff;
 
 h1,h2,h3,h4,h5,nav{
 font-family: 'nulshock';
+font-size: 0.9em !important;
 }
 body{
     background-color: $secondary;
+    font-family: $font-family-base;
+    font-size: 1.3em !important;
 }
 #nav, footer {
     background-color: $primary !important;
 }
-#nav nav div a,footer a {
+#nav nav div a,footer a, .cardss a {
     color: $light !important;
+}
+a{
+    text-decoration: none !important;
+
+}
+a:hover, nav div a:hover{
+    color: $info !important;
 }
 
 

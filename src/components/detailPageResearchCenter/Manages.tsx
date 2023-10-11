@@ -1,7 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import DetailPersonels from "./Personel";
-import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
 import ManageInterface from "../../interfaces/ManageInterface";
 
 const Manages = ({ id  } : { id: number }) => {
@@ -29,8 +28,8 @@ const Manages = ({ id  } : { id: number }) => {
   return (
     <>
      {managesState ? (
-       <div className="col-md-4 text-center border border-dark">
-      <h3>Personel :</h3>
+       <div className="col-md-4 ">
+      <h3 className="text-warning text-center">Dirigeant :</h3>
         {managesState.map((manages: any) => (
           <DetailPersonels key={manages.directeur_id} id={manages.directeur_id}  />
         ))}</div>

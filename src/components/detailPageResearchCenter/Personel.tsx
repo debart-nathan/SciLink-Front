@@ -24,11 +24,16 @@ const Personel = ({ id }: { id: number }) => {
   return (
     <>
       {personelState ? (
-        <section className="container">
-          <p>Id : {personelState.id}</p>
-          <p>First name : {personelState.first_name}</p>
-          <p>Last name : {personelState.last_name}</p>
-        </section>
+        <article className="">
+          <div className="row">
+            <h5 className="col-6 text-warning">First name :</h5>
+          <p className="col-6"> {personelState.first_name}</p>
+          </div>
+          <div className="row">
+            <h5 className="col-6 text-warning">Last name :</h5>
+          <p className="col-6"> {personelState.last_name}</p>
+          </div>
+        </article>
       ) : null}
     </>
   );

@@ -1,9 +1,9 @@
 import JsonServerB from "../../services/jsonServerB";
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 import InvestorInterface from "../../interfaces/InvestorInterface";
 
-const InvestorLinks = ({id} : {id: number} ) => {
-    const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();
+const InvestorLinks = ({ id }: { id: number }) => {
+  const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();
   useEffect(() => {
     InvestorSelect("Investors", "user_id", id);
   }, []);
@@ -14,24 +14,33 @@ const InvestorLinks = ({id} : {id: number} ) => {
     condition: number
   ) {
     try {
-      const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);
+      const response = await JsonServerB.EntitySelectWCondition(
+        entityName,
+        conditionName,
+        condition
+      );
       setInvestorsState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
     }
   }
-  
+
   return (
-    <article className="col-12 col-md-4">
-      <h4 className="text-center">Investisseur</h4>
-        {InvestorsState ? (
-          <div className="row">
+    <>
+      {InvestorsState ? (
+        <div className="row border border-danger border-bottom-0">
           {InvestorsState.map((Investors: any) => (
-          <a className="col-12 col-md-6" key={Investors.id} href={`/investor/${Investors.id}`}>Lien vers detail Investor</a>
-        ))}
+            <a
+              className="col-12 col-md-6"
+              key={Investors.id}
+              href={`/investor/${Investors.id}`}
+            >
+              Lien vers {Investors.name}
+            </a>
+          ))}
         </div>
-        ) : null} 
-      </article>
+      ) : null}
+    </>
   );
 };
 

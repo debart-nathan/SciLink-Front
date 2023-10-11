@@ -26,8 +26,8 @@ const Locateds = ({ id  } : { id: number }) => {
 
   return (
     <>
-    {locatedsState ? (<div className="col-md-4 text-center border border-dark">
-          <h3>Localisation :</h3>
+    {locatedsState ? (<div className="col-12 col-md-4 ">
+          <h3 className="text-warning text-center">Localisation :</h3>
         {locatedsState.map((located: any) => (
           <DetailLocation key={located.location_id} id={located.location_id} />
         ))}

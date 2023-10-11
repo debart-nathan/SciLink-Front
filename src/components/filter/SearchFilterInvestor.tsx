@@ -5,54 +5,64 @@ import Popover from "react-bootstrap/Popover";
 import Overlay from "react-bootstrap/Overlay";
 
 interface SearchFilterInvestorProps {
-    resetInvestorFields: () => FieldValues;
+  resetInvestorFields: () => FieldValues;
 }
 
 const SearchFilterInvestor: React.FC<SearchFilterInvestorProps> = ({
-    resetInvestorFields,
+  resetInvestorFields,
 }) => {
-    const { register, reset } = useFormContext();
-    //TODO get from server
-    const domains: { id: number; name: string }[] = [];
+  const { register, reset } = useFormContext();
+  //TODO get from server
+  const domains: { id: number; name: string }[] = [];
 
-    const [show, setShow] = useState(false);
-    const target = useRef(null);
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
 
-    return (
-        <>
-            <Button ref={target} onClick={() => setShow(!show)}>
-                Toggle Form Fields
-            </Button>
+  return (
+    <>
+      <Button
+        className="btn btn-outline-info text-warning"
+        ref={target}
+        onClick={() => setShow(!show)}
+      >
+        Filtres
+      </Button>
 
-            <Overlay target={target.current} show={show} placement="bottom">
-                {(props) => (
-                    <Popover id="popover-contained" {...props}>
-                        <label>Domaine :</label>
-                        <select
-                            id="investor-domain"
-                            {...register("investor.domain")}>
-                            <option value="">choisissez une Option</option>
-                            {domains.map((domain) => {
-                                return (
-                                    <option value={domain.id}>
-                                        {domain.name}
-                                    </option>
-                                );
-                            })}
-                        </select>
+      <Overlay target={target.current} show={show} placement="bottom">
+        {(props) => (
+          <Popover className="p-3" id="popover-contained" {...props}>
+            <label className="form-label">Domaine :</label>
+            <select
+              className="form-control"
+              id="investor-domain"
+              {...register("investor.domain")}
+            >
+              <option className="form-check" value="">
+                choisissez une Option
+              </option>
+              {domains.map((domain) => {
+                return (
+                  <option className="form-check" value={domain.id}>
+                    {domain.name}
+                  </option>
+                );
+              })}
+            </select>
 
-                        <button
-                            onClick={(ev) => {
-                                ev.preventDefault();
-                                reset(resetInvestorFields());
-                            }}>
-                            Reset Filters
-                        </button>
-                    </Popover>
-                )}
-            </Overlay>
-        </>
-    );
+            <button
+              className="btn btn-outline-info"
+              onClick={(ev) => {
+                ev.preventDefault();
+                reset(resetInvestorFields());
+              }}
+            >
+              Reset les Filtres
+            </button>
+          </Popover>
+        )}
+      </Overlay>
+    </>
+  );
 };
 
 export default SearchFilterInvestor;

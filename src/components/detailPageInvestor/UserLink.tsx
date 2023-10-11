@@ -8,7 +8,7 @@ const User = ({id} : {id: number} ) => {
 
   useEffect(() => {
     UserSelect("Users", id);
-  }, []);
+  }, [id]);
 
   async function UserSelect(
     entityName: string,

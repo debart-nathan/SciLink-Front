@@ -1,4 +1,3 @@
-import { Domain } from "domain";
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import DomaineInterface from "../../interfaces/DomaineInterface";
@@ -29,9 +28,9 @@ const Domaine = ({ id } : { id: number  }) => {
   return (
     <>
     {domaineState ? (
-      <section className="container">
-            <p>Nom du domaine : {domaineState.name}</p>
-          </section>
+      <article className="">
+            <h5>{domaineState.name}</h5>
+          </article>
     ) : null}
     </>
   );

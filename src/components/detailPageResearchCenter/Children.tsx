@@ -32,8 +32,8 @@ const Children = ({
   return (
     <>
       {childrenState ? (
-        <div className="col-md-6 text-center border border-dark">
-          <h3>Enfant :</h3>
+        <div className="col-md-5 offset-2 col-12 text-end">
+          <h3 className="text-warning">À comme sous-groupe :</h3>
           {childrenState.map((children: any) => (
             <ResearchCenterLink
               key={children.research_center_child_id}

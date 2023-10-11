@@ -19,62 +19,62 @@ const SearchFilterResearchCenter: React.FC<SearchFilterResearchCenterProps> = ({
 
     return (
         <>
-            <Button ref={target} onClick={() => setShow(!show)}>
-                Toggle Form Fields
+            <Button className="btn btn-outline-info text-warning" ref={target} onClick={() => setShow(!show)}>
+                Filtres
             </Button>
 
             <Overlay target={target.current} show={show} placement="bottom">
                 {(props) => (
-                    <Popover id="popover-contained" {...props}>
-                        <label htmlFor="research-center-is-active">
+                    <Popover className="p-3" id="popover-contained" {...props}>
+                        <label className="form-label" htmlFor="research-center-is-active">
                             Actif :
                         </label>
-                        <select
+                        <select className="form-control"
                             id="research-center-is-active"
                             {...register("research-center.is_active")}>
-                            <option value="">choisissez une Option</option>
-                            <option value="true">oui</option>
-                            <option value="false">non</option>
+                            <option className="form-check" value="">choisissez une Option</option>
+                            <option className="form-check" value="true">oui</option>
+                            <option className="form-check" value="false">non</option>
                         </select>
-                        <label>Domaine :</label>
-                        <select
+                        <label className="form-label" htmlFor="research-center-domain">Domaine :</label>
+                        <select className="form-control"
                             id="research-center-domain"
                             {...register("research-center.domain")}>
-                            <option value="">choisissez une Option</option>
+                            <option className="form-check" value="">choisissez une Option</option>
                             {domains.map((domain) => {
                                 return (
-                                    <option value={domain.id}>
+                                    <option className="form-check" value={domain.id}>
                                         {domain.name}
                                     </option>
                                 );
                             })}
                         </select>
-                        <fieldset>
-                            <legend>Date de création</legend>
-                            <label htmlFor="research-center-date-start">
-                                Min:{" "}
+                        <fieldset className="form-group">
+                            <legend className="text-warning">Date de création</legend>
+                            <label className="form-label" htmlFor="research-center-date-start">
+                                De Quand:
                             </label>
-                            <input
+                            <input className="form-control"
                                 id="research-center-date-start"
                                 type="date"
                                 {...register("research-center.date_start")}
                             />
-                            <label htmlFor="research-center-date-end">
-                                Max:{" "}
+                            <label  className="form-label mt-1" htmlFor="research-center-date-end">
+                                à Quand:
                             </label>
-                            <input
+                            <input className="form-control"
                                 id="research-center-date-end"
                                 type="date"
                                 {...register("research-center.date_end")}
                             />
                         </fieldset>
 
-                        <button
+                        <button className="btn btn-outline-info" 
                             onClick={(ev) => {
                                 ev.preventDefault();
                                 reset(resetResearchCenterFields());
                             }}>
-                            Reset Filters
+                            Reset les Filtres
                         </button>
                     </Popover>
                 )}

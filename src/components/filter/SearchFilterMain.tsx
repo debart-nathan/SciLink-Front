@@ -155,7 +155,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
     */
     return (
         <FormProvider {...methods}>
-            <form onSubmit={methods.handleSubmit(onFormSubmit)}>
+            <form className="form-group" onSubmit={methods.handleSubmit(onFormSubmit)}>
                 <SearchFilterBar
                     searchCategoryClassName=""
                     searchClassName=""
@@ -175,7 +175,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
                         resetInvestorFields={resetInvestorFields}
                     />
                 )}
-                <button type="submit">rechercher</button>
+                <button className="btn btn-outline-info text-warning" type="submit">rechercher</button>
             </form>
         </FormProvider>
     );
