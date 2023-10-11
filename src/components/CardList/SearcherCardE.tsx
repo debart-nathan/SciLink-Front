@@ -15,7 +15,7 @@ const SearcherCardE: React.FC<CenterProps> = ({ data,  }) => {
         <p>
           <i>email: {data.user.email}</i>
         </p>
-        <a className="btn " href="">
+        <a className="btn " href={"/researcher/"+data.profil.id}>
           voir plus
         </a>
       </div>

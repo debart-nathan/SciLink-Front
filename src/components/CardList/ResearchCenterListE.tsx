@@ -33,7 +33,7 @@ const ResearchCenterListE: React.FC<CenterProps> = ({ data }) => {
                     {data.fiche_msr}
                 </a>
             </p>
-            <a className="btn " href="">
+            <a className="btn " href={"/researchCenter/"+data.id}>
                 voir plus
             </a>
         </article>

@@ -15,7 +15,7 @@ const ResearchCenterCardE: React.FC<CenterProps> = ({ data }) => {
                     {" "}
                     <i>Sigle: {data.sigle}</i>
                 </p>
-                <a className="btn " href="">
+                <a className="btn " href={"/researchCenter/"+data.id}>
                     voir plus
                 </a>
             </div>

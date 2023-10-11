@@ -13,7 +13,7 @@ const SearcherListE: React.FC<CenterProps> = ({ data }) => {
             <h3>{data.user.first_name}</h3>
             <p className="col-6">{data.user.email}</p>
            
-            <a className="btn " href="">
+            <a className="btn " href={"/researcher/"+data.profil.id}>
                 voir plus
             </a>
         </article>

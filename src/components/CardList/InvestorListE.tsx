@@ -19,7 +19,7 @@ const InvestorListE: React.FC<CenterProps> = ({ data }) => {
             <p className="col-6">
                 label: {data.label}
             </p>
-            <a className="btn " href="">
+            <a className="btn " href={"/investor/"+data.id}>
                 voir plus
             </a>
         </article>
