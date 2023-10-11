@@ -146,6 +146,8 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
         let queryString = new URLSearchParams(cleanedData).toString();
 
         navigate(`?${queryString}`);
+        onSubmit(data);
+
     };
 
     /*FormProvider : Passe les variables dans tous les composent qui se trouve a l’intérieur de lui.

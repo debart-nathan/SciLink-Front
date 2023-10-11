@@ -62,7 +62,7 @@ const SearchPage = () => {
                         return (
                             <ul>
                                 {cards.map((card) => {
-                                    return <DisplayCardE key={card.id} card={card} />;
+                                    return <DisplayCardE key={card.data.id} card={card} />;
                                 })}
                             </ul>
                         );
@@ -70,7 +70,7 @@ const SearchPage = () => {
                         return (
                             <div className="row">
                                 {cards.map((card) => {
-                                    return <DisplayListE key={card.id} card={card} />;
+                                    return <DisplayListE key={card.data.id} card={card} />;
                                 })}
                             </div>
                         );
