@@ -1,6 +1,7 @@
 import LocationInterface from "../../interfaces/LocationInterface";
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
+import FormModifUser from "./FormModifUser";
 
 const User = ({
   id,
@@ -12,15 +13,21 @@ const User = ({
   setUserState: Function;
 }) => {
   const [locationState, setLocationState] = useState<LocationInterface>();
+  const [refresh, setRefresh] = useState(false);
+  const handleRefresh = () => {
+    setRefresh(!refresh);
+  };
   useEffect(() => {
     UserSelect("Users", id);
 
-  }, []);
+  }, [refresh]);
   useEffect(() => {
     if (userState) {
       LocationSelect("Locations", userState.location_id);
     }
   }, [userState]);
+
+  
   
 
   async function LocationSelect(entityName: string, id: number) {
@@ -55,55 +62,37 @@ const User = ({
                 <p className="col-12 col-md-3">
                   Prénom : {userState.first_name}
                 </p>
-                <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                <FormModifUser id={id} entityName={"Users"} data={{"first_name": userState.first_name}} handleRefresh={handleRefresh} />
                 {locationState ? (
                   <p className="col-12 col-md-3">Adresse : {locationState.address}</p>
                 ) : null}
                 {locationState ? (
-                  <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                  <FormModifUser id={id} entityName={"Locations"} data={{"address": locationState.address}} handleRefresh={handleRefresh} />
                 ) : null}
                 <p className="col-12 col-md-3">Email : {userState.email}</p>
-                <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                <FormModifUser id={id} entityName={"Users"} data={{"email": userState.email}} handleRefresh={handleRefresh} />
                 <p className="col-12 col-md-3">
                 Nom : {userState.last_name}
                 </p>
-                <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                <FormModifUser id={id} entityName={"Users"} data={{"last_name": userState.last_name}} handleRefresh={handleRefresh} />
                 {locationState ? (
                   <p className="col-12 col-md-3">Code Postal : {locationState.postal_code}</p>
                 ): null}
                 {locationState ? (
-                  <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                  <FormModifUser id={id} entityName={"Locations"} data={{"postal_code": locationState.postal_code}} handleRefresh={handleRefresh} />
                 ): null}
                 <p className="col-12 col-md-3">Mot de passe : {userState.password}</p>
-                <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                <FormModifUser id={id} entityName={"Users"} data={{"password": userState.password}} handleRefresh={handleRefresh} />
                 <p className="col-12 col-md-3">Pseudo : {userState.user_name}</p>
-                <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                <FormModifUser id={id} entityName={"Users"} data={{"user_name": userState.user_name}} handleRefresh={handleRefresh} />
                 {locationState ? (
                   <p className="col-12 col-md-3">Commune : {locationState.town}</p>
                 ) : null}
                 {locationState ? (
-                  <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                  <FormModifUser id={id} entityName={"Locations"} data={{"town": locationState.town}} handleRefresh={handleRefresh} />
                 ) : null}
                 <p className="col-12 col-md-3">Photo de Profils : {userState.photo}</p>
-                <button className="btn btn-outline-warning col-md-1">
-                  modifier
-                </button>
+                <FormModifUser id={id} entityName={"Users"} data={{"photo": userState.photo}} handleRefresh={handleRefresh} />
               </div>
             </article>
           </section>
