@@ -9,7 +9,8 @@ const fakeData2: UserInterface[] = [
         last_name: "Doe",
         email: "johndoe@example.com",
         password : "sdgsrgs",
-        contact_id : 5
+        user_name : "sdgsrgs",
+        location_id : 5
     },
     {
         find: any,
@@ -18,7 +19,8 @@ const fakeData2: UserInterface[] = [
         last_name: "Smith",
         email: "janesmith@example.com",
         password : "sdgsrgs",
-        contact_id : 5
+        user_name : "sdgsrgs",
+        location_id : 5
     },
     {
         find: any,
@@ -27,7 +29,8 @@ const fakeData2: UserInterface[] = [
         last_name: "Johnson",
         email: "alicejohnson@example.com",
         password : "sdgsrgs",
-        contact_id : 5
+        user_name : "sdgsrgs",
+        location_id : 5
     },
     // Ajoutez d'autres utilisateurs ici.
 ];

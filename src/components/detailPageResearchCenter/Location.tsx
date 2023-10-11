@@ -22,15 +22,15 @@ const Location = ({ id }: { id: number }) => {
         <article className="">
           <div className="row">
             <h5 className=" text-warning col-6">Adresse : </h5>
-            <p className="col-6">{locationState.adresse}</p>
+            <p className="col-6">{locationState.address}</p>
           </div>
           <div className="row">
             <h5 className=" text-warning col-6">Code postale: </h5>
-            <p className="col-6">{locationState.code_postale}</p>
+            <p className="col-6">{locationState.postal_code}</p>
           </div>
           <div className="row">
             <h5 className=" text-warning col-6">Commune : </h5>
-            <p className="col-6">{locationState.commune}</p>
+            <p className="col-6">{locationState.town}</p>
           </div>
         </article>
       ) : null}

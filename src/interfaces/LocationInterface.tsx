@@ -1,6 +1,6 @@
 export default interface LocationInterface{
     id: number;
-    adresse: string;
-    code_postale: string;
-    commune: string;
+    address: string;
+    postal_code: string;
+    town: string;
 }
