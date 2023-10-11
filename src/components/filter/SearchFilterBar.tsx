@@ -25,13 +25,13 @@ const SearchFilterBar: React.FC<SearchFilterBarInterface>= ({searchCategoryClass
     */
     return (
         <>
-            <select className={searchCategoryClassName} {...register("category")}>
+            <select className={searchCategoryClassName} style={{width: "26%"}} {...register("category")}>
                 <option className="form-check" value="">Tous</option>
                 <option className="form-check" value="research-center">Centre de Recherche</option>
                 <option className="form-check" value="searcher">Chercheur</option>
                 <option className="form-check" value="investor">Investisseur</option>
             </select>
-            <input type="search" className={searchClassName} placeholder="rechercher"{...register("search")}/>
+            <input type="search" className={searchClassName}  placeholder="rechercher"{...register("search")}/>
         </>
     );
 };

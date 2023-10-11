@@ -105,7 +105,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
                     return;
             }
         }
-    }, [category]);
+    }, [category, methods, prevCategory, resetInvestorFields, resetResearchCenterFields, resetSearcherFields]);
 
     // Cette fonction prend un objet de données et le "aplatit", c'est-à-dire qu'elle transforme les structures de données imbriquées en une structure de niveau supérieur.
     const flattenData = (data: any, path: string = ""): any => {
@@ -153,10 +153,10 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
     */
     return (
         <FormProvider {...methods}>
-            <form className="form-group" onSubmit={methods.handleSubmit(onFormSubmit)}>
+            <form className="form-group d-flex" onSubmit={methods.handleSubmit(onFormSubmit)}>
                 <SearchFilterBar
-                    searchCategoryClassName=""
-                    searchClassName=""
+                    searchCategoryClassName="form-select"
+                    searchClassName="form-Search " 
                 />
                 {category === "research-center" && (
                     <SearchFilterResearchCenter
@@ -173,7 +173,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
                         resetInvestorFields={resetInvestorFields}
                     />
                 )}
-                <button className="btn btn-outline-info text-warning" type="submit">rechercher</button>
+                <button className="btn btn-outline-info text-warning " type="submit">rechercher</button>
             </form>
         </FormProvider>
     );
