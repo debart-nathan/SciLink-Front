@@ -5,5 +5,6 @@ export default interface UserInterface {
     email : string,
     first_name : string,
     password : string,
-    contact_id : number
+    user_name : string,
+    location_id : number
 }
