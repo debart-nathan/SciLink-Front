@@ -35,7 +35,7 @@ const Investor = ({
   return (
     <>
       {investorState ? (
-        <section className="row">
+        <section className="row mb-2">
           <h1 className="fs-1 col-12 text-center text-warning bi bi-piggy-bank-fill mb-5">
             {" "}
             {investorState.nom}{" "}
