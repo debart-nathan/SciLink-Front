@@ -1,6 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import InvestorInterface from "../../interfaces/InvestorInterface";
+import CreateProfileInvestor from "./CreateProfileInvestor";
 
 const InvestorLinks = ({ id }: { id: number }) => {
   const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();
@@ -27,6 +28,7 @@ const InvestorLinks = ({ id }: { id: number }) => {
 
   return (
     <>
+    <CreateProfileInvestor userId={id}/>
       {InvestorsState ? (
         <div className="row border border-danger border-bottom-0">
           {InvestorsState.map((Investors: any) => (
