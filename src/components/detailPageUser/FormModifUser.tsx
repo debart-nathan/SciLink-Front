@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
 import JsonServerB from "./../../services/jsonServerB";
 import Modal from "react-bootstrap/Modal";
@@ -30,13 +29,24 @@ const FormModifUser = ({
     }
   };
 
+  const handleClose = async () => {await setShow(false);
+setShow(false);};
+  const handleShow = () => setShow(true);
+  
+
+  
+    
+
   return (
     <button
       className="btn btn-outline-warning col-md-1"
-      onClick={() => setShow(true)}
+      onClick={handleShow}
     >
       modifier
-      <Modal show={show} onHide={() => setShow(false)}>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modifier</Modal.Title>
+        </Modal.Header>
         <Modal.Body>
           <form onSubmit={handleSubmit(onSubmit)}>
             {keys.map((key: string) => {
@@ -47,6 +57,9 @@ const FormModifUser = ({
             <input type="submit" />
           </form>
         </Modal.Body>
+        <Modal.Footer>
+          <button onClick={handleClose}>Fermer</button>
+        </Modal.Footer>
       </Modal>
     </button>
   );
