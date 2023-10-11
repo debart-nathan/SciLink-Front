@@ -11,7 +11,7 @@ const FormSignUp = ({ onToggleForm }: { onToggleForm: any }) => {
           <span>Pseudo</span>
         </div>
         <div className="inputBox">
-          <input type="mail" required={true} />
+          <input type="text" required={true} />
           <i className="bi bi-envelope-at"></i>
           <span>Email</span>
         </div>
