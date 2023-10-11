@@ -54,9 +54,9 @@
     "Locations": [
       {
         "id": 1,
-        "adresse": "Adresse1",
-        "code_postale": "12345",
-        "commune": "Ville1"
+        "address": "Adresse1",
+        "postal_code": "12345",
+        "town": "Ville1"
       },
       {
         "id": 2,
@@ -72,7 +72,8 @@
         "email": "john@example.com",
         "first_name": "John",
         "password": "password1",
-        "contact_id": 1
+        "user_name": "john34",
+        "location_id": 1
       },
       {
         "id": 2,
@@ -80,7 +81,8 @@
         "email": "jane@example.com",
         "first_name": "Jane",
         "password": "password2",
-        "contact_id": 2
+        "user_name": "janesmith",
+        "location_id": 2
       }
     ],
     "Contacts": [
