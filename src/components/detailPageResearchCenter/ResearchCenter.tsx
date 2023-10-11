@@ -1,5 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import FormModif from "./FormModif";
 
 const ResearchCenter = ({
   id,
@@ -10,9 +11,16 @@ const ResearchCenter = ({
   researchCenterState: any;
   setResearchCenterState: Function;
 }) => {
+  const [refresh, setRefresh] = useState(false);
+
+  const handleRefresh = () => {
+    setRefresh(!refresh);
+  };
   useEffect(() => {
     researchCenterSelect("ResearchCenters", id);
-  }, []);
+  }, [refresh]);
+
+  
 
   async function researchCenterSelect(entityName: string, id: number) {
     try {
@@ -26,7 +34,7 @@ const ResearchCenter = ({
   return (
     <>
       {researchCenterState ? (
-        <section className="row">
+        <section className="row mb-2">
           <h1 className="fs-1 col-12 text-center text-warning bi bi-mortarboard-fill mb-5">
             {researchCenterState.libele}
           </h1>
@@ -69,6 +77,21 @@ const ResearchCenter = ({
                   {researchCenterState.fiche_msr}
                 </a>
               </p>
+            </div>
+            <div className="">
+            <FormModif
+                id={id}
+                entityName={"researchCenter"}
+                data={{
+                  libele: researchCenterState.libele,
+                  sigle: researchCenterState.sigle,
+                  founding_year: researchCenterState.founding_year,
+                  is_active: researchCenterState.is_active,
+                  website: researchCenterState.website,
+                  fiche_msr: researchCenterState.fiche_msr,
+                }}
+                handleRefresh={handleRefresh}
+              />
             </div>
           </div>
         </section>
