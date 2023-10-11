@@ -22,7 +22,7 @@ const DisplayCardE: React.FC<CardProp> = ({ card }) => {
       case "searcher":
         return (
           <>
-            <SearcherCardE data={data} data1={data} />
+            <SearcherCardE data={data} />
           </>
         );
       case "investor":
