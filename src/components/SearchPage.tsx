@@ -28,7 +28,6 @@ const SearchPage = () => {
         },
         body: JSON.stringify(body),
       });
-
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -72,7 +71,7 @@ const SearchPage = () => {
             return (
               <div className="row cardss">
                 {cards.map((card) => {
-                  return <DisplayCardE key={card.id} card={card} />;
+                  return <DisplayCardE key={card.data.id} card={card} />;
                 })}
               </div>
             );
@@ -80,7 +79,7 @@ const SearchPage = () => {
             return (
               <ul className="text-light cardss">
                 {cards.map((card) => {
-                  return <DisplayListE key={card.id} card={card} />;
+                  return <DisplayListE key={card.data.id} card={card} />;
                 })}
               </ul>
             );
@@ -90,6 +89,7 @@ const SearchPage = () => {
       })()}
     </main>
   );
+
 };
 
 export default SearchPage;
