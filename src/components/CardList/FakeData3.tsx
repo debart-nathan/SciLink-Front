@@ -3,6 +3,7 @@ import InvestorInterface from "../../interfaces/InvestorInterface";
 const fakeData3: InvestorInterface[] = [
     {
         id: 1,
+        img: "https://picsum.photos/200",
         nom: "Investisseur 1",
         sigle: "INV1",
         nature: "Nature 1",
@@ -11,6 +12,7 @@ const fakeData3: InvestorInterface[] = [
     },
     {
         id: 2,
+        img: "https://picsum.photos/200",
         nom: "Investisseur 2",
         sigle: "INV2",
         nature: "Nature 2",
@@ -19,6 +21,7 @@ const fakeData3: InvestorInterface[] = [
     },
     {
         id: 3,
+        img: "https://picsum.photos/200",
         nom: "Investisseur 3",
         sigle: "INV3",
         nature: "Nature 3",

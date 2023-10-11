@@ -26,8 +26,9 @@ const Tuteles = ({ id  } : { id: number }) => {
 
   return (
     <>
-    {TutelesState ? (<div className="border border-dark">
-          <h3>Centre de recherche :</h3>
+    {TutelesState ? (
+    <div className="col-md-4 border border-bottom-0 border-danger">
+          <h3 className="text-center text-warning">Centre de recherche liés:</h3>
         {TutelesState.map((Tutele: any) => (
           <ResearchCenterLink key={Tutele.research_center_id} id={Tutele.research_center_id} />
         ))}
