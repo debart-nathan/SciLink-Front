@@ -26,7 +26,7 @@ const FormLogin = ({
           <input
             ref={inputNameRef}
             value={email}
-            onChange={(e) => setEmail(e.target.value)} type="mail" required={true} />
+            onChange={(e) => setEmail(e.target.value)} type="text" required={true} />
           <i className="bi bi-envelope-at"></i>
           <span>Email</span>
         </div>
