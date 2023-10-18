@@ -19,16 +19,12 @@ const User = ({
   };
   useEffect(() => {
     UserSelect("Users", id);
-
   }, [refresh]);
   useEffect(() => {
     if (userState) {
       LocationSelect("Locations", userState.location_id);
     }
   }, [userState]);
-
-  
-  
 
   async function LocationSelect(entityName: string, id: number) {
     try {
@@ -58,41 +54,97 @@ const User = ({
           </h1>
           <section className="row">
             <article className="col-12 col-md-10 offset-md-1 ">
-              <div className="row">
-                <p className="col-12 col-md-3">
+              <div className="row d-flex align-items-center">
+                
+                <p className="col-12 col-md-3 align-self-center">
                   Prénom : {userState.first_name}
                 </p>
-                <FormModifUser id={id} entityName={"Users"} data={{"first_name": userState.first_name}} handleRefresh={handleRefresh} />
+                <FormModifUser
+                  id={id}
+                  entityName={"Users"}
+                  data={{ first_name: userState.first_name }}
+                  handleRefresh={handleRefresh}
+                />
                 {locationState ? (
-                  <p className="col-12 col-md-3">Adresse : {locationState.address}</p>
+                  <p className="col-12 col-md-3 align-self-center">
+                    Adresse : {locationState.address}
+                  </p>
                 ) : null}
                 {locationState ? (
-                  <FormModifUser id={id} entityName={"Locations"} data={{"address": locationState.address}} handleRefresh={handleRefresh} />
+                  <FormModifUser
+                    id={id}
+                    entityName={"Locations"}
+                    data={{ address: locationState.address }}
+                    handleRefresh={handleRefresh}
+                  />
                 ) : null}
-                <p className="col-12 col-md-3">Email : {userState.email}</p>
-                <FormModifUser id={id} entityName={"Users"} data={{"email": userState.email}} handleRefresh={handleRefresh} />
-                <p className="col-12 col-md-3">
-                Nom : {userState.last_name}
+                <p className="col-12 col-md-3 align-self-center">Email : {userState.email}</p>
+                <FormModifUser
+                  id={id}
+                  entityName={"Users"}
+                  data={{ email: userState.email }}
+                  handleRefresh={handleRefresh}
+                />
+                <p className="col-12 col-md-3 align-self-center">Nom : {userState.last_name}</p>
+                <FormModifUser
+                  id={id}
+                  entityName={"Users"}
+                  data={{ last_name: userState.last_name }}
+                  handleRefresh={handleRefresh}
+                />
+                {locationState ? (
+                  <p className="col-12 col-md-3 align-self-center">
+                    Code Postal : {locationState.postal_code}
+                  </p>
+                ) : null}
+                {locationState ? (
+                  <FormModifUser
+                    id={id}
+                    entityName={"Locations"}
+                    data={{ postal_code: locationState.postal_code }}
+                    handleRefresh={handleRefresh}
+                  />
+                ) : null}
+                <p className="col-12 col-md-3 align-self-center">
+                  Mot de passe : {userState.password}
                 </p>
-                <FormModifUser id={id} entityName={"Users"} data={{"last_name": userState.last_name}} handleRefresh={handleRefresh} />
+                <FormModifUser
+                  id={id}
+                  entityName={"Users"}
+                  data={{ password: userState.password }}
+                  handleRefresh={handleRefresh}
+                />
+                <p className="col-12 col-md-3 align-self-center">
+                  Pseudo : {userState.user_name}
+                </p>
+                <FormModifUser
+                  id={id}
+                  entityName={"Users"}
+                  data={{ user_name: userState.user_name }}
+                  handleRefresh={handleRefresh}
+                />
                 {locationState ? (
-                  <p className="col-12 col-md-3">Code Postal : {locationState.postal_code}</p>
-                ): null}
-                {locationState ? (
-                  <FormModifUser id={id} entityName={"Locations"} data={{"postal_code": locationState.postal_code}} handleRefresh={handleRefresh} />
-                ): null}
-                <p className="col-12 col-md-3">Mot de passe : {userState.password}</p>
-                <FormModifUser id={id} entityName={"Users"} data={{"password": userState.password}} handleRefresh={handleRefresh} />
-                <p className="col-12 col-md-3">Pseudo : {userState.user_name}</p>
-                <FormModifUser id={id} entityName={"Users"} data={{"user_name": userState.user_name}} handleRefresh={handleRefresh} />
-                {locationState ? (
-                  <p className="col-12 col-md-3">Commune : {locationState.town}</p>
+                  <p className="col-12 col-md-3 align-self-center">
+                    Commune : {locationState.town}
+                  </p>
                 ) : null}
                 {locationState ? (
-                  <FormModifUser id={id} entityName={"Locations"} data={{"town": locationState.town}} handleRefresh={handleRefresh} />
+                  <FormModifUser
+                    id={id}
+                    entityName={"Locations"}
+                    data={{ town: locationState.town }}
+                    handleRefresh={handleRefresh}
+                  />
                 ) : null}
-                <p className="col-12 col-md-3">Photo de Profils : {userState.photo}</p>
-                <FormModifUser id={id} entityName={"Users"} data={{"photo": userState.photo}} handleRefresh={handleRefresh} />
+                <p className="col-12 col-md-3 align-self-center">
+                  Photo de Profils : {userState.photo}
+                </p>
+                <FormModifUser
+                  id={id}
+                  entityName={"Users"}
+                  data={{ photo: userState.photo }}
+                  handleRefresh={handleRefresh}
+                />
               </div>
             </article>
           </section>

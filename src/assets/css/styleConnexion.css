@@ -1,35 +1,33 @@
 .container {
   padding: 40px;
-  border-radius: 20px;
-  border: 8px solid #6da0b2;
+  border-radius: 10px;
+  border: 4px solid #6da0b23f;
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35),
     inset 5px 5px 15px rgba(255, 255, 255, 0.1),
     inset -5px -5px 15px rgba(0, 0, 0, 0.35);
+    background: #6da0b24b  !important;
 }
-#conect {
-  background-color: #053b53;
-}
-.container .formconect {
+ .formconect {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 25px;
 }
-.container.signinFormconect .formconect.signin {
+.signinFormconect .formconect.signin {
   display: flex;
 }
-.container .formconect h2 {
+ .formconect h2 {
   color: #fff;
   font-weight: 500;
   letter-spacing: 0em;
 }
-.container .formconect .inputBox {
+ .formconect .inputBox {
   position: relative;
   width: 300px;
 }
-.container .formconect .inputBox input {
+ .formconect .inputBox input {
   padding: 12px 10px 12px 48px;
   border: none;
   width: 100%;
@@ -44,7 +42,7 @@
   transition: 0.5s;
   outline: none;
 }
-.container .formconect .inputBox span {
+ .formconect .inputBox span {
   position: absolute;
   top: 0;
   left: 0;
@@ -56,8 +54,8 @@
   letter-spacing: 0.05em;
   color: #cad7e2;
 }
-.container .formconect .inputBox input:valid ~ span,
-.container .formconect .inputBox input:focus ~ span {
+ .formconect .inputBox input:valid ~ span,
+ .formconect .inputBox input:focus ~ span {
   color: #03bce8;
   border: 1px solid #03bce8;
   background: #053b53;
@@ -67,11 +65,11 @@
   border-radius: 10px;
   letter-spacing: 0.1em;
 }
-.container .formconect .inputBox input:valid,
-.container .formconect .inputBox input:focus {
+ .formconect .inputBox input:valid,
+ .formconect .inputBox input:focus {
   border: 1px solid #6da0b2;
 }
-.container .formconect .inputBox i {
+ .formconect .inputBox i {
   position: absolute;
   top: 15px;
   left: 16px;
@@ -81,7 +79,7 @@
   color: #03bce8;
   border-right: 1px solid #03bce8;
 }
-.container .formconect .inputBox input[type="submit"] {
+ .formconect .inputBox input[type="submit"] {
   background: #03bce8;
   color: #053b53;
   padding: 10px 0;
@@ -92,12 +90,12 @@
     inset 5px 5px 15px rgba(255, 255, 255, 0.1),
     inset -5px -5px 15px rgba(0, 0, 0, 0.35);
 }
-.container .formconect p {
+ .formconect p {
   color: #cad7e2;
   font-size: 0.75em;
   font-weight: 300;
 }
-.container .formconect p a {
+ .formconect p a {
   font-weight: 500;
   color: #fff;
   text-decoration: none;

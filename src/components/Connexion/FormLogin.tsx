@@ -12,7 +12,7 @@ const FormLogin = ({
   const [password, setPassword] = useState("");
 
   return (
-    <div id="conect" className="container">
+    <div id="conect" className="">
       <form
         className="form formconect signin"
         action="/login"
