@@ -175,7 +175,7 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
                         resetInvestorFields={resetInvestorFields}
                     />
                 )}
-                <button className="btn btn-outline-info text-warning " type="submit">rechercher</button>
+                <button className="btn bg-primary btn-outline-info text-warning " type="submit">rechercher</button>
             </form>
         </FormProvider>
     );

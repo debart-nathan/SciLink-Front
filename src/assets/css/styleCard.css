@@ -1,7 +1,7 @@
 
 
 
-.container .cardss {
+ .cardss {
   position: relative;
   display: flex;
   justify-content: center;
@@ -9,16 +9,16 @@
   max-width: 1200px;
   flex-wrap: wrap;
   z-index: 1;
-  background-color: #053B53;
+  background:transparent;
   border-radius: 20px;
 }
-.container .cardss .card {
+ .cardss .card {
   position: relative;
   width: 280px;
   height: 400px;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.8);
-  border-radius: 15px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.300);
   overflow: hidden;
   display: flex;
@@ -28,35 +28,35 @@
   border-left: 1px solid rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
 }
-.container .cardss .card .content {
+ .cardss .card .content {
   padding: 20px;
   text-align: center;
   transform: translateY(100px);
   opacity: 0.3;
   transition: 0.5s;
 }
-.container .cardss .card:hover .content {
+ .cardss .card:hover .content {
     transform: translateY(0px);
     opacity: 1;
 }
-.container .cardss .card .content h2 {
+ .cardss .card .content h2 {
   position: absolute;
   top: -80px;
   right: 30px;
   font-size: 8em;
   color: rgba(255, 255, 255, 0.4);
 }
-.container .cardss .card .content h3 {
+ .cardss .card .content h3 {
   font-size: 1.8em;
   color: #053B53;
   z-index: 1;
 }
-.container .cardss .card .content p {
+ .cardss .card .content p {
   font-size: 1em;
   color: #CAD7E2;
   font-weight: 300;
 }
-.container .cardss .card .content a {
+ .cardss .card .content a {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
@@ -68,10 +68,10 @@
   font-weight: 500;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-.container .cardss .card:hover .content {
+ .cardss .card:hover .content {
   transform: translateY(0);
 }
-.container .cardss .card:hover .content a {
+ .cardss .card:hover .content a {
   background: #03BCE8;
 
 }

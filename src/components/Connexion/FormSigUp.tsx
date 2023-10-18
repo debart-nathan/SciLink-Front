@@ -2,7 +2,7 @@ import react from "@babel/types";
 
 const FormSignUp = ({ onToggleForm }: { onToggleForm: any }) => {
   return (
-    <div id="conect" className="container">
+    <div id="conect" className="">
       <div className="formconect signup">
         <h2>Inscription</h2>
         <div className="inputBox">

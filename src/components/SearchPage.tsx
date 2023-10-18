@@ -54,16 +54,16 @@ const SearchPage = () => {
       </div>
 
       <button
-        className="btn btn-outline-primary col-1"
+        className="btn btn-outline-danger col-1"
         onClick={() => setDisplayMode("list")}
       >
-        Afficher en <i className="bi bi-list-task"></i>
+        <i className="bi bi-list-task"></i>
       </button>
       <button
-        className="btn btn-outline-primary col-1"
+        className="btn btn-outline-danger col-1"
         onClick={() => setDisplayMode("card")}
       >
-        Afficher en <i className="bi bi-card-list"></i>
+        <i className="bi bi-card-list"></i>
       </button>
       {(() => {
         switch (displayMode) {
