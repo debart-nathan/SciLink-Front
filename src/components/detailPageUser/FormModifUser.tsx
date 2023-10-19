@@ -38,7 +38,7 @@ setShow(false);};
     
 
   return (
-    <button className="btnx col-md-1" onClick={handleShow}>
+    <button className="btnx col-md-1 col-12 my-4" onClick={handleShow}>
       <span></span><span></span><span></span><span></span>
       modifier
       <Modal show={show} onHide={handleClose}>

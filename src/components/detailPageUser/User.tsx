@@ -50,15 +50,18 @@ const User = ({
       {userState ? (
         <>
           <h1 className="col-12 col-md-6 offset-md-3 mb-5 text-warning">
-            Profils de {userState.first_name}
+            Profils de {userState.first_name} {userState.last_name}
           </h1>
-          <section className="row">
+          <section className="row ">
             <article className="col-12 col-md-10 offset-md-1 ">
-              <div className="row d-flex align-items-center">
-                
-                <p className="col-12 col-md-3 align-self-center">
-                  Prénom : {userState.first_name}
-                </p> 
+              <div className="row d-flex align-items-center ">
+                <div className="col-12 col-md-3 text-warning align-self-center">
+                  Prénom :
+                  <p className="text-light d-inline ms-2">
+                    
+                    {userState.first_name}
+                  </p>
+                </div>
                 <FormModifUser
                   id={id}
                   entityName={"Users"}
@@ -66,9 +69,13 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <p className="col-12 col-md-3 align-self-center">
-                    Adresse : {locationState.address}
-                  </p>
+                  <div className="col-12 col-md-3 text-warning align-self-center">
+                    Adresse :
+                    <p className="text-light d-inline ms-2">
+                      
+                      {locationState.address}
+                    </p>
+                  </div>
                 ) : null}
                 {locationState ? (
                   <FormModifUser
@@ -78,14 +85,23 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <p className="col-12 col-md-3 align-self-center">Email : {userState.email}</p>
+                <div className="col-12 col-md-3 text-warning align-self-center">
+                  Email :
+                  <p className="text-light d-inline ms-2"> {userState.email}</p>
+                </div>
                 <FormModifUser
                   id={id}
                   entityName={"Users"}
                   data={{ email: userState.email }}
                   handleRefresh={handleRefresh}
                 />
-                <p className="col-12 col-md-3 align-self-center">Nom : {userState.last_name}</p>
+                <div className="col-12 col-md-3 text-warning align-self-center">
+                  Nom :
+                  <p className="text-light d-inline ms-2">
+                    
+                    {userState.last_name}
+                  </p>
+                </div>
                 <FormModifUser
                   id={id}
                   entityName={"Users"}
@@ -93,9 +109,10 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <p className="col-12 col-md-3 align-self-center">
-                    Code Postal : {locationState.postal_code}
-                  </p>
+                  <div className="col-12 col-md-3 text-warning align-self-center">
+                    Code Postal : <p className="text-light d-inline ms-2">{locationState.postal_code} </p>
+                    
+                  </div>
                 ) : null}
                 {locationState ? (
                   <FormModifUser
@@ -105,18 +122,20 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <p className="col-12 col-md-3 align-self-center">
-                  Mot de passe : {userState.password}
-                </p>
+                <div className="col-12 col-md-3 text-warning align-self-center">
+                  Mot de passe : <p className="text-light d-inline ms-2">{userState.password} </p>
+                  
+                </div>
                 <FormModifUser
                   id={id}
                   entityName={"Users"}
                   data={{ password: userState.password }}
                   handleRefresh={handleRefresh}
                 />
-                <p className="col-12 col-md-3 align-self-center">
-                  Pseudo : {userState.user_name}
-                </p>
+                <div className="col-12 col-md-3 text-warning align-self-center">
+                  Pseudo : <p className="text-light d-inline ms-2">  {userState.user_name}</p>
+                 
+                </div>
                 <FormModifUser
                   id={id}
                   entityName={"Users"}
@@ -124,9 +143,10 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <p className="col-12 col-md-3 align-self-center">
-                    Commune : {locationState.town}
-                  </p>
+                  <div className="col-12 col-md-3 text-warning align-self-center">
+                    Commune : <p className="text-light d-inline ms-2">{locationState.town} </p>
+                    
+                  </div>
                 ) : null}
                 {locationState ? (
                   <FormModifUser
@@ -136,9 +156,11 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <p className="col-12 col-md-3 align-self-center">
-                  Photo de Profils : {userState.photo}
-                </p>
+                <div className="col-12 col-md-3 text-warning align-self-center">
+                  Photo de Profils :
+                  <p className="text-light d-inline ms-2"> {userState.photo}</p>
+                  
+                </div>
                 <FormModifUser
                   id={id}
                   entityName={"Users"}

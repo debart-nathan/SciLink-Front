@@ -12,8 +12,8 @@ const ContactUs: React.FC = () => {
   };
   return (
     <div className="col-6 offset-3 text-center">
-      <h1>Contacter Nous</h1>
-      <form onSubmit={handleSubmit} className="form">
+      <h1>Contactez-Nous</h1>
+      <form onSubmit={handleSubmit} className="form text-warning">
         <div className="form-group">
           <label className="col-form-label" htmlFor="name">Nom:</label>
           <input className="form-control"
@@ -55,7 +55,7 @@ const ContactUs: React.FC = () => {
             required
           />
         </div>
-        <button className="btn btn-primary" type="submit">envoyer</button>
+        <button className="btnx" type="submit"><span></span><span></span><span></span><span></span>envoyer</button>
       </form>
     </div>
   );

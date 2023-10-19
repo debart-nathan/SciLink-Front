@@ -43,7 +43,7 @@ const ResearchCenter = ({
             className="img-fluid col-md-5"
             alt={`image du centre ${researchCenterState.libele}`}
           />
-          <div className="col-12 col-md-7 align-items-center affiche">
+          <div className="col-12 col-md-7 align-items-center ">
             <div className="row">
               <h4 className="col-12 col-md-4 text-warning">acronyme :</h4>
               <p className=" col-12 col-md-8">{researchCenterState.sigle}</p>
