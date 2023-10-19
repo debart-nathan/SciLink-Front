@@ -33,7 +33,7 @@ const PageDetailUser = () => {
           </article>
           <article className="col-12 col-md-4">
             <h4 className="text-warning">Centre de Recherche</h4>
-            <ResearchCenter id={id} />
+            <ResearchCenter id={id}  />
           </article>
           <article className="col-12 col-md-4">
             <h4 className="text-warning">Investisseur</h4>

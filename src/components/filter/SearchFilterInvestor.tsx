@@ -21,10 +21,10 @@ const SearchFilterInvestor: React.FC<SearchFilterInvestorProps> = ({
   return (
     <>
       <Button
-        className="btn btn-outline-info text-warning"
+        className="btnx "
         ref={target}
         onClick={() => setShow(!show)}
-      >
+      ><span></span><span></span><span></span><span></span>
         Filtres
       </Button>
 
@@ -50,12 +50,13 @@ const SearchFilterInvestor: React.FC<SearchFilterInvestorProps> = ({
             </select>
 
             <button
-              className="btn btn-outline-info"
+              className="btnx"
               onClick={(ev) => {
                 ev.preventDefault();
                 reset(resetInvestorFields());
               }}
             >
+              <span></span><span></span><span></span><span></span>
               Reset les Filtres
             </button>
           </Popover>

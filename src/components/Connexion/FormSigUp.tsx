@@ -30,8 +30,12 @@ const FormSignUp = ({ onToggleForm }: { onToggleForm: any }) => {
         </div>
         <p>
           Déjà inscrit?{" "}
-          <a href="#" onClick={() => onToggleForm("login")} className="login">
-            Connection
+          <a
+            href="#"
+            onClick={() => onToggleForm("login")}
+            className="login text-danger"
+          >
+            Connectez-vous
           </a>
         </p>
       </div>

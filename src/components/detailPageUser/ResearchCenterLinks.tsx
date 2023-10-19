@@ -32,7 +32,7 @@ const ResearchCenterLinks = ({ id }: { id: number }) => {
         <div className="row border border-danger border-bottom-0">
           {ResearchCentersState.map((ResearchCenters: any) => (
             <a
-              className="col-12 col-md-6"
+              className="col-12 col-md-6 text-danger"
               key={ResearchCenters.research_center_id}
               href={`/researchCenter/${ResearchCenters.research_center_id}`}
             >

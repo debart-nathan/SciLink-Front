@@ -16,25 +16,27 @@ function App() {
     return (
       <BrowserRouter>
         <div className="background">
-        <Header />
-        <div className="container ">
-          <Routes>
-            <Route path="/login" element={<Connexion />} />
-            <Route path="/user/:id" element={<PageDetailUser />} />
-            <Route
-              path="/researchCenter/:id"
-              element={<PageDetailResearchCenter />}
-            />
-            <Route path="/investor/:id" element={<PageDetailInvestor />} />
-            <Route path="/recherche" element={<SearchPage />}></Route>
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/Mentions" element={<Mentions />} />
-            <Route path="/admin" element={<AdminPage />}></Route>
-            <Route path="/" element={<Home />}></Route>
-          </Routes>
-        </div>
+          <Header />
+          <div className="container ">
+            <Routes>
+              <Route path="/login" element={<Connexion />} />
+              <Route path="/user/:id" element={<PageDetailUser />} />
+              <Route
+                path="/researchCenter/:id"
+                element={<PageDetailResearchCenter />}
+              />
+              {/* <Route path="/searcher/:id" element={<PageDetailsearcher />} /> */}
+              <Route path="/investor/:id" element={<PageDetailInvestor />} />
+              <Route path="/recherche" element={<SearchPage />}></Route>
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/Mentions" element={<Mentions />} />
+              <Route path="/admin" element={<AdminPage />}></Route>
+              <Route path="/" element={<Home />}></Route>
+            </Routes>
+          </div>
 
-        <Footer /></div>
+          <Footer />
+        </div>
       </BrowserRouter>
     );
 }

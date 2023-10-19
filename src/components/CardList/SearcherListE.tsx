@@ -8,15 +8,15 @@ interface CenterProps {
 
 const SearcherListE: React.FC<CenterProps> = ({ data }) => {
     return (
-        <article key={data.profil.id}>
-            <h2>{data.user.last_name}</h2>
-            <h3>{data.user.first_name}</h3>
-            <p className="col-6">{data.user.email}</p>
-           
-            <a className="btn " href={"/researcher/"+data.profil.id}>
-                voir plus
-            </a>
-        </article>
+      <article className="my-3 row" key={data.profil.id}>
+        <h2>{data.user.last_name}</h2>
+        <h3>{data.user.first_name}</h3>
+        <p className="col-md-6 col-12">{data.user.email}</p>
+
+        <a className="text-end  text-danger" href={"/researcher/" + data.profil.id}>
+          voir plus
+        </a>
+      </article>
     );
 };
 

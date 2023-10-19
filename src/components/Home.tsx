@@ -74,7 +74,7 @@ const Home = () => {
             Rejoignez ScilinK dès aujourd'hui et commencez à construire des
             partenariats stratégiques qui ouvriront la voie à l'innovation.
           </p>
-          <a className="text-danger" href="lien_vers_la_page_d_inscription">
+          <a className="text-danger" href="/login" >
             Inscrivez-vous maintenant
           </a>
         </article>

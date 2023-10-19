@@ -8,35 +8,37 @@ interface CenterProps {
 
 const ResearchCenterListE: React.FC<CenterProps> = ({ data }) => {
     return (
-        <article key={data.id}>
-            <h2>{data.libele}</h2>
-            <p className="col-6">Sigle: {data.sigle}</p>
-            <p className="col-6">Année de fondation: {data.founding_year}</p>
-            <p className="col-6">
-                Statut: {data.is_active ? "Actif" : "Inactif"}
-            </p>
-            <p className="col-6">
-                Site Web:{" "}
-                <a
-                    href={data.website}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    {data.website}
-                </a>
-            </p>
-            <p className="col-6">
-                Fiche d'information:{" "}
-                <a
-                    href={data.fiche_msr}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    {data.fiche_msr}
-                </a>
-            </p>
-            <a className="btn " href={"/researchCenter/"+data.id}>
-                voir plus
-            </a>
-        </article>
+      <article className="my-3 row" key={data.id}>
+        <h2>{data.libele}</h2>
+        <p className="col-md-6 col-12">Sigle: {data.sigle}</p>
+        <p className="col-md-6 col-12">Année de fondation: {data.founding_year}</p>
+        <p className="col-md-6 col-12">Statut: {data.is_active ? "Actif" : "Inactif"}</p>
+        <p className="col-md-6 col-12">
+          Site Web:
+          <a
+            href={data.website}
+            className="text-danger"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {data.website}
+          </a>
+        </p>
+        <p className="col-md-6 col-12">
+          Fiche d'information:
+          <a
+            href={data.fiche_msr}
+            className="text-danger"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {data.fiche_msr}
+          </a>
+        </p>
+        <a className="text-danger text-end" href={"/researchCenter/" + data.id}>
+          voir plus
+        </a>
+      </article>
     );
 };
 

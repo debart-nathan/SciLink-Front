@@ -58,7 +58,7 @@ const User = ({
                 
                 <p className="col-12 col-md-3 align-self-center">
                   Prénom : {userState.first_name}
-                </p>
+                </p> 
                 <FormModifUser
                   id={id}
                   entityName={"Users"}

@@ -33,7 +33,7 @@ const InvestorLinks = ({ id }: { id: number }) => {
         <div className="row border border-danger border-bottom-0">
           {InvestorsState.map((Investors: any) => (
             <a
-              className="col-12 col-md-6"
+              className="col-12 col-md-6 text-danger"
               key={Investors.id}
               href={`/investor/${Investors.id}`}
             >

@@ -35,7 +35,7 @@ const ResearcherLinks = ({ id }: { id: number }) => {
           
           {researchersState.map((researchers: any) => (
             <a
-              className="col-12 col-md-6"
+              className="col-12 col-md-6 text-danger"
               key={researchers.id}
               href={`/researcher/${researchers.id}`}
             >

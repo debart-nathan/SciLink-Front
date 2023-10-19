@@ -15,7 +15,8 @@ const InvestorCardE: React.FC<CenterProps> = ({ data }) => {
                     <i>label: {data.label}</i>
                     <b>nature: {data.nature}</b>
                 </p>
-                <a className="btn " href={"/investor/"+data.id}>
+                <a className="btnx " href={"/investor/" + data.id}>
+                    <span></span><span></span><span></span><span></span>
                     voir plus
                 </a>
             </div>

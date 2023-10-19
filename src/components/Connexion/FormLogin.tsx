@@ -54,7 +54,7 @@ const FormLogin = ({
         </div>
         <p>
           Nouveau Membre?{" "}
-          <a href="#" onClick={() => onToggleForm("signup")} className="create">
+          <a href="#" onClick={() => onToggleForm("signup")} className="create text-danger">
             Créer un Compte
           </a>
         </p>
