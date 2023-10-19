@@ -28,6 +28,7 @@ const ResearchCenterLinks = ({ id }: { id: number }) => {
 
   return (
     <>
+      <a className="btnx btn my-2" href="/contact-us"><span></span><span></span><span></span><span></span> contactez nous pour créer ou lier un centre</a>
       {ResearchCentersState ? (
         <div className="row border border-danger border-bottom-0">
           {ResearchCentersState.map((ResearchCenters: any) => (

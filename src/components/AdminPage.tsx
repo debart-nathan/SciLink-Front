@@ -159,42 +159,42 @@ const AdminPage = () => {
     }
 
     return (
-        <main>
-            <div>
-                <h2>Delete User</h2>
-                <DeleteUserForm users={users} onSubmit={onDeleteUserSubmit} />
-                <p>{deleteUserMessage}</p>
+        <main className="row text-center text-warning">
+            <div className="col-12 my-5 fs-2">
+                <h1>Administration</h1>
             </div>
-            <div>
-                <h2>Link Profile</h2>
-                <LinkProfileForm
-                    users={users}
-                    researchCenters={researchCenterProfiles}
-                    searchers={searcherProfiles}
-                    investors={investorProfiles}
-                    onSubmit={onLinkProfileSubmit}
-                />
-                <p>{linkProfileMessage}</p>
-            </div>
-            <div>
-                <h2>Delete Profile</h2>
-                <DeleteProfileForm
-                    researchCenterProfiles={researchCenterProfiles}
-                    searcherProfiles={searcherProfiles}
-                    investorProfiles={investorProfiles}
-                    onSubmit={onDeleteProfileSubmit}
-                />
-                <p>{deleteProfileMessage}</p>
-            </div>
-            <div>
-                <h2>Unlink Profile</h2>
-                <UnlinkProfileForm
-                    users={users}
-                    onSubmit={onUnlinkProfileSubmit}
-                />
-                <p>{unlinkProfileMessage}</p>
-            </div>
-        </main>
+        <div className=" col-12 col-md-6">
+          <h2>Supprimer un compte d'utilisateur</h2>
+          <DeleteUserForm users={users} onSubmit={onDeleteUserSubmit} />
+          <p>{deleteUserMessage}</p>
+        </div>
+        <div className=" col-12 col-md-6">
+          <h2>Lier les profiles</h2>
+          <LinkProfileForm
+            users={users}
+            researchCenters={researchCenterProfiles}
+            searchers={searcherProfiles}
+            investors={investorProfiles}
+            onSubmit={onLinkProfileSubmit}
+          />
+          <p>{linkProfileMessage}</p>
+        </div>
+        <div className=" col-12 col-md-6">
+          <h2>Supprimer les profiles</h2>
+          <DeleteProfileForm
+            researchCenterProfiles={researchCenterProfiles}
+            searcherProfiles={searcherProfiles}
+            investorProfiles={investorProfiles}
+            onSubmit={onDeleteProfileSubmit}
+          />
+          <p>{deleteProfileMessage}</p>
+        </div>
+        <div className=" col-12 col-md-6">
+          <h2>Délier les profiles</h2>
+          <UnlinkProfileForm users={users} onSubmit={onUnlinkProfileSubmit} />
+          <p>{unlinkProfileMessage}</p>
+        </div>
+      </main>
     );
 };
 

@@ -110,47 +110,52 @@ const UnlinkProfileForm: React.FC<UnlinkProfileFormProps> = ({
 
     // Rendu du formulaire
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <Controller
-                name="userId"
-                control={control}
-                render={({ field }) => (
-                    <Select
-                        className=""
-                        classNamePrefix=""
-                        {...field}
-                        options={users.map((user) => ({
-                            value: user.id,
-                            label: user.first_name,
-                        }))}
-                    />
-                )}
+      <form className="form-group" onSubmit={handleSubmit(onSubmit)}>
+        <Controller
+          name="userId"
+          control={control}
+          render={({ field }) => (
+            <Select
+              className=""
+              classNamePrefix=""
+              {...field}
+              options={users.map((user) => ({
+                value: user.id,
+                label: user.first_name,
+              }))}
             />
+          )}
+        />
 
-            <select {...register("profileType")}>
-                <option value="research-center">Centre de recherche</option>
-                <option value="searcher">Chercheur</option>
-                <option value="investor">Investisseur</option>
-            </select>
+        <select className="form-select" {...register("profileType")}>
+          <option className="form-control" value="research-center">Centre de recherche</option>
+          <option className="form-control" value="searcher">Chercheur</option>
+          <option className="form-control" value="investor">Investisseur</option>
+        </select>
 
-            <Controller
-                name="profileId"
-                control={control}
-                render={({ field }) => (
-                    <Select
-                    className=""
-                    classNamePrefix=""
-                        {...field}
-                        options={profiles.map((profile) => ({
-                            value: profile.id,
-                            label: profile.displayText,
-                        }))}
-                    />
-                )}
+        <Controller
+          name="profileId"
+          control={control}
+          render={({ field }) => (
+            <Select
+              className=""
+              classNamePrefix=""
+              {...field}
+              options={profiles.map((profile) => ({
+                value: profile.id,
+                label: profile.displayText,
+              }))}
             />
+          )}
+        />
 
-            <input type="submit" />
-        </form>
+        <button type="submit" className="btnx my-2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>Delier
+        </button>
+      </form>
     );
 };
 

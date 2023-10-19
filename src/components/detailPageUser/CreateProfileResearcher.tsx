@@ -44,8 +44,11 @@ const CreateProfileResearcher: React.FC<CreateProfileResearcherProps> = ({
 
     return (
       <>
-            <Button className="btnx" variant="primary" onClick={handleShow}>
-                <span></span><span></span><span></span><span></span>
+        <Button className="btnx my-2" variant="primary" onClick={handleShow}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           Créer un profil de chercheur
         </Button>
 
