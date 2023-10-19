@@ -28,8 +28,8 @@ const Domaine = ({ id } : { id: number  }) => {
   return (
     <>
     {domaineState ? (
-      <article className="">
-            <h5>{domaineState.name}</h5>
+      <article className="row">
+            <h5 className="col-md-6 col-12" >{domaineState.name}</h5>
           </article>
     ) : null}
     </>

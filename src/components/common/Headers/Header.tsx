@@ -47,13 +47,15 @@ const Header = () => {
         <div className="col-12 col-md-2 row justify-content-right align-items-center">
           {isConnected ? (
             <>
-              <Link className="col-7 offset-2" to="/Accounts">
+              <Link className="col-7 offset-2 btnx" to="/user">
+                <span></span><span></span><span></span><span></span>
                 comptes
               </Link>
               <LogOut />
             </>
           ) : (
-            <Link className="btn btn-primary" to="/login">
+              <Link className="btnx " to="/login">
+                <span></span><span></span><span></span><span></span>
               Connexion
             </Link>
           )}

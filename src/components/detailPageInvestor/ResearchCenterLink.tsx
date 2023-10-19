@@ -25,7 +25,7 @@ const ResearchCenter = ({id} : {id: number} ) => {
   return (
       <div >
         {ResearchCenterState ? (
-            <a href={`/ResearchCenter/${ResearchCenterState.id}`}>Lien vers {ResearchCenterState.libele}</a>
+            <a className="text-danger" href={`/ResearchCenter/${ResearchCenterState.id}`}>Lien vers {ResearchCenterState.libele}</a>
         ) : null}
       </div>
   );

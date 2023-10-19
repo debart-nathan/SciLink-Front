@@ -39,11 +39,12 @@ const FormModif = ({
                 <input className="form-control" key={key} {...register(key)} defaultValue={data[key]} />
               );
             })}
-            <input className="btn btn-outline-warning" type="submit" />
+            <button className="btnx" type="submit"> <span></span><span></span><span></span><span></span>envoyer la modification</button>
           </form>
         </div>
       ) : (
-        <Button className="btn btn-outline-warning" onClick={() => setShow(true)}>Modifier</Button>
+          <Button className="btnx fs-4" onClick={() => setShow(true)}>
+            <span></span><span></span><span></span><span></span>Modifier</Button>
       )}
     </div>
   );

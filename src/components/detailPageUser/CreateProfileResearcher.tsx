@@ -43,45 +43,59 @@ const CreateProfileResearcher: React.FC<CreateProfileResearcherProps> = ({
     };
 
     return (
-        <>
-            <Button variant="primary" onClick={handleShow}>
-                Créer un profil de chercheur
-            </Button>
+      <>
+            <Button className="btnx" variant="primary" onClick={handleShow}>
+                <span></span><span></span><span></span><span></span>
+          Créer un profil de chercheur
+        </Button>
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Créer un profil de chercheur</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form onSubmit={handleSubmit(onSubmit)}>
-                        <Form.Group controlId="formPresentation">
-                            <OverlayTrigger
-                                placement="right"
-                                delay={{ show: 250, hide: 400 }}
-                                overlay={(props) =>
-                                    renderTooltip(props, "Tooltip text for Presentation")
-                                }>
-                                <Form.Label>Presentation</Form.Label>
-                            </OverlayTrigger>
-                            <Form.Control
-                                as="textarea"
-                                className="form-control mb-2"
-                                title="Tooltip text for Presentation"
-                                placeholder="Enter your presentation"
-                                {...register("presentation", { required: true })}
-                            />
-                        </Form.Group>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title className="text-warning">
+              Créer un profil de chercheur
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="text-warning">
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <Form.Group controlId="formPresentation">
+                <OverlayTrigger
+                  placement="right"
+                  delay={{ show: 250, hide: 400 }}
+                  overlay={(props) =>
+                    renderTooltip(props, "Tooltip text for Presentation")
+                  }
+                >
+                  <Form.Label>Presentation</Form.Label>
+                </OverlayTrigger>
+                <Form.Control
+                  as="textarea"
+                  className="form-control mb-2"
+                  title="Tooltip text for Presentation"
+                  placeholder="Enter your presentation"
+                  {...register("presentation", { required: true })}
+                />
+              </Form.Group>
 
-                        <Button className="btn btn-outline-warning mx-2" variant="secondary" onClick={handleClose}>
-                            Fermer
-                        </Button>
-                        <Button className="btn btn-outline-warning" variant="primary" type="submit">
-                            Sauvegarder les modifications
-                        </Button>
-                    </Form>
-                </Modal.Body>
-            </Modal>
-        </>
+              <Button
+                className="btnx mx-2"
+                variant="secondary"
+                onClick={handleClose}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Fermer
+              </Button>
+              <Button className="btnx" variant="primary" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Sauvegarder les modifications
+              </Button>
+            </Form>
+          </Modal.Body>
+        </Modal>
+      </>
     );
 };
 

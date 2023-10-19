@@ -39,7 +39,8 @@ const SearchBar: React.FC = () => {
                 />
                 <button
                     type="submit"
-                    className="btn btn-outline-warning btn-sm col-2">
+                    className="btnx col-2">
+                    <span></span><span></span><span></span><span></span>
                     Go
                 </button>
             </form>
