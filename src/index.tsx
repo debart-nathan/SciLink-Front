@@ -9,6 +9,7 @@ import './assets/css/main.scss';
 import './assets/css/styleConnexion.css';
 import './assets/css/styleCard.css';
 import './assets/css/styleButtonHoverAnim.css';
+import './assets/css/styleChangeSize.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
