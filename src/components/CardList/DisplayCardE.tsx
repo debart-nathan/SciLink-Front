@@ -1,7 +1,7 @@
 import React from "react";
 import ResearchCenterCardE from "./ResearchCenterCardE";
 import InvestorCardE from "./InvestorCardE";
-import SearcherCardE from "./SearcherCardE";
+import SearcherCardE from "./ResearcherCardE";
 
 interface CardProp {
   card: {
