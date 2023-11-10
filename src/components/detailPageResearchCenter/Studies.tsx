@@ -32,7 +32,7 @@ const Studies = ({ id }: { id: number }) => {
     <>
       {studiesState ? (
         <div className="col-md-4 border border-bottom-0 border-danger">
-          <h3 className="text-center text-warning">Domaines étudier :</h3>
+          <h3 className="text-center">Domaines étudier :</h3>
           {studiesState.map((Studies: any) => (
             <DetailDomaine key={Studies.domain_id} id={Studies.domain_id} />
           ))}

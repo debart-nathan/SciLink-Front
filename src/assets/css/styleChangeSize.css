@@ -15,7 +15,7 @@
     cursor: pointer;
 }
  .buttons .btnsize.active{
-    background: #053B53;
+     background: #053B53;  /*053B53 */
 }
  .buttons .btnsize:nth-child(2){
     font-size: 1.3em;

@@ -1,16 +1,16 @@
 
 
-/*              ajout d'un bouttons
+/*              ajout d'un boutons
 
               <button className="btnx " >
                 <span></span><span></span><span></span><span></span>
-              "nom du boutton"
+              "nom du bouton"
             </button> 
             */
 
 
 
-
+/* couleur du bouton :1//053B53 2//03bce8*/
 
 
 
@@ -20,20 +20,20 @@
     display: inline-block;
     text-decoration: none;
     padding: 4px;
-    color: #03bce8 ;
-    background: #053B53;
+    color: #053B53 ;
+    background: #03bce8; 
     border: none !important;
 }
 .btnx:hover{
-    background-color: #6DA0B2;
-    color: #053B53;
+    background-color: #053B53;
+    color: #03bce8 !important;
     transition: 0.5s;
     transition-delay: 1s;
 }
 .btnx span {
     position: absolute;
     display: block;
-    background-color: #03BCE8;
+    background-color: #053B53;
 }
 .btnx span:nth-child(1){
     left: 0;

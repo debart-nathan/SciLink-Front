@@ -54,11 +54,11 @@ const CreateProfileResearcher: React.FC<CreateProfileResearcherProps> = ({
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title className="text-warning">
+            <Modal.Title className="">
               Créer un profil de chercheur
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body className="text-warning">
+          <Modal.Body className="">
             <Form onSubmit={handleSubmit(onSubmit)}>
               <Form.Group controlId="formPresentation">
                 <OverlayTrigger

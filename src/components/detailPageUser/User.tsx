@@ -49,16 +49,15 @@ const User = ({
     <>
       {userState ? (
         <>
-          <h1 className="col-12 col-md-6 offset-md-3 mb-5 text-warning">
+          <h1 className="col-12 bg-light fs-2 col-md-6 offset-md-3 mb-5">
             Profils de {userState.first_name} {userState.last_name}
           </h1>
           <section className="row ">
             <article className="col-12 col-md-10 offset-md-1 ">
               <div className="row d-flex align-items-center ">
-                <div className="col-12 col-md-3 text-warning align-self-center">
+                <div className="col-12 col-md-3 align-self-center">
                   Prénom :
-                  <p className="text-light d-inline ms-2">
-                    
+                  <p className="border-bottom border-dark border-2 d-inline ms-2">
                     {userState.first_name}
                   </p>
                 </div>
@@ -69,10 +68,9 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <div className="col-12 col-md-3 text-warning align-self-center">
+                  <div className="col-12 col-md-3 align-self-center">
                     Adresse :
-                    <p className="text-light d-inline ms-2">
-                      
+                    <p className="border-bottom border-dark border-2 d-inline ms-2">
                       {locationState.address}
                     </p>
                   </div>
@@ -85,9 +83,9 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <div className="col-12 col-md-3 text-warning align-self-center">
+                <div className="col-12 col-md-3 align-self-center">
                   Email :
-                  <p className="text-light d-inline ms-2"> {userState.email}</p>
+                  <p className="border-bottom border-dark border-2 d-inline ms-2"> {userState.email}</p>
                 </div>
                 <FormModifUser
                   id={id}
@@ -95,10 +93,9 @@ const User = ({
                   data={{ email: userState.email }}
                   handleRefresh={handleRefresh}
                 />
-                <div className="col-12 col-md-3 text-warning align-self-center">
+                <div className="col-12 col-md-3 align-self-center">
                   Nom :
-                  <p className="text-light d-inline ms-2">
-                    
+                  <p className="border-bottom border-dark border-2 d-inline ms-2">
                     {userState.last_name}
                   </p>
                 </div>
@@ -109,9 +106,11 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <div className="col-12 col-md-3 text-warning align-self-center">
-                    Code Postal : <p className="text-light d-inline ms-2">{locationState.postal_code} </p>
-                    
+                  <div className="col-12 col-md-3 align-self-center">
+                    Code Postal :{" "}
+                    <p className="border-bottom border-dark border-2 d-inline ms-2">
+                      {locationState.postal_code}{" "}
+                    </p>
                   </div>
                 ) : null}
                 {locationState ? (
@@ -122,9 +121,11 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <div className="col-12 col-md-3 text-warning align-self-center">
-                  Mot de passe : <p className="text-light d-inline ms-2">{userState.password} </p>
-                  
+                <div className="col-12 col-md-3 align-self-center">
+                  Mot de passe :{" "}
+                  <p className="border-bottom border-dark border-2 d-inline ms-2">
+                    {userState.password}{" "}
+                  </p>
                 </div>
                 <FormModifUser
                   id={id}
@@ -132,9 +133,12 @@ const User = ({
                   data={{ password: userState.password }}
                   handleRefresh={handleRefresh}
                 />
-                <div className="col-12 col-md-3 text-warning align-self-center">
-                  Pseudo : <p className="text-light d-inline ms-2">  {userState.user_name}</p>
-                 
+                <div className="col-12 col-md-3 align-self-center">
+                  Pseudo :{" "}
+                  <p className="border-bottom border-dark border-2 d-inline ms-2">
+                    {" "}
+                    {userState.user_name}
+                  </p>
                 </div>
                 <FormModifUser
                   id={id}
@@ -143,9 +147,11 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <div className="col-12 col-md-3 text-warning align-self-center">
-                    Commune : <p className="text-light d-inline ms-2">{locationState.town} </p>
-                    
+                  <div className="col-12 col-md-3 align-self-center">
+                    Commune :{" "}
+                    <p className="border-bottom border-dark border-2 d-inline ms-2">
+                      {locationState.town}{" "}
+                    </p>
                   </div>
                 ) : null}
                 {locationState ? (
@@ -156,10 +162,9 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <div className="col-12 col-md-3 text-warning align-self-center">
+                <div className="col-12 col-md-3 align-self-center">
                   Photo de Profils :
-                  <p className="text-light d-inline ms-2"> {userState.photo}</p>
-                  
+                  <p className="border-bottom border-dark border-2 d-inline ms-2"> {userState.photo}</p>
                 </div>
                 <FormModifUser
                   id={id}

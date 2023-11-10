@@ -43,9 +43,9 @@ setShow(false);};
       modifier
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="text-warning">Modifier</Modal.Title>
+          <Modal.Title className="">Modifier</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="text-warning">
+        <Modal.Body className="">
           <form onSubmit={handleSubmit(onSubmit)}>
             {keys.map((key: string) => {
               return (

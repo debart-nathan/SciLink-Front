@@ -21,15 +21,15 @@ const Location = ({ id }: { id: number }) => {
       {locationState ? (
         <article className="">
           <div className="row">
-            <h5 className=" text-warning col-6">Adresse : </h5>
+            <h5 className=" col-6">Adresse : </h5>
             <p className="col-6">{locationState.address}</p>
           </div>
           <div className="row">
-            <h5 className=" text-warning col-6">Code postale: </h5>
+            <h5 className=" col-6">Code postale: </h5>
             <p className="col-6">{locationState.postal_code}</p>
           </div>
           <div className="row">
-            <h5 className=" text-warning col-6">Commune : </h5>
+            <h5 className=" col-6">Commune : </h5>
             <p className="col-6">{locationState.town}</p>
           </div>
         </article>
