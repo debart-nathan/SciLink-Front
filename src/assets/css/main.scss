@@ -32,37 +32,36 @@ font-size: 0.9em !important;
 body{
     font-family: $font-family-base;
     font-size: 1.3em !important;
-    background-color: $warning !important;
-    color: $light !important;
+    background-color: $primary !important;
+    color: $dark !important;
 }
 
-.background{
-    background:fixed !important;
-    background: url(./../img/bg2.jpg)!important;
-    background-size:cover !important;
-    background-repeat: no-repeat !important;
-    width: 100%!important;
-    height: 100%!important;
-    z-index: -10 !important;
-}
+// .background{
+//     background:fixed !important;
+//     background-size:cover !important;
+//     background-repeat: no-repeat !important;
+//     width: 100%!important;
+//     height: 100%!important;
+//     z-index: -10 !important;
+// }
 #nav, footer {
   border-radius: 10px;
-  border: 4px solid #6da0b23f;
+  border: 4px solid #CAD7E23f;
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35),
     inset 5px 5px 15px rgba(255, 255, 255, 0.1),
     inset -5px -5px 15px rgba(0, 0, 0, 0.35);
-    background: #6da0b25e  !important;
+    background: #CAD7E2b4  !important;
 }
  .affiche  {
-    background: #6da0b23f  !important;
+    background: #CAD7E24b  !important;
 }
 #logohome{
     border-radius:50% !important;
     
 }
 #nav nav div a,footer a {
-    color: $light !important;
+    color: $dark ;
 }
 a{
     text-decoration: none !important;

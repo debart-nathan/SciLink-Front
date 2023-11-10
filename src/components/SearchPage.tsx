@@ -48,23 +48,29 @@ const SearchPage = () => {
   };
   return (
     <main className="row">
-      <h2>Listes de Recherches</h2>
-      <div className="col-10">
+      <h2 className="bg-light fs-3">Listes de Recherches</h2>
+      <div className="mt-4 col-10">
         <SearchFilterMain onSubmit={onSearch} />
       </div>
 
       <button
-        className="btnx col-1"
+        className="btnx mt-4 col-1"
         onClick={() => setDisplayMode("list")}
       >
-        <span></span><span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <i className="bi bi-list-task"></i>
       </button>
       <button
-        className="btnx col-1"
+        className="btnx mt-4 col-1"
         onClick={() => setDisplayMode("card")}
       >
-        <span></span><span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <i className="bi bi-card-list"></i>
       </button>
       {(() => {
@@ -79,7 +85,7 @@ const SearchPage = () => {
             );
           case "list":
             return (
-              <ul className="text-light cardss">
+              <ul className=" cardss">
                 {cards.map((card) => {
                   return <DisplayListE key={card.data.id} card={card} />;
                 })}

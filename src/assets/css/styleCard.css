@@ -44,7 +44,7 @@
   top: -80px;
   right: 30px;
   font-size: 8em;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.32);
 }
  .cardss .card .content h3 {
   font-size: 1.8em;
@@ -53,7 +53,7 @@
 }
  .cardss .card .content p {
   font-size: 1em;
-  color: #CAD7E2;
+  color: #053B53;
   font-weight: 300;
 }
  .cardss .card .content a {

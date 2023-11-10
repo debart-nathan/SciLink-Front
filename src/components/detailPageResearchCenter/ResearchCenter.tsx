@@ -35,35 +35,35 @@ const ResearchCenter = ({
     <>
       {researchCenterState ? (
         <section className="row mb-2">
-          <h1 className="fs-1 col-12 text-center text-warning bi bi-mortarboard-fill mb-5">
+          <h1 className="fs-1 col-12 text-center bg-light bi bi-mortarboard-fill mb-5">
             {researchCenterState.libele}
           </h1>
-          <img width={"300px"} height={"auto"} 
+          <img
+            width={"300px"}
+            height={"auto"}
             src={researchCenterState.img}
             className="img-fluid col-md-5"
             alt={`image du centre ${researchCenterState.libele}`}
           />
           <div className="col-12 col-md-7 align-items-center ">
             <div className="row">
-              <h4 className="col-12 col-md-4 text-warning">acronyme :</h4>
+              <h4 className="col-12 col-md-4">acronyme :</h4>
               <p className=" col-12 col-md-8">{researchCenterState.sigle}</p>
             </div>
             <div className="row">
-              <h5 className="col-12 col-md-4 text-warning">
-                Année de fondation :
-              </h5>
+              <h5 className="col-12 col-md-4">Année de fondation :</h5>
               <p className=" col-12 col-md-8">
                 {researchCenterState.founding_year}
               </p>
             </div>
             <div className="row">
-              <h5 className="col-12 col-md-4 text-warning">En activité :</h5>
+              <h5 className="col-12 col-md-4">En activité :</h5>
               <p className=" col-12 col-md-8">
                 {String(researchCenterState.is_active)}
               </p>
             </div>
             <div className="row">
-              <h5 className="col-12 col-md-4 text-warning">Site Web :</h5>
+              <h5 className="col-12 col-md-4">Site Web :</h5>
               <p className=" col-12 col-md-8">
                 <a className="text-danger" href={researchCenterState.website}>
                   {researchCenterState.website}
@@ -71,7 +71,7 @@ const ResearchCenter = ({
               </p>
             </div>
             <div className="row">
-              <h5 className="col-12 col-md-4 text-warning">Fiche : </h5>{" "}
+              <h5 className="col-12 col-md-4">Fiche : </h5>{" "}
               <p className=" col-12 col-md-8">
                 <a className="text-danger" href={researchCenterState.fiche_msr}>
                   {researchCenterState.fiche_msr}
@@ -79,7 +79,7 @@ const ResearchCenter = ({
               </p>
             </div>
             <div className="">
-            <FormModif
+              <FormModif
                 id={id}
                 entityName={"researchCenter"}
                 data={{

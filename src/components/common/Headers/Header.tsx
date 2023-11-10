@@ -31,7 +31,7 @@ const Header = () => {
         <div className="col-12 col-md-1">
           <Link to="/recherche?category=investor">Investisseurs</Link>
         </div>
-        <div className="col-12 col-md-2">
+        <div className="col-12 col-md-2 text-center">
           <Link to="/recherche?category=research-center">
             Centre de Recherches
           </Link>
@@ -48,16 +48,27 @@ const Header = () => {
           {isConnected ? (
             <>
               <Link className="col-7 offset-2 btnx" to="/user">
-                <span></span><span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 comptes
               </Link>
               <LogOut />
             </>
           ) : (
-              <Link className="btnx " to="/login">
-                <span></span><span></span><span></span><span></span>
-              Connexion
-            </Link>
+            <>
+              <Link
+                className=" btnx"
+                to="/login"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Connexion
+              </Link>
+            </>
           )}
         </div>
       </nav>

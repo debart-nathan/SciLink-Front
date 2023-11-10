@@ -36,7 +36,7 @@ const Investor = ({
     <>
       {investorState ? (
         <section className="row mb-2">
-          <h1 className="fs-1 col-12 text-center text-warning bi bi-piggy-bank-fill mb-5">
+          <h1 className="fs-1 col-12 text-center bg-light bi bi-piggy-bank-fill mb-5">
             {" "}
             {investorState.nom}{" "}
           </h1>
@@ -49,15 +49,15 @@ const Investor = ({
           />
           <div className="col-12 col-md-7 align-items-center ">
             <div className="row">
-              <h4 className="col-12 col-md-4 text-warning">acronyme:</h4>
+              <h4 className="col-12 col-md-4">acronyme:</h4>
               <p className=" col-12 col-md-8">{investorState.sigle}</p>
             </div>
             <div className="row">
-              <h5 className="col-12 col-md-4 text-warning">Nature:</h5>
+              <h5 className="col-12 col-md-4">Nature:</h5>
               <p className=" col-12 col-md-8">{investorState.nature}</p>
             </div>
             <div className="row">
-              <h5 className="col-12 col-md-4 text-warning">Label:</h5>
+              <h5 className="col-12 col-md-4">Label:</h5>
               <p className=" col-12 col-md-8">{String(investorState.label)}</p>
             </div>
             <div className="row">

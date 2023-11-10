@@ -26,22 +26,22 @@ const PageDetailUser = () => {
       <main className=" row mt-5 text-center">
         <User id={id} userState={userState} setUserState={setUserState} />
         <section className="row">
-          <h3 className="text-warning mt-5 mb-5">Favoris</h3>
+          <h3 className=" mt-5 mb-5">Favoris</h3>
           <article className="col-12 col-md-4">
-            <h4 className="text-warning">Recherche</h4>
+            <h4 className="">Recherche</h4>
             <Researcher id={id} />
           </article>
           <article className="col-12 col-md-4">
-            <h4 className="text-warning">Centre de Recherche</h4>
+            <h4 className="">Centre de Recherche</h4>
             <ResearchCenter id={id}  />
           </article>
           <article className="col-12 col-md-4">
-            <h4 className="text-warning">Investisseur</h4>
+            <h4 className="">Investisseur</h4>
             <Investor id={id} />
           </article>
         </section>
         <section className="row">
-          <h3 className="text-center text-warning mt-5 mb-5">Messagerie</h3>
+          <h3 className="text-center  mt-5 mb-5">Messagerie</h3>
           {/* reste a faire */}
         </section>
       </main>

@@ -159,9 +159,9 @@ const AdminPage = () => {
     }
 
     return (
-        <main className="row text-center text-warning">
+        <main className="row text-center">
             <div className="col-12 my-5 fs-2">
-                <h1>Administration</h1>
+                <h1 className="text-light bg-danger fs-2">Administration</h1>
             </div>
         <div className=" col-12 col-md-6">
           <h2>Supprimer un compte d'utilisateur</h2>
