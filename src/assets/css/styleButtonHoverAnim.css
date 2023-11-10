@@ -1,4 +1,20 @@
 
+
+/*              ajout d'un bouttons
+
+              <button className="btnx " >
+                <span></span><span></span><span></span><span></span>
+              "nom du boutton"
+            </button> 
+            */
+
+
+
+
+
+
+
+
 .btnx {
     position: relative;
     display: inline-block;
