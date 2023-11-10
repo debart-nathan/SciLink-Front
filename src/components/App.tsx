@@ -7,6 +7,7 @@ import SearchPage from "./SearchPage";
 import ContactUs from "./common/Footers/ContactUs";
 import Mentions from "./common/Footers/Mentions";
 import PageDetailInvestor from "./detailPageInvestor/PageDetailInvestor";
+import PageDetailResearcher from "./detailPageResearcher/PageDetailResearcher";
 import PageDetailResearchCenter from "./detailPageResearchCenter/PageDetailResearchCenter";
 import PageDetailUser from "./detailPageUser/PageDetailUser";
 import AdminPage from "./AdminPage";
@@ -33,7 +34,7 @@ function App() {
                 path="/researchCenter/:id"
                 element={<PageDetailResearchCenter />}
               />
-              {/* <Route path="/searcher/:id" element={<PageDetailsearcher />} /> */}
+              <Route path="/researcher/:id" element={<PageDetailResearcher />} />
               <Route path="/investor/:id" element={<PageDetailInvestor />} />
               <Route path="/recherche" element={<SearchPage />}></Route>
               <Route path="/contact-us" element={<ContactUs />} />

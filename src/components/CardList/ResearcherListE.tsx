@@ -6,7 +6,7 @@ interface CenterProps {
     data: {user:UserInterface, profil:ResearcherInterface};
 }
 
-const SearcherListE: React.FC<CenterProps> = ({ data }) => {
+const ResearcherListE: React.FC<CenterProps> = ({ data }) => {
     return (
       <article className="my-3 row" key={data.profil.id}>
         <h2>{data.user.last_name}</h2>
@@ -20,4 +20,4 @@ const SearcherListE: React.FC<CenterProps> = ({ data }) => {
     );
 };
 
-export default SearcherListE;
+export default ResearcherListE;

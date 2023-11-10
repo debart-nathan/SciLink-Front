@@ -1,6 +1,6 @@
 import InvestorListE from "./InvestorListE";
 import ResearchCenterListE from "./ResearchCenterListE";
-import SearcherListE from "./SearcherListE";
+import SearcherListE from "./ResearcherListE";
 
 interface CardProp {
   card: {
