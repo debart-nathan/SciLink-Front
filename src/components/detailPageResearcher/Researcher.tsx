@@ -45,7 +45,7 @@ const Researcher = ({
             height={"auto"}
             src={researcherState.img}
             className="img-fluid col-md-5"
-            alt={`image de l'investisseur ${researcherState.user_id}`}
+            alt={`image du chercheur ${researcherState.user_id}`}
           />
           <div className="col-12 col-md-7 align-items-center ">
             <div className="row">
