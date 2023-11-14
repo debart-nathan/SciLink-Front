@@ -49,24 +49,15 @@ const Researcher = ({
           />
           <div className="col-12 col-md-7 align-items-center ">
             <div className="row">
-              <h4 className="col-12 col-md-4">acronyme:</h4>
-              <p className=" col-12 col-md-8">{researcherState.user_id}</p>
-            </div>
-            <div className="row">
-              <h5 className="col-12 col-md-4">Nature:</h5>
-              <p className=" col-12 col-md-8">{researcherState.user_id}</p>
-            </div>
-            <div className="row">
-              <h5 className="col-12 col-md-4">Label:</h5>
-              <p className=" col-12 col-md-8">
-                {String(researcherState.user_id)}
-              </p>
+              <h4 className="col-12 col-md-4">Description:</h4>
+              <p className=" col-12 col-md-8">{researcherState.descriptions}</p>
             </div>
             <div className="row">
               <FormModif
                 id={id}
-                entityName={"researchers"}
+                entityName={"Researchers"}
                 data={{
+                  descriptions: researcherState.descriptions,
                 }}
                 handleRefresh={handleRefresh}
               />

@@ -2,7 +2,7 @@ import { useState } from "react";
 import ResearcherInterface from "../../interfaces/ResearcherInterface";
 import Researcher from "./Researcher";
 import UserLink from "./UserLink";
-import Tuteles from "./Tuteles";
+import Practices from "./Practices";
 
 const PageDetailResearcher = () => {
   const id = idSelect();
@@ -30,8 +30,8 @@ const PageDetailResearcher = () => {
         />
       </div>
       <section className="row">
-        <Tuteles id={id} />
-      
+        <Practices id={id} />
+
         <UserLink id={id} />
       </section>
     </>
