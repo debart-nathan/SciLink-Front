@@ -8,7 +8,7 @@ const ResearchCenter = ({id} : {id: number} ) => {
 
   useEffect(() => {
     ResearchCenterSelect("ResearchCenters", id);
-  }, [id]);
+  }, []);
 
   async function ResearchCenterSelect(
     entityName: string,
@@ -21,7 +21,6 @@ const ResearchCenter = ({id} : {id: number} ) => {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
     }
   }
-  
   return (
       <div >
         {ResearchCenterState ? (

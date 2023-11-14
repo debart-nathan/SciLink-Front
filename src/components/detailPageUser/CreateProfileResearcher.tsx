@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import JsonServerB from "../../services/jsonServerB";
 
 type CreateProfileResearcherProps = {
   userId: number;
@@ -25,13 +26,19 @@ const CreateProfileResearcher: React.FC<CreateProfileResearcherProps> = ({
 
 
 useEffect(() => {
-  async function fetchData() {
-    const response = await fetch("http://localhost:3002/Domaines");
-    const data = await response.json();
-    setDomainOptions(data);
-  }
-  fetchData();
+  domainSelect("Domains");
 }, ['show']);
+
+async function domainSelect(
+  entityName: string,
+) {
+  try {
+    const response = await JsonServerB.EntitySelectAll(entityName);
+    setDomainOptions(response);
+  } catch (error) {
+    console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
+  }
+}
 
   const handleClose = () => {
     setShow(false);
@@ -100,7 +107,7 @@ useEffect(() => {
                 {domainOption.map((option) => {
                   return <option key={option.id} value={option.id}>{option.name}</option>;
                 })}
-   
+
               </Form.Select>
             </Form.Group>
 

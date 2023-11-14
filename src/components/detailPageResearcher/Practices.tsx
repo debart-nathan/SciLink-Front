@@ -1,16 +1,17 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
-import TuteleInterface from "../../interfaces/TuteleInterface";
+import PracticeInterface from "../../interfaces/PracticeInterface";
 import ResearchCenterLink from "./ResearchCenterLink";
-const Tuteles = ({ id  } : { id: number }) => {
+import Domain from "../detailPageResearcher/Domain";
+const Practices = ({ id  } : { id: number }) => {
 
-  const [TutelesState, setTutelesState] = useState<TuteleInterface[]>();
+  const [PracticesState, setPracticesState] = useState<PracticeInterface[]>();
 
   useEffect(() => {
-    TutelesSelect("Tuteles", "Researcher_id", id);
+    PracticesSelect("Practices", "researcher_id", id);
   }, [id]);
 
-  async function TutelesSelect(
+  async function PracticesSelect(
     entityName: string,
     conditionName: string,
     condition: number
@@ -18,7 +19,7 @@ const Tuteles = ({ id  } : { id: number }) => {
     try {
       const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);
       console.log(response);
-      setTutelesState(response);
+      setPracticesState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
     }
@@ -26,16 +27,15 @@ const Tuteles = ({ id  } : { id: number }) => {
 
   return (
     <>
-    {TutelesState ? (
+    {PracticesState ? (
     <div className="col-md-4 border border-bottom-0 border-danger">
-          <h3 className="text-center">Centre de recherche liés:</h3>
-        {TutelesState.map((Tutele: any) => (
-          <ResearchCenterLink key={Tutele.research_center_id} id={Tutele.research_center_id} />
+          <h3 className="text-center">Domaines :</h3>
+        {PracticesState.map((Practice: any) => (
+          <Domain key={Practice.domain_id} id={Practice.domain_id} />
         ))}
         </div>) : null}
-        
     </>
   );
 };
 
-export default Tuteles;
+export default Practices;
