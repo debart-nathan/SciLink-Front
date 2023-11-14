@@ -3,17 +3,15 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
 
-const ResearchCenter = ({id} : {id: number} ) => {
-    const [ResearchCenterState, setResearchCenterState] = useState<ResearchCenterInterface>();
+const ResearchCenter = ({ id }: { id: number }) => {
+  const [ResearchCenterState, setResearchCenterState] =
+    useState<ResearchCenterInterface>();
 
   useEffect(() => {
     ResearchCenterSelect("ResearchCenters", id);
   }, [id]);
 
-  async function ResearchCenterSelect(
-    entityName: string,
-    id: number
-  ) {
+  async function ResearchCenterSelect(entityName: string, id: number) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       setResearchCenterState(response);
@@ -21,13 +19,18 @@ const ResearchCenter = ({id} : {id: number} ) => {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
     }
   }
-  
+
   return (
-      <div >
-        {ResearchCenterState ? (
-            <a className="text-danger" href={`/ResearchCenter/${ResearchCenterState.id}`}>Lien vers {ResearchCenterState.libele}</a>
-        ) : null}
-      </div>
+    <div>
+      {ResearchCenterState ? (
+        <a
+          className="text-danger"
+          href={`/ResearchCenter/${ResearchCenterState.id}`}
+        >
+          Lien vers {ResearchCenterState.libele}
+        </a>
+      ) : null}
+    </div>
   );
 };
 
