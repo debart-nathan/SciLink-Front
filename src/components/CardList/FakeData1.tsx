@@ -3,16 +3,19 @@ import ResearcherInterface from "../../interfaces/ResearcherInterface";
 const fakeData1: ResearcherInterface[] = [
   {
     id: 1,
+    descriptions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     user_id: 101,
     img: "../../../../../../../../../../../../../../../../../assets/img/1.jpg",
   },
   {
     id: 2,
+    descriptions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     user_id: 102,
     img: "../../../../../../../../../../../../../../../../../assets/img/1.jpg",
   },
   {
     id: 3,
+    descriptions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     user_id: 103,
     img: "../../../../../../../../../../../../../../../../../assets/img/1.jpg",
   },
