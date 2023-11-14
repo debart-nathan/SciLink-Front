@@ -29,17 +29,18 @@ const FormModifUser = ({
     }
   };
 
-  const handleClose = async () => {await setShow(false);
-setShow(false);};
+  const handleClose = async () => {
+    await setShow(false);
+    setShow(false);
+  };
   const handleShow = () => setShow(true);
-  
-
-  
-    
 
   return (
     <button className="btnx col-md-1 col-12 my-4" onClick={handleShow}>
-      <span></span><span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
       modifier
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -52,14 +53,21 @@ setShow(false);};
                 <input key={key} {...register(key)} defaultValue={data[key]} />
               );
             })}
-            <button className="btnx" type="submit" >
-              <span></span><span></span><span></span><span></span> envoyer
+            <button className="btnx" type="submit">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span> envoyer
             </button>
           </form>
         </Modal.Body>
         <Modal.Footer>
           <button className="btnx" onClick={handleClose}>
-            <span></span><span></span><span></span><span></span>Fermer</button>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Fermer
+          </button>
         </Modal.Footer>
       </Modal>
     </button>
