@@ -10,7 +10,7 @@ const ResearchCenterCardE: React.FC<CenterProps> = ({ data }) => {
       <article key={data.id} className="card col-4">
         <div className="content">
           <h2>{data.founding_year}</h2>
-          <h3>{data.libele}</h3>
+          <h3>{data.label}</h3>
           <p>
             <i>Sigle: {data.sigle}</i>
           </p>

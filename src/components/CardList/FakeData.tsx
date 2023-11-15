@@ -3,7 +3,7 @@ import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface"; 
 const fakeData: ResearchCenterInterface[] = [
     {
         id: 1,
-        libele: "Centre de recherche 1",
+        label: "Centre de recherche 1",
         sigle: "CR1",
         founding_year: "1990",
         is_active: true,
@@ -12,7 +12,7 @@ const fakeData: ResearchCenterInterface[] = [
     },
     {
         id: 2,
-        libele: "Centre de recherche 2",
+        label: "Centre de recherche 2",
         sigle: "CR2",
         founding_year: "2005",
         is_active: false,

@@ -150,7 +150,7 @@ const User = ({
                   <div className="col-12 col-md-3 align-self-center">
                     Commune :{" "}
                     <p className="border-bottom border-dark border-2 d-inline ms-2">
-                      {locationState.town}{" "}
+                      {locationState.commune}{" "}
                     </p>
                   </div>
                 ) : null}
@@ -158,7 +158,7 @@ const User = ({
                   <FormModifUser
                     id={id}
                     entityName={"Locations"}
-                    data={{ town: locationState.town }}
+                    data={{ town: locationState.commune }}
                     handleRefresh={handleRefresh}
                   />
                 ) : null}

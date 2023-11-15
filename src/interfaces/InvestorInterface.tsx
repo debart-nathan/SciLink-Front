@@ -1,9 +1,9 @@
 export default interface InvestorInterface {
     img: string | undefined;
     id: number,
-    nom: string,
+    name: string,
     sigle: string,
-    nature: string,
+    type: string,
     label: string,
     user_id: number
 }

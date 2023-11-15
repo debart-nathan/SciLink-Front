@@ -9,7 +9,7 @@ interface CenterProps {
 const ResearchCenterListE: React.FC<CenterProps> = ({ data }) => {
     return (
       <article className="my-3 row" key={data.id}>
-        <h2>{data.libele}</h2>
+        <h2>{data.label}</h2>
         <p className="col-md-6 col-12">Sigle: {data.sigle}</p>
         <p className="col-md-6 col-12">Année de fondation: {data.founding_year}</p>
         <p className="col-md-6 col-12">Statut: {data.is_active ? "Actif" : "Inactif"}</p>
