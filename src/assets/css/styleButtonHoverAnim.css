@@ -1,0 +1,102 @@
+
+
+/*              ajout d'un boutons
+
+              <button className="btnx " >
+                <span></span><span></span><span></span><span></span>
+              "nom du bouton"
+            </button> 
+            */
+
+
+
+/* couleur du bouton :1//053B53 2//03bce8*/
+
+
+
+
+.btnx {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px;
+    color: #053B53 ;
+    background: #03bce8; 
+    border: none !important;
+}
+.btnx:hover{
+    background-color: #053B53;
+    color: #03bce8 !important;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.btnx span {
+    position: absolute;
+    display: block;
+    background-color: #053B53;
+}
+.btnx span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s;
+}
+.btnx:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+}
+
+.btnx span:nth-child(2){
+    left:  0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+.btnx:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s;
+    transition-delay: 0.25s;
+}
+
+.btnx span:nth-child(3){
+    right:  0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+.btnx:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.25s;
+    transition-delay: 0.5s;
+}
+
+.btnx span:nth-child(4){
+    left:  0;
+    bottom:  0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}
+.btnx:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.25s;
+    transition-delay: 0.75s;
+}

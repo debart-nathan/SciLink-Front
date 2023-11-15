@@ -1,0 +1,79 @@
+/* ===========================policy================================== */
+
+@font-face {
+  /* police*/
+  font-family: "mermaid";
+  src: url(./../font/Mermaid1001.ttf);
+}
+@font-face {
+  /* police*/
+  font-family: "nulshock";
+  src: url(./../font/nulshock_bd.otf);
+}
+
+/* ===========================variable================================== */
+
+$font-family-base: "mermaid";
+$primary: #6DA0B2   ;
+$secondary: #CAD7E2;
+$warning: #053B53;
+$dark: #000000;
+$info: #03BCE8;
+$danger: #EB1D36;
+$light: #fff;
+
+/* ==============================style================================== */
+
+
+h1,h2,h3,h4,h5,nav{
+font-family: 'nulshock';
+font-size: 0.9em !important;
+}
+body{
+    font-family: $font-family-base;
+    font-size: 1.3em !important;
+    background-color: $primary !important;
+    color: $dark !important;
+}
+
+// .background{
+//     background:fixed !important;
+//     background-size:cover !important;
+//     background-repeat: no-repeat !important;
+//     width: 100%!important;
+//     height: 100%!important;
+//     z-index: -10 !important;
+// }
+#nav, footer {
+  border-radius: 10px;
+  border: 4px solid #CAD7E23f;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset 5px 5px 15px rgba(255, 255, 255, 0.1),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.35);
+    background: #CAD7E2b4  !important;
+}
+ .affiche  {
+    background: #CAD7E24b  !important;
+}
+#logohome{
+    border-radius:50% !important;
+    
+}
+#nav nav div a,footer a {
+    color: $dark ;
+}
+a{
+    text-decoration: none !important;
+
+}
+
+
+
+
+
+
+
+
+/* ==============================import================================== */
+@import "~bootstrap/scss/bootstrap";

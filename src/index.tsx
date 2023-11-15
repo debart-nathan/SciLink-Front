@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './assets/css/main.scss';
+import './assets/css/styleConnexion.css';
+import './assets/css/styleCard.css';
+import './assets/css/styleButtonHoverAnim.css';
+import './assets/css/styleChangeSize.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
