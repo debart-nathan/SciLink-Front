@@ -7,7 +7,7 @@ const Tuteles = ({ id  } : { id: number }) => {
   const [TutelesState, setTutelesState] = useState<TuteleInterface[]>();
 
   useEffect(() => {
-    TutelesSelect("Tuteles", "investisseur_id", id);
+    TutelesSelect("Tuteles", "investor_id", id);
   }, [id]);
 
   async function TutelesSelect(
