@@ -1,6 +1,6 @@
 export default interface ResearchCenterInterface {
     id: number;
-    libele: string;
+    label: string;
     sigle: string;
     founding_year: string;
     is_active: boolean;

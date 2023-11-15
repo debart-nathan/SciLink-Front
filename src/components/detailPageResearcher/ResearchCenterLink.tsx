@@ -27,7 +27,7 @@ const ResearchCenter = ({ id }: { id: number }) => {
           className="text-danger"
           href={`/ResearchCenter/${ResearchCenterState.id}`}
         >
-          Lien vers {ResearchCenterState.libele}
+          Lien vers {ResearchCenterState.label}
         </a>
       ) : null}
     </div>

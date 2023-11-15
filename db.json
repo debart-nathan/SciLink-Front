@@ -12,7 +12,7 @@
   "ResearchCenters": [
     {
       "id": 1,
-      "libele": "Center 1",
+      "label": "Center 1",
       "sigle": "C1",
       "founding_year": "2020-01-01",
       "is_active": true,
@@ -21,7 +21,7 @@
     },
     {
       "id": 2,
-      "libele": "Center 2",
+      "label": "Center 2",
       "sigle": "C2",
       "founding_year": "2019-01-01",
       "is_active": false,
@@ -90,45 +90,45 @@
       "id": 1,
       "send_date": "2023-10-05T10:00:00",
       "object": "Subject1",
-      "status": "Status1",
-      "user_id": 1,
-      "user_id_1": 2
+      "relation_status": "Status1",
+      "app_user_send_id": 1,
+      "app_user_receive": 2
     },
     {
       "id": 2,
       "send_date": "2023-10-05T11:00:00",
       "object": "Subject2",
-      "status": "Status2",
-      "user_id": 2,
-      "user_id_1": 1
+      "relation_status": "Status2",
+      "app_user_send_id": 2,
+      "app_user_receive": 1
     }
   ],
   "Researchers": [
     {
       "id": 1,
-      "descriptions": "Descriptions1",
+      "description": "Descriptions1",
       "user_id": 1
     },
     {
       "id": 2,
-      "descriptions": "Descriptions2",
+      "description": "Descriptions2",
       "user_id": 2
     }
   ],
   "Investors": [
     {
       "id": 1,
-      "nom": "Investisseur1",
+      "name": "Investisseur1",
       "sigle": "I1",
-      "nature": "Nature1",
+      "type": "Nature1",
       "label": "Label1",
       "user_id": 1
     },
     {
       "id": 2,
-      "nom": "Investisseur2",
+      "name": "Investisseur2",
       "sigle": "I2",
-      "nature": "Nature2",
+      "type": "Nature2",
       "label": "Label2",
       "user_id": 2
     }
@@ -146,7 +146,7 @@
   "Tuteles": [
     {
       "research_center_id": 1,
-      "investisseur_id": 1,
+      "investor_id": 1,
       "uai": "UAI1",
       "siret": "SIRET1",
       "type": "Type1"
@@ -182,12 +182,12 @@
   "Manages": [
     {
       "research_center_id": 1,
-      "directeur_id": 1,
+      "personnel_id": 1,
       "grade": "Grade1"
     },
     {
       "research_center_id": 2,
-      "directeur_id": 2,
+      "personnel_id": 2,
       "grade": "Grade2"
     }
   ],

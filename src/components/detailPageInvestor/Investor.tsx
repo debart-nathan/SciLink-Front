@@ -38,14 +38,14 @@ const Investor = ({
         <section className="row mb-2">
           <h1 className="fs-1 col-12 text-center bg-light bi bi-piggy-bank-fill mb-5">
             {" "}
-            {investorState.nom}{" "}
+            {investorState.name}{" "}
           </h1>
           <img
             width={"300px"}
             height={"auto"}
             src={investorState.img}
             className="img-fluid col-md-5"
-            alt={`image de l'investisseur ${investorState.nom}`}
+            alt={`image de l'investisseur ${investorState.name}`}
           />
           <div className="col-12 col-md-7 align-items-center ">
             <div className="row">
@@ -54,7 +54,7 @@ const Investor = ({
             </div>
             <div className="row">
               <h5 className="col-12 col-md-4">Nature:</h5>
-              <p className=" col-12 col-md-8">{investorState.nature}</p>
+              <p className=" col-12 col-md-8">{investorState.type}</p>
             </div>
             <div className="row">
               <h5 className="col-12 col-md-4">Label:</h5>
@@ -65,9 +65,9 @@ const Investor = ({
                 id={id}
                 entityName={"Investors"}
                 data={{
-                  nom: investorState.nom,
+                  nom: investorState.name,
                   sigle: investorState.sigle,
-                  nature: investorState.nature,
+                  nature: investorState.type,
                   label: investorState.label,
                 }}
                 handleRefresh={handleRefresh}

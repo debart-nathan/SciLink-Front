@@ -30,7 +30,7 @@ const Location = ({ id }: { id: number }) => {
           </div>
           <div className="row">
             <h5 className=" col-6">Commune : </h5>
-            <p className="col-6">{locationState.town}</p>
+            <p className="col-6">{locationState.commune}</p>
           </div>
         </article>
       ) : null}

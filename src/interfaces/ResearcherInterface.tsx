@@ -1,6 +1,6 @@
 export default interface ResearcherInterface {
     img: string | undefined;
     id : number,
-    descriptions: string,
+    description: string,
     user_id : number,
 }

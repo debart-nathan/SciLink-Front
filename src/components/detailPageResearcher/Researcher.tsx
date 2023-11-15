@@ -50,14 +50,14 @@ const Researcher = ({
           <div className="col-12 col-md-7 align-items-center ">
             <div className="row">
               <h4 className="col-12 col-md-4">Description:</h4>
-              <p className=" col-12 col-md-8">{researcherState.descriptions}</p>
+              <p className=" col-12 col-md-8">{researcherState.description}</p>
             </div>
             <div className="row">
               <FormModif
                 id={id}
                 entityName={"Researchers"}
                 data={{
-                  descriptions: researcherState.descriptions,
+                  descriptions: researcherState.description,
                 }}
                 handleRefresh={handleRefresh}
               />
