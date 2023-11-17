@@ -44,7 +44,7 @@ export default class JsonServerB {
       }
 
       static async EntityUpdate(entityName: string,id: number, data: any) {
-        return fetch(`${JsonServerB.url}/${entityName}/${id}`, {
+        return fetch(`${JsonServerB.url}/${entityName}/${id}/patch`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
