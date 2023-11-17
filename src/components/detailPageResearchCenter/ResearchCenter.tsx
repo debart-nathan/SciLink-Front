@@ -36,7 +36,7 @@ const ResearchCenter = ({
       {researchCenterState ? (
         <section className="row mb-2">
           <h1 className="fs-1 col-12 text-center bg-light bi bi-mortarboard-fill mb-5">
-            {researchCenterState.libele}
+            {researchCenterState.label}
           </h1>
           <img
             width={"300px"}
