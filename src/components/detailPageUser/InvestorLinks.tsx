@@ -6,7 +6,7 @@ import CreateProfileInvestor from "./CreateProfileInvestor";
 const InvestorLinks = ({ id }: { id: number }) => {
   const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();
   useEffect(() => {
-    InvestorSelect("Investors", "user_id", id);
+    InvestorSelect("Investors", "app_user", id);
   }, []);
 
   async function InvestorSelect(

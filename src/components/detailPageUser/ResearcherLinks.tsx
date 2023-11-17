@@ -7,7 +7,7 @@ const ResearcherLinks = ({ id }: { id: number }) => {
   const [researchersState, setResearchersState] =
     useState<ResearcherInterface[]>();
   useEffect(() => {
-    ResearcherSelect("Researchers", "user_id", id);
+    ResearcherSelect("Researchers", "app_user", id);
   }, []);
 
   async function ResearcherSelect(
