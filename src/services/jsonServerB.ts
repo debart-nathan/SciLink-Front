@@ -1,5 +1,5 @@
 export default class JsonServerB {
-    private static url = "http://localhost:3002";
+    private static url = "http://localhost:8000";
 
     static async EntitySelectAll(entityName: string) : Promise<Array<any>> {
         return fetch(`${JsonServerB.url}/${entityName}`)

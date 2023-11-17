@@ -22,7 +22,7 @@ const Manages = ({ id  } : { id: number }) => {
   }
 
   useEffect(() => {
-    managesSelect("Manages", "research_center_id", id);
+    managesSelect("Manages", "researchCenter", id);
   }, []);
     
   return (
