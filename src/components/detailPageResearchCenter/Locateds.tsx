@@ -2,7 +2,7 @@ import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import DetailLocation from "./Location";
 import LocatedInterface from "../../interfaces/LocatedInterface";
-const Locateds = ({ id  } : { id: number }) => {
+const Locateds = ({ id  } : { id: string }) => {
 
   const [locatedsState, setLocatedsState] = useState<Array<LocatedInterface>>();
 
@@ -13,7 +13,7 @@ const Locateds = ({ id  } : { id: number }) => {
   async function locatedsSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);

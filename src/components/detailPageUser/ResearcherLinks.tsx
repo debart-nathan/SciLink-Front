@@ -3,7 +3,7 @@ import { useEffect , useState } from "react";
 import ResearcherInterface from "../../interfaces/ResearcherInterface";
 import CreateProfileResearcher from './CreateProfileResearcher';
 
-const ResearcherLinks = ({ id }: { id: number }) => {
+const ResearcherLinks = ({ id }: { id: string }) => {
   const [researchersState, setResearchersState] =
     useState<ResearcherInterface[]>();
   useEffect(() => {
@@ -13,7 +13,7 @@ const ResearcherLinks = ({ id }: { id: number }) => {
   async function ResearcherSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(

@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import DomainInterface from "../../interfaces/DomainInterface";
-const Domain = ({ id } : { id: number  }) => {
+const Domain = ({ id } : { id: string  }) => {
 
   const [domainState, setDomainState] = useState<DomainInterface>();
 
@@ -12,11 +12,8 @@ const Domain = ({ id } : { id: number  }) => {
 
   async function domainSelect(
     entityName: string,
-    id: number
+    id: string
   ) {
-    if (id === 0) {
-      return;
-    }
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       console.log(response);

@@ -2,18 +2,15 @@ import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import ResearchCenterLink from "./ResearchCenterLink";
 import ParentInterface from "../../interfaces/ParentInterface";
-const Parents = ({ id } : { id: number }) => {
+const Parents = ({ id } : { id: string }) => {
 
   const [parentsState, setParentsState] = useState<ParentInterface[]>();
 
   async function parentsSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
-    if (condition === 0) {
-      return;
-    }
     try {
       const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);
       console.log(response);

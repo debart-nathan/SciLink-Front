@@ -3,18 +3,18 @@ import { useEffect, useState } from "react";
 import PracticeInterface from "../../interfaces/PracticeInterface";
 import ResearchCenterLink from "./ResearchCenterLink";
 import Domain from "../detailPageResearcher/Domain";
-const Practices = ({ id  } : { id: number }) => {
+const Practices = ({ id  } : { id: string }) => {
 
   const [PracticesState, setPracticesState] = useState<PracticeInterface[]>();
 
   useEffect(() => {
     PracticesSelect("Practices", "researcher_id", id);
-  }, [id]);
+  }, []);
 
   async function PracticesSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);

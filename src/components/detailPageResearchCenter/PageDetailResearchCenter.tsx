@@ -21,7 +21,7 @@ const PageDetailResearchCenters = () => {
     const pathname = window.location.pathname;
     const segments = pathname.split("/");
     const lastSegment = segments[segments.length - 1];
-    return Number(lastSegment);
+    return lastSegment;
   }
 
   return (

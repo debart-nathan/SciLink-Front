@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import Domain from "./Domain";
 import StudyInterface from "../../interfaces/StudyInterface";
 
-const Studies = ({ id }: { id: number }) => {
+const Studies = ({ id }: { id: string }) => {
   const [studiesState, setStudiesState] = useState<StudyInterface[]>();
 
   async function studiesSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(

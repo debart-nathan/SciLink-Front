@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import InvestorInterface from "../../interfaces/InvestorInterface";
 import CreateProfileInvestor from "./CreateProfileInvestor";
 
-const InvestorLinks = ({ id }: { id: number }) => {
+const InvestorLinks = ({ id }: { id: string }) => {
   const [InvestorsState, setInvestorsState] = useState<InvestorInterface[]>();
   useEffect(() => {
     InvestorSelect("Investors", "app_user", id);
@@ -12,7 +12,7 @@ const InvestorLinks = ({ id }: { id: number }) => {
   async function InvestorSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(

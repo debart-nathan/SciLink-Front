@@ -3,7 +3,7 @@ import { Modal, Button, Form, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
 type CreateProfileInvestorProps = {
-    userId: number;
+    userId: string;
 };
 type TooltipProps = React.ComponentProps<typeof Tooltip>;
 

@@ -2,7 +2,7 @@ import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import TuteleInterface from "../../interfaces/TuteleInterface";
 import ResearchCenterLink from "./ResearchCenterLink";
-const Tuteles = ({ id  } : { id: number }) => {
+const Tuteles = ({ id  } : { id: string }) => {
 
   const [TutelesState, setTutelesState] = useState<TuteleInterface[]>();
 
@@ -13,7 +13,7 @@ const Tuteles = ({ id  } : { id: number }) => {
   async function TutelesSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);

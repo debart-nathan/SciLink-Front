@@ -2,7 +2,7 @@ import JsonServerB from "../../services/jsonServerB";
 import { useEffect , useState } from "react";
 import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
 
-const ResearchCenterLinks = ({ id }: { id: number }) => {
+const ResearchCenterLinks = ({ id }: { id: string }) => {
   const [ResearchCentersState, setResearchCentersState] =
     useState<ResearchCenterInterface[]>();
   useEffect(() => {
@@ -12,7 +12,7 @@ const ResearchCenterLinks = ({ id }: { id: number }) => {
   async function ResearchCenterSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(

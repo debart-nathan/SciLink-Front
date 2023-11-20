@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
-const ResearchCenter = ({ id } : {id: number} ) => {
+const ResearchCenter = ({ id } : {id: string} ) => {
   const [researchCenterState, setResearchCenterState] = useState<ResearchCenterInterface>();
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const ResearchCenter = ({ id } : {id: number} ) => {
 
   async function researchCenterSelect(
     entityName: string,
-    id: number
+    id: string
   ) {
 
       try {
