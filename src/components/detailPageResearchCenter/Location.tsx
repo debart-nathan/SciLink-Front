@@ -1,13 +1,13 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import LocationInterface from "../../interfaces/LocationInterface";
-const Location = ({ id }: { id: number }) => {
+const Location = ({ id }: { id: string }) => {
   const [locationState, setLocationState] = useState<LocationInterface>();
   useEffect(() => {
     locationSelect("Locations", id);
   }, []);
 
-  async function locationSelect(entityName: string, id: number) {
+  async function locationSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       console.log(response);

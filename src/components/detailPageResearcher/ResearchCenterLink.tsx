@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ResearchCenterInterface from "../../interfaces/ResearchCenterInterface";
 
-const ResearchCenter = ({ id }: { id: number }) => {
+const ResearchCenter = ({ id }: { id: string }) => {
   const [ResearchCenterState, setResearchCenterState] =
     useState<ResearchCenterInterface>();
 
@@ -11,7 +11,7 @@ const ResearchCenter = ({ id }: { id: number }) => {
     ResearchCenterSelect("ResearchCenters", id);
   }, []);
 
-  async function ResearchCenterSelect(entityName: string, id: number) {
+  async function ResearchCenterSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       setResearchCenterState(response);

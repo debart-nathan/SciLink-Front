@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import JsonServerB from "../../services/jsonServerB";
 
 type CreateProfileResearcherProps = {
-  userId: number;
+  userId: string;
 };
 
 type TooltipProps = React.ComponentProps<typeof Tooltip>;

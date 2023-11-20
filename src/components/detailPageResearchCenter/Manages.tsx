@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 import DetailPersonels from "./Personel";
 import ManageInterface from "../../interfaces/ManageInterface";
 
-const Manages = ({ id  } : { id: number }) => {
+const Manages = ({ id  } : { id: string }) => {
 
   const [managesState, setManagesState] = useState<ManageInterface[]>();
 
   async function managesSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);

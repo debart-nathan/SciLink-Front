@@ -14,11 +14,11 @@ const PageDetailUser = () => {
    *
    * @return {number} Le dernier segment du chemin d'URL en tant que nombre.
    */
-  function idSelect(): number {
+  function idSelect(): string {
     const pathname = window.location.pathname;
     const segments = pathname.split("/");
     const lastSegment = segments[segments.length - 1];
-    return Number(lastSegment);
+    return lastSegment;
   }
   //<Investisseur id={id}/>
   return (

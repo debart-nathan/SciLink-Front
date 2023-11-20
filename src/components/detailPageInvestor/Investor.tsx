@@ -9,7 +9,7 @@ const Investor = ({
   investorState,
   setInvestorState,
 }: {
-  id: number;
+  id: string;
   investorState: InvestorInterface | undefined;
   setInvestorState: Function;
 }) => {
@@ -23,7 +23,7 @@ const Investor = ({
     investorSelect("Investors", id);
   }, [refresh]);
 
-  async function investorSelect(entityName: string, id: number) {
+  async function investorSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       setInvestorState(response);

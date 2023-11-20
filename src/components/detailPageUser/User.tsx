@@ -8,7 +8,7 @@ const User = ({
   userState,
   setUserState,
 }: {
-  id: number;
+  id: string;
   userState: any;
   setUserState: Function;
 }) => {
@@ -26,7 +26,7 @@ const User = ({
     }
   }, [userState]);
 
-  async function LocationSelect(entityName: string, id: number) {
+  async function LocationSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       console.log(response);
@@ -36,7 +36,7 @@ const User = ({
     }
   }
 
-  async function UserSelect(entityName: string, id: number) {
+  async function UserSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       setUserState(response);

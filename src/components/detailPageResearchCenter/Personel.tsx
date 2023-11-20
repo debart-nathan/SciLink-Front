@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import PersonnelInterface from '../../interfaces/PersonnelInterface';
-const Personel = ({ id }: { id: number }) => {
+const Personel = ({ id }: { id: string }) => {
 
   const [personelState, setPersonelState] = useState<PersonnelInterface>();
 
@@ -11,7 +11,7 @@ const Personel = ({ id }: { id: number }) => {
 
   async function personelSelect(
     entityName: string,
-    id: number
+    id: string
   ) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);

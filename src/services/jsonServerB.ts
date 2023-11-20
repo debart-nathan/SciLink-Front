@@ -29,7 +29,7 @@ export default class JsonServerB {
         
       }
 
-      static async EntitySelect(entityName: string,id: number) : Promise<any> {
+      static async EntitySelect(entityName: string,id: string) : Promise<any> {
         return fetch(`${JsonServerB.url}/${entityName}/${id}`)
           .then((response) => {
             return response.json();
@@ -43,7 +43,7 @@ export default class JsonServerB {
         
       }
 
-      static async EntityUpdate(entityName: string,id: number, data: any) {
+      static async EntityUpdate(entityName: string,id: string, data: any) {
         return fetch(`${JsonServerB.url}/${entityName}/${id}/patch`, {
           method: "PATCH",
           headers: {

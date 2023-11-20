@@ -9,7 +9,7 @@ const FormModifUser = ({
   data,
   handleRefresh,
 }: {
-  id: number;
+  id: string;
   entityName: string;
   data: { [key: string]: string };
   handleRefresh: Function;

@@ -9,7 +9,7 @@ const Researcher = ({
   researcherState,
   setResearcherState,
 }: {
-  id: number;
+  id: string;
   researcherState: ResearcherInterface | undefined;
   setResearcherState: Function;
 }) => {
@@ -23,7 +23,7 @@ const Researcher = ({
     ResearcherSelect("Researchers", id);
   }, [refresh]);
 
-  async function ResearcherSelect(entityName: string, id: number) {
+  async function ResearcherSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       setResearcherState(response);

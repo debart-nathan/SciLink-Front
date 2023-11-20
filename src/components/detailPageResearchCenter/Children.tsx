@@ -5,7 +5,7 @@ import ParentInterface from "../../interfaces/ParentInterface";
 const Children = ({
   id
 }: {
-  id: number;
+  id: string;
 }) => {
   const [childrenState, setChildrenState] = useState<ParentInterface[]>();
   useEffect(() => {
@@ -15,7 +15,7 @@ const Children = ({
   async function childrenSelect(
     entityName: string,
     conditionName: string,
-    condition: number
+    condition: string
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(

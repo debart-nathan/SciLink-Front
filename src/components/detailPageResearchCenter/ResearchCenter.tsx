@@ -7,7 +7,7 @@ const ResearchCenter = ({
   researchCenterState,
   setResearchCenterState,
 }: {
-  id: number;
+  id: string;
   researchCenterState: any;
   setResearchCenterState: Function;
 }) => {
@@ -22,7 +22,7 @@ const ResearchCenter = ({
 
   
 
-  async function researchCenterSelect(entityName: string, id: number) {
+  async function researchCenterSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       setResearchCenterState(response);

@@ -3,16 +3,16 @@ import { useEffect } from "react";
 import { useState } from "react";
 import UserInterface from "../../interfaces/UserInterface";
 
-const User = ({id} : {id: number} ) => {
+const User = ({id} : {id: string} ) => {
     const [userState, setUserState] = useState<UserInterface>();
 
   useEffect(() => {
     UserSelect("Users", id);
-  }, [id]);
+  }, []);
 
   async function UserSelect(
     entityName: string,
-    id: number
+    id: string
   ) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
