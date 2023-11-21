@@ -40,14 +40,8 @@ const Researcher = ({
             {" "}
             {researcherState.id}{" "}
           </h1>
-          <img
-            width={"300px"}
-            height={"auto"}
-            src={researcherState.img}
-            className="img-fluid col-md-5"
-            alt={`image du chercheur ${researcherState.user_id}`}
-          />
-          <div className="col-12 col-md-7 align-items-center ">
+         
+          <div className="col-12 col-md-9 offset-md-2 align-items-center ">
             <div className="row">
               <h4 className="col-12 col-md-4">Description:</h4>
               <p className=" col-12 col-md-8">{researcherState.description}</p>
