@@ -47,6 +47,7 @@ const SearchPage = () => {
                     case "card":
                         return (
                             <div className="row cardss">
+
                                 {cards &&
                                     Array.isArray(cards) &&
                                     cards.map((card) => {
@@ -64,11 +65,13 @@ const SearchPage = () => {
                                             />
                                         );
                                     })}
+
                             </div>
                         );
                     case "list":
                         return (
                             <ul className=" cardss">
+
                                 {cards &&
                                     Array.isArray(cards) &&
                                     cards.map((card) => {
