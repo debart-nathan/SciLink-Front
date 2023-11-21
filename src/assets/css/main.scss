@@ -27,13 +27,14 @@ $light: #fff;
 
 h1,h2,h3,h4,h5,nav{
 font-family: 'nulshock';
-font-size: 0.9em !important;
+font-size: 0.7em !important;
 }
 body{
     font-family: $font-family-base;
     font-size: 1.3em !important;
     background-color: $primary !important;
     color: $dark !important;
+    word-wrap: break-word !important;
 }
 
 // .background{
@@ -67,7 +68,6 @@ a{
     text-decoration: none !important;
 
 }
-
 
 
 

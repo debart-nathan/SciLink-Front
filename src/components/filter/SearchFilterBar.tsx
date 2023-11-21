@@ -25,7 +25,7 @@ const SearchFilterBar: React.FC<SearchFilterBarInterface>= ({searchCategoryClass
     */
     return (
         <>
-            <select className={searchCategoryClassName} style={{width: "26%"}} {...register("category")}>
+            <select className={searchCategoryClassName} style={{width: "37%"}} {...register("category")}>
                 <option className="form-check" value="">Tous</option>
                 <option className="form-check" value="research-center">Centre de Recherche</option>
                 <option className="form-check" value="searcher">Chercheur</option>

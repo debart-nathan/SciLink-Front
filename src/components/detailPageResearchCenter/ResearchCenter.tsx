@@ -62,7 +62,7 @@ const ResearchCenter = ({
                 {String(researchCenterState.is_active)}
               </p>
             </div>
-            <div className="row">
+            <div className="row wrap">
               <h5 className="col-12 col-md-4">Site Web :</h5>
               <p className=" col-12 col-md-8">
                 <a className="text-danger" href={researchCenterState.website}>
@@ -70,7 +70,7 @@ const ResearchCenter = ({
                 </a>
               </p>
             </div>
-            <div className="row">
+            <div className="row wrap">
               <h5 className="col-12 col-md-4">Fiche : </h5>{" "}
               <p className=" col-12 col-md-8">
                 <a className="text-danger" href={researchCenterState.fiche_msr}>

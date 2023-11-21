@@ -6,7 +6,7 @@ const Personel = ({ id }: { id: string }) => {
   const [personelState, setPersonelState] = useState<PersonnelInterface>();
 
   useEffect(() => {
-    personelSelect("Personels", id);
+    personelSelect("Personnels", id);
   }, []);
 
   async function personelSelect(
