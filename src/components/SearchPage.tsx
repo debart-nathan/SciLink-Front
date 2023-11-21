@@ -47,27 +47,45 @@ const SearchPage = () => {
                     case "card":
                         return (
                             <div className="row cardss">
-                                {cards.map((card) => {
-                                    return (
-                                        <DisplayCardE
-                                            key={card.data.id}
-                                            card={card}
-                                        />
-                                    );
-                                })}
+                                {cards &&
+                                    Array.isArray(cards) &&
+                                    cards.map((card) => {
+                                        let id;
+                                        if (card.category === "searcher") {
+                                            id = card.data.profil.id;
+                                        } else {
+                                            id = card.data.id;
+                                        }
+                                        const key = `${card.category}-${id}`;
+                                        return (
+                                            <DisplayCardE
+                                                key={key}
+                                                card={card}
+                                            />
+                                        );
+                                    })}
                             </div>
                         );
                     case "list":
                         return (
                             <ul className=" cardss">
-                                {cards.map((card) => {
-                                    return (
-                                        <DisplayListE
-                                            key={card.data.id}
-                                            card={card}
-                                        />
-                                    );
-                                })}
+                                {cards &&
+                                    Array.isArray(cards) &&
+                                    cards.map((card) => {
+                                        let id;
+                                        if (card.category === "searcher") {
+                                            id = card.data.profil.id;
+                                        } else {
+                                            id = card.data.id;
+                                        }
+                                        const key = `${card.category}-${id}`;
+                                        return (
+                                            <DisplayListE
+                                                key={key}
+                                                card={card}
+                                            />
+                                        );
+                                    })}
                             </ul>
                         );
                     default:
