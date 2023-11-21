@@ -31,7 +31,7 @@ const ResearcherLinks = ({ id }: { id: string }) => {
     <>
       <CreateProfileResearcher userId={id}/>
       {researchersState ? (
-        <div className="row border border-danger border-bottom-0">
+        <div className="row border border-danger border-bottom-0 mt-2">
           
           {researchersState.map((researchers: any) => (
             <a
