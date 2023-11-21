@@ -1,49 +1,81 @@
 import { useState, useRef } from "react";
-import JsonServer from "../../services/jsonServerLogin";
+
 import FormLogin from "./FormLogin";
 import FormSignUp from "./FormSigUp";
+import JsonServerB from "../../services/jsonServerB";
+import { useNavigate } from 'react-router-dom';
 
 function Connexion() {
-  const [isLogin, setIsLogin] = useState(false);
-  const inputNameRef = useRef(null);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [activeForm, setActiveForm] = useState("login");
+    const [activeForm, setActiveForm] = useState("login");
 
-  const toggleForm = (formType: any) => {
-    setActiveForm(formType);
-  };
-  
+    const toggleForm = (formType: any) => {
+        setActiveForm(formType);
+    };
 
-  async function isConnect(email: string, password: string) {
-    const user_loaded = await JsonServer.loadUser(email, password);
-    setIsLogin(user_loaded);
-  }
+    const navigate = useNavigate();
 
-  function handleSubmitLoginUser() {
-    if (inputNameRef.current) {
-      console.log("Dans handleSubmitLoginUser");
-      // Récupérer les données qui sont entrées par l'utilisateur dans le formulaire (email, pwd )
-      isConnect(email, password);
-      JsonServer.isLogin();
-      setEmail("");
-      setPassword("");
-    }
-  }
+    const handleLogin = async (email: string, password: string) => {
+        try {
+            const response = await JsonServerB.PostRequest("login", {
+                username: email,
+                password,
+            });
+            if (response.status === "ok") {
+                console.log("Request successful", response);
+                navigate('/'); // Redirect to home
+            } else {
+                console.log(response)
+                alert(response.message); // Show the message from the response
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
-  return (
-    <div className="Connexion_container ">
+    const handleRegister = async (
+        username: string,
+        email: string,
+        lastName: string,
+        firstName: string,
+        password: string
+    ) => {
+        try {
+            const response = await JsonServerB.PostRequest("register", {
+                user_name: username,
+                email,
+                first_name: firstName,
+                last_name: lastName,
+                password,
+            });
+            if (response.status === "ok") {
+                console.log("Request successful", response);
+                navigate('/'); // Redirect to home
+            } else {
+                console.log(response)
+                alert(response.message); // Show the message from the response
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
-      {!isLogin && (
-        <>
-           {activeForm === "login" ? (
-        <FormLogin onToggleForm={toggleForm} onSubmitLoginUser={handleSubmitLoginUser} inputNameRef={inputNameRef} />
-      ) : (
-        <FormSignUp onToggleForm={toggleForm} />
-      )}
-        </>
-      )}
-    </div>
-  );
+
+    return (
+        <div className="Connexion_container ">
+            <>
+                {activeForm === "login" ? (
+                    <FormLogin
+                        onToggleForm={toggleForm}
+                        onSubmit={handleLogin}
+                    />
+                ) : (
+                    <FormSignUp
+                        onToggleForm={toggleForm}
+                        onSubmit={handleRegister}
+                    />
+                )}
+            </>
+        </div>
+    );
 }
 export default Connexion;
