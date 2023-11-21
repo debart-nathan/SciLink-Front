@@ -36,7 +36,7 @@ const FormModifUser = ({
   const handleShow = () => setShow(true);
 
   return (
-    <button className="btnx col-md-1 col-12 my-4" onClick={handleShow}>
+    <button className="btnx col-md-2 col-12 my-4" onClick={handleShow}>
       <span></span>
       <span></span>
       <span></span>

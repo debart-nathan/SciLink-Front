@@ -17,13 +17,13 @@ const FormSignUp = ({ onToggleForm }: { onToggleForm: any }) => {
         </div>
         <div className="inputBox">
           <input type="text" required={true} />
-          <i className="bi bi-envelope-at"></i>
+          <i className="bi bi-person-vcard"></i>
           <span>Nom</span>
         </div>
         <div className="inputBox">
           <input type="text" required={true} />
-          <i className="bi bi-envelope-at"></i>
-          <span>Prenom</span>
+          <i className="bi bi-person-vcard-fill"></i>
+          <span>Prénom</span>
         </div>
         <div className="inputBox">
           <input type="password" required={true} />
