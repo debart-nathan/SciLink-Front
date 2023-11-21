@@ -38,7 +38,7 @@ const Header = () => {
         </div>
 
         <div className="col-12 col-md-2">
-          <Link to="/recherche?category=researcher">Chercheurs</Link>
+          <Link to="/recherche?category=searcher">Chercheurs</Link>
 
         </div>
         <div className="col-12 col-md-3">
