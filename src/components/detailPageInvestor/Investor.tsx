@@ -40,14 +40,7 @@ const Investor = ({
             {" "}
             {investorState.name}{" "}
           </h1>
-          <img
-            width={"300px"}
-            height={"auto"}
-            src={investorState.img}
-            className="img-fluid col-md-5"
-            alt={`image de l'investisseur ${investorState.name}`}
-          />
-          <div className="col-12 col-md-7 align-items-center ">
+          <div className="col-12 col-md-9 offset-md-2 align-items-center ">
             <div className="row">
               <h4 className="col-12 col-md-4">acronyme:</h4>
               <p className=" col-12 col-md-8">{investorState.sigle}</p>
