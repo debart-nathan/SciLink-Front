@@ -55,7 +55,7 @@ const User = ({
           <section className="row ">
             <article className="col-12 col-md-10 offset-md-1 ">
               <div className="row d-flex align-items-center ">
-                <div className="col-12 col-md-3 align-self-center">
+                <div className="col-12 col-md-4 align-self-center">
                   Prénom :
                   <p className="border-bottom border-dark border-2 d-inline ms-2">
                     {userState.first_name}
@@ -68,7 +68,7 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <div className="col-12 col-md-3 align-self-center">
+                  <div className="col-12 col-md-4 align-self-center">
                     Adresse :
                     <p className="border-bottom border-dark border-2 d-inline ms-2">
                       {locationState.address}
@@ -83,7 +83,7 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <div className="col-12 col-md-3 align-self-center">
+                <div className="col-12 col-md-4 align-self-center">
                   Email :
                   <p className="border-bottom border-dark border-2 d-inline ms-2"> {userState.email}</p>
                 </div>
@@ -93,7 +93,7 @@ const User = ({
                   data={{ email: userState.email }}
                   handleRefresh={handleRefresh}
                 />
-                <div className="col-12 col-md-3 align-self-center">
+                <div className="col-12 col-md-4 align-self-center">
                   Nom :
                   <p className="border-bottom border-dark border-2 d-inline ms-2">
                     {userState.last_name}
@@ -106,7 +106,7 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <div className="col-12 col-md-3 align-self-center">
+                  <div className="col-12 col-md-4 align-self-center">
                     Code Postal :{" "}
                     <p className="border-bottom border-dark border-2 d-inline ms-2">
                       {locationState.postal_code}{" "}
@@ -121,10 +121,10 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <div className="col-12 col-md-3 align-self-center">
-                  Mot de passe :{" "}
+                <div className="col-12 col-md-4 align-self-center">
+                  Mot de passe :
                   <p className="border-bottom border-dark border-2 d-inline ms-2">
-                    {userState.password}{" "}
+                    *********
                   </p>
                 </div>
                 <FormModifUser
@@ -133,7 +133,7 @@ const User = ({
                   data={{ password: userState.password }}
                   handleRefresh={handleRefresh}
                 />
-                <div className="col-12 col-md-3 align-self-center">
+                <div className="col-12 col-md-4 align-self-center">
                   Pseudo :{" "}
                   <p className="border-bottom border-dark border-2 d-inline ms-2">
                     {" "}
@@ -147,7 +147,7 @@ const User = ({
                   handleRefresh={handleRefresh}
                 />
                 {locationState ? (
-                  <div className="col-12 col-md-3 align-self-center">
+                  <div className="col-12 col-md-4 align-self-center">
                     Commune :{" "}
                     <p className="border-bottom border-dark border-2 d-inline ms-2">
                       {locationState.commune}{" "}
@@ -162,16 +162,16 @@ const User = ({
                     handleRefresh={handleRefresh}
                   />
                 ) : null}
-                <div className="col-12 col-md-3 align-self-center">
-                  Photo de Profils :
-                  <p className="border-bottom border-dark border-2 d-inline ms-2"> {userState.photo}</p>
+                <div className="col-12 col-md-4 align-self-center">
+                  {/* Photo de Profils :
+                  <p className="border-bottom border-dark border-2 d-inline ms-2"> {userState.photo}</p> */}
                 </div>
-                <FormModifUser
+                {/* <FormModifUser
                   id={id}
                   entityName={"Users"}
                   data={{ photo: userState.photo }}
                   handleRefresh={handleRefresh}
-                />
+                /> */}
               </div>
             </article>
           </section>

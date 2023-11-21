@@ -32,14 +32,15 @@ const FormSignUp = ({ onToggleForm, onSubmit }: { onToggleForm: any, onSubmit: (
           <span>Email</span>
         </div>
         <div className="inputBox">
-          <input type="text" required={true} value={lastName} onChange={(e) => setLastName(e.target.value)} />
-          <i className="bi bi-envelope-at"></i>
+          <input type="text" required={true} />
+          <i className="bi bi-person-vcard"></i>
           <span>Nom</span>
         </div>
         <div className="inputBox">
           <input type="text" required={true} value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-          <i className="bi bi-envelope-at"></i>
-          <span>Prenom</span>
+          <i className="bi bi-person-vcard-fill"></i>
+          <span>Prénom</span>
+
         </div>
         <div className="inputBox">
           <input type="password" required={true} value={password} onChange={(e) => setPassword(e.target.value)} />
