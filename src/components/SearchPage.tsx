@@ -47,10 +47,10 @@ const SearchPage = () => {
                     case "card":
                         return (
                             <div className="row cardss">
-                                {cards.map((card) => {
+                                {cards&&cards.map((card) => {
                                     return (
                                         <DisplayCardE
-                                            key={card.data.id}
+                                            key={card.category+card.data.id}
                                             card={card}
                                         />
                                     );
@@ -60,10 +60,10 @@ const SearchPage = () => {
                     case "list":
                         return (
                             <ul className=" cardss">
-                                {cards.map((card) => {
+                                {cards&&cards.map((card) => {
                                     return (
                                         <DisplayListE
-                                            key={card.data.id}
+                                            key={card.category+card.data.id}
                                             card={card}
                                         />
                                     );
