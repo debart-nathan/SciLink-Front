@@ -21,7 +21,7 @@ const CreateProfileResearcher: React.FC<CreateProfileResearcherProps> = ({
   const [show, setShow] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const [domainOption, setDomainOptions] = useState<
-  { id: number; name: string }[]
+  { id: string; name: string }[]
 >([]);
 
 
