@@ -43,9 +43,30 @@ export default class JsonServerB {
         
       }
 
+      static async PostRequest(endpoint: string, data: any) : Promise<any> {
+        return fetch(`${JsonServerB.url}/${endpoint}`, {
+            method: "POST",
+            mode: 'cors',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+    }
+
       static async EntityUpdate(entityName: string,id: string, data: any) {
         return fetch(`${JsonServerB.url}/${entityName}/${id}/patch`, {
           method: "PATCH",
+          mode: 'cors',
           headers: {
             "Content-Type": "application/json",
           },

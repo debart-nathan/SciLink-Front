@@ -11,6 +11,19 @@ interface FormProps {
     onSubmit: (data: any) => void;
 }
 
+const transformQueryToNested = (query: any) => {
+    const result: any = {};
+    for (const key in query) {
+        const keys = key.split('.');
+        keys.reduce((res, key, i) => {
+            const value = query[keys.join('.')];
+            return res[key] = keys.length === i + 1 ? value : res[key] || {};
+        }, result);
+    }
+    return result;
+}
+
+
 const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
     // Utilisation de l'objet location pour récupéré l'url actuel
     const location = useLocation();
@@ -18,8 +31,9 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
     const navigate = useNavigate();
     // récupère les valeurs dans l'url
     const currentQuery = queryString.parse(location.search);
+    const nestedQuery = transformQueryToNested(currentQuery);
     // Récupération des méthode de manipulation de form.
-    const methods = useForm({ defaultValues: currentQuery as any });
+    const methods = useForm({ defaultValues: nestedQuery as any });
     // Ajout d'un événement onChange pour tous les futures field.
     const category = methods.watch("category");
 
@@ -90,22 +104,21 @@ const SearchFilterMain: React.FC<FormProps> = ({ onSubmit }) => {
 
     // Effet pour gérer le changement de "category"
     useEffect(() => {
-        if (prevCategory !== category) {
-            switch (category) {
-                case "research-center":
-                    methods.reset(resetResearchCenterFields());
-                    break;
-                case "searcher":
-                    methods.reset(resetSearcherFields());
-                    break;
-                case "investor":
-                    methods.reset(resetInvestorFields());
-                    break;
-                default:
-                    return;
-            }
+        const queryParameters = queryString.parse(location.search);
+        switch (category) {
+            case "research-center":
+                //methods.reset({ ...resetResearchCenterFields(), ...queryParameters });
+                break;
+            case "searcher":
+                //methods.reset({ ...resetSearcherFields(), ...queryParameters });
+                break;
+            case "investor":
+                //methods.reset({ ...resetInvestorFields(), ...queryParameters });
+                break;
+            default:
+                return;
         }
-    }, [category, methods, prevCategory, resetInvestorFields, resetResearchCenterFields, resetSearcherFields]);
+    }, [category, methods, location.search, resetInvestorFields, resetResearchCenterFields, resetSearcherFields]);
 
     // Cette fonction prend un objet de données et le "aplatit", c'est-à-dire qu'elle transforme les structures de données imbriquées en une structure de niveau supérieur.
     const flattenData = (data: any, path: string = ""): any => {

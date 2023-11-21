@@ -36,8 +36,10 @@ const Header = () => {
             Centre de Recherches
           </Link>
         </div>
+
         <div className="col-12 col-md-2">
           <Link to="/recherche?category=researcher">Chercheurs</Link>
+
         </div>
         <div className="col-12 col-md-3">
           <div className="row justify-content-end">
