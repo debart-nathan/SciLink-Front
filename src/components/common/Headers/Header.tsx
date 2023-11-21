@@ -17,18 +17,18 @@ const Header = () => {
 
   return (
     <header id="nav" className="mt-3 mb-5">
-      <nav className="row justify-content-around align-items-center text-center">
-        <div className="col-12 col-md-1">
+      <nav className="row justify-content-center align-items-center text-center">
+        <div className="col-4 col-md-1">
           <Link to="/">
             <img src={logoName} className="img-fluid" alt="logo Accueil" />
           </Link>
         </div>
-        <div className="col-12 col-md-1">
+        {/* <div className="col-12 col-md-1">
           <Link className="disabled display-none" to="/Projects">
-            Projets
+            Projet
           </Link>
-        </div>
-        <div className="col-12 col-md-1">
+        </div> */}
+        <div className="col-12 col-md-2">
           <Link to="/recherche?category=investor">Investisseurs</Link>
         </div>
         <div className="col-12 col-md-2 text-center">
@@ -36,8 +36,10 @@ const Header = () => {
             Centre de Recherches
           </Link>
         </div>
-        <div className="col-12 col-md-1">
-          <Link to="/recherche?category=searcher">Chercheurs</Link>
+
+        <div className="col-12 col-md-2">
+          <Link to="/recherche?category=researcher">Chercheurs</Link>
+
         </div>
         <div className="col-12 col-md-3">
           <div className="row justify-content-end">

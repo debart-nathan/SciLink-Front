@@ -31,7 +31,7 @@ const Manages = ({ id  } : { id: string }) => {
        <div className="col-md-4 ">
       <h3 className="text-warning text-center">Dirigeant :</h3>
         {managesState.map((manages: any) => (
-          <DetailPersonels key={manages.directeur_id} id={manages.directeur_id}  />
+          <DetailPersonels key={manages.personnel_id} id={manages.personnel_id}  />
         ))}</div>
      ) : null}
     </>

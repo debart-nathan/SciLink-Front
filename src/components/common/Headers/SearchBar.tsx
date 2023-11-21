@@ -31,20 +31,21 @@ const SearchBar: React.FC = () => {
         Elles sont récupéré par l'appel de seFormContext() dans les dit composent
     */
     return (
-        <FormProvider {...methods}>
-            <form className="row" onSubmit={methods.handleSubmit(onFormSubmit)}>
-                <SearchFilterBar
-                    searchCategoryClassName="col-4 form-select"
-                    searchClassName="col-6 form-Search "
-                />
-                <button
-                    type="submit"
-                    className="btnx col-2">
-                    <span></span><span></span><span></span><span></span>
-                    Go
-                </button>
-            </form>
-        </FormProvider>
+      <FormProvider {...methods}>
+        <form className="row" onSubmit={methods.handleSubmit(onFormSubmit)}>
+          <SearchFilterBar
+            searchCategoryClassName="col-5  form-select "
+            searchClassName="col-5  form-Search "
+          />
+          <button type="submit" className="btnx col-2 ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Go
+          </button>
+        </form>
+      </FormProvider>
     );
 };
 

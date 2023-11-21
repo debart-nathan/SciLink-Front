@@ -28,9 +28,14 @@ const ResearchCenterLinks = ({ id }: { id: string }) => {
 
   return (
     <>
-      <a className="btnx btn my-2" href="/contact-us"><span></span><span></span><span></span><span></span> contactez nous pour créer ou lier un centre</a>
+      <a className="btnx btn my-2 " href="/contact-us">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> contactez nous pour créer ou lier un centre
+      </a>
       {ResearchCentersState ? (
-        <div className="row border border-danger border-bottom-0">
+        <div className="row border border-danger border-bottom-0 mt-2">
           {ResearchCentersState.map((ResearchCenters: any) => (
             <a
               className="col-12 col-md-6 text-danger"
