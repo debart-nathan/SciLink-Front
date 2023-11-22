@@ -21,10 +21,8 @@ function Connexion() {
                 password,
             });
             if (response.status === "ok") {
-                console.log("Request successful", response);
                 navigate('/'); // Redirect to home
             } else {
-                console.log(response)
                 alert(response.message); // Show the message from the response
             }
         } catch (error) {
