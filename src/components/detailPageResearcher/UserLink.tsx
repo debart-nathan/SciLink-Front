@@ -3,8 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import UserInterface from "../../interfaces/UserInterface";
 
-const User = ({id} : {id: string} ) => {
-    const [userState, setUserState] = useState<UserInterface>();
+const User = ({id, userState, setUserState} : {id: string, userState: UserInterface | undefined, setUserState: Function} ) => {
 
   useEffect(() => {
     UserSelect("Users", id);
