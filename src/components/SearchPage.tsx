@@ -41,6 +41,7 @@ const SearchPage = () => {
       onSearch({});
     }, [pagination.page, pagination.limit]);
 
+
     const renderPageButtons = () => {
       const totalPages = Math.ceil(pagination.total / pagination.limit);
       const currentPage = pagination.page;

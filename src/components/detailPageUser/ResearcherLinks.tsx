@@ -6,9 +6,20 @@ import CreateProfileResearcher from './CreateProfileResearcher';
 const ResearcherLinks = ({ id }: { id: string }) => {
   const [researchersState, setResearchersState] =
     useState<ResearcherInterface[]>();
+  const [isConnectedUser, setIsConnectedUser] = useState(false);
+
   useEffect(() => {
     ResearcherSelect("Researchers", "app_user", id);
   }, []);
+
+  useEffect(() => {
+    const checkUser = async () => {
+      const isConnected = await JsonServerB.IsConnectedUser(id);
+      setIsConnectedUser(isConnected);
+    };
+
+    checkUser();
+  }, [id]);
 
   async function ResearcherSelect(
     entityName: string,
@@ -29,10 +40,9 @@ const ResearcherLinks = ({ id }: { id: string }) => {
 
   return (
     <>
-      <CreateProfileResearcher userId={id}/>
+      {isConnectedUser && <CreateProfileResearcher userId={id}/>}
       {researchersState ? (
         <div className="row border border-danger border-bottom-0 mt-2">
-          
           {researchersState.map((researchers: any) => (
             <a
               className="col-12 col-md-6 text-danger"

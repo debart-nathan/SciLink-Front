@@ -29,16 +29,16 @@ const LinkProfileForm: React.FC<LinkProfileFormProps> = ({
 
   // Initialisation des états pour stocker les profils
   const [profiles, setProfiles] = useState<
-    { id: number; displayText: string }[]
+    { id: string; displayText: string }[]
   >([]);
   const [researchCenterProfiles, setResearchCenterProfiles] = useState<
-    { id: number; displayText: string }[]
+    { id: string; displayText: string }[]
   >([]);
   const [searcherProfiles, setSearcherProfiles] = useState<
-    { id: number; displayText: string }[]
+    { id: string; displayText: string }[]
   >([]);
   const [investorProfiles, setInvestorProfiles] = useState<
-    { id: number; displayText: string }[]
+    { id: string; displayText: string }[]
   >([]);
 
   // Utilisation du hook useEffect pour créer les profils lors du chargement du composant
@@ -48,11 +48,11 @@ const LinkProfileForm: React.FC<LinkProfileFormProps> = ({
       displayText: `${profile.id} - ${profile.sigle}`,
     }));
     const sProfiles = searchers.map((profile) => ({
-      id: profile.id,
+      id: profile.id.toString(),
       displayText: `${profile.id}`,
     }));
     const iProfiles = investors.map((profile) => ({
-      id: profile.id,
+      id: profile.id.toString(),
       displayText: `${profile.id} - ${profile.label}`,
     }));
 
@@ -63,7 +63,7 @@ const LinkProfileForm: React.FC<LinkProfileFormProps> = ({
 
   // Utilisation du hook useEffect pour mettre à jour l'état des profils en fonction du type de profil sélectionné
   useEffect(() => {
-    let profiles: { id: number; displayText: string }[];
+    let profiles: { id: string; displayText: string }[];
     switch (profileType) {
       case "research-center":
         profiles = researchCenterProfiles;

@@ -32,7 +32,7 @@ const PageDetailInvestor = () => {
       <section className="row">
         <Tuteles id={id} />
       
-        <UserLink id={id} />
+        {investorState && investorState.user_id && <UserLink id={investorState?.user_id?.toString()} />}
       </section>
     </>
   );

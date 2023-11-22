@@ -17,7 +17,6 @@ const Studies = ({ id }: { id: string }) => {
         conditionName,
         condition
       );
-      console.log(response);
       setStudiesState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
@@ -31,7 +30,7 @@ const Studies = ({ id }: { id: string }) => {
   return (
     <>
       {studiesState ? (
-        <div className="col-md-4 border border-bottom-0 border-danger">
+        <div className="col-12 col-md-3 border border-bottom-0 border-danger">
           <h3 className="text-center">Domaines étudier :</h3>
           {studiesState.map((Studies: any) => (
             <Domain key={Studies.domain_id} id={Studies.domain_id} />

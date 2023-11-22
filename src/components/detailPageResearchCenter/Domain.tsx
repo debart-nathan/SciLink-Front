@@ -16,7 +16,6 @@ const Domain = ({ id } : { id: string  }) => {
   ) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
-      console.log(response);
       setDomainState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
@@ -26,7 +25,7 @@ const Domain = ({ id } : { id: string  }) => {
     <>
     {domainState ? (
       <article className="row">
-            <h5 className="col-md-6 col-12" >{domainState.name}</h5>
+            <h5 className="col-12" >{domainState.name}</h5>
           </article>
     ) : null}
     </>

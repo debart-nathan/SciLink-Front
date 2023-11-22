@@ -22,16 +22,16 @@ const UnlinkProfileForm: React.FC<UnlinkProfileFormProps> = ({
 
     // États des profils
     const [profiles, setProfiles] = useState<
-        { id: number; displayText: string }[]
+        { id: string; displayText: string }[]
     >([]);
     const [researchCenterProfiles, setResearchCenterProfiles] = useState<
-        { id: number; displayText: string }[]
+        { id: string; displayText: string }[]
     >([]);
     const [searcherProfiles, setSearcherProfiles] = useState<
-        { id: number; displayText: string }[]
+        { id: string; displayText: string }[]
     >([]);
     const [investorProfiles, setInvestorProfiles] = useState<
-        { id: number; displayText: string }[]
+        { id: string; displayText: string }[]
     >([]);
 
     // Récupération des profils
@@ -63,11 +63,11 @@ const UnlinkProfileForm: React.FC<UnlinkProfileFormProps> = ({
                     displayText: `${profile.id} - ${profile.sigle}`,
                 }));
                 const sProfiles = searchers.map((profile) => ({
-                    id: profile.id,
+                    id: profile.id.toString(),
                     displayText: `${profile.id}`,
                 }));
                 const iProfiles = investors.map((profile) => ({
-                    id: profile.id,
+                    id: profile.id.toString(),
                     displayText: `${profile.id} - ${profile.label}`,
                 }));
 
@@ -86,7 +86,7 @@ const UnlinkProfileForm: React.FC<UnlinkProfileFormProps> = ({
 
     // Mise à jour des profils
     useEffect(() => {
-        let profiles: { id: number; displayText: string }[];
+        let profiles: { id: string; displayText: string }[];
         switch (profileType) {
             case "research-center":
                 profiles = researchCenterProfiles;
