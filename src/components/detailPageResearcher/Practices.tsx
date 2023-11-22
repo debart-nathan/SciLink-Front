@@ -18,7 +18,6 @@ const Practices = ({ id  } : { id: string }) => {
   ) {
     try {
       const response = await JsonServerB.EntitySelectWCondition(entityName, conditionName, condition);
-      console.log(response);
       setPracticesState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
