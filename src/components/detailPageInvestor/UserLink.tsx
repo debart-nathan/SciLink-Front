@@ -3,17 +3,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import UserInterface from "../../interfaces/UserInterface";
 
-const User = ({id} : {id: string} ) => {
-    const [userState, setUserState] = useState<UserInterface>();
+const User = ({ id }: { id: string }) => {
+  const [userState, setUserState] = useState<UserInterface>();
 
   useEffect(() => {
     UserSelect("Users", id);
-  }, [id]);
+  }, []);
 
-  async function UserSelect(
-    entityName: string,
-    id: string
-  ) {
+  async function UserSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
       setUserState(response);
@@ -21,7 +18,7 @@ const User = ({id} : {id: string} ) => {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
     }
   }
-  
+
   return (
     <>
       {userState ? (
