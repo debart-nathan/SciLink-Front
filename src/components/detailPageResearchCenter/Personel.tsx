@@ -15,7 +15,6 @@ const Personel = ({ id }: { id: string }) => {
   ) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
-      console.log(response);
       setPersonelState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);
