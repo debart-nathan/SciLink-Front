@@ -27,7 +27,7 @@ const User = ({id, userState, setUserState} : {id: string, userState: UserInterf
         <div className="col-md-4 offset-md-4 border border-bottom-0 border-danger">
           <h3 className="text-center">Utilisateur :</h3>
           <a className="text-danger" href={`/user/${userState.id}`}>
-            Lien vers {userState.first_name} {userState.last_name}
+            Profil utilisateur de {userState.first_name} {userState.last_name}
           </a>
         </div>
       ) : null}

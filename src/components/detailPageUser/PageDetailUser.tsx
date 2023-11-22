@@ -29,7 +29,7 @@ const PageDetailUser = () => {
           <h3 className=" mt-5 mb-5">Favoris</h3>
           <article className="col-12 col-md-4">
             <h4 className="">Recherche</h4>
-            <Researcher id={id} />
+            <Researcher id={id} userState={userState} />
           </article>
           <article className="col-12 col-md-4">
             <h4 className="">Centre de Recherche</h4>
