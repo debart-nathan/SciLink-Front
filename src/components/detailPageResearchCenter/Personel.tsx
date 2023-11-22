@@ -1,7 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import PersonnelInterface from '../../interfaces/PersonnelInterface';
-const Personel = ({ id }: { id: string }) => {
+const Personel = ({ id , grade}: { id: string , grade:string}) => {
 
   const [personelState, setPersonelState] = useState<PersonnelInterface>();
 
@@ -25,14 +25,14 @@ const Personel = ({ id }: { id: string }) => {
       {personelState ? (
         <article className="">
           <div className="row">
-            <h5 className="col-6">Nom :</h5>
-          <p className="col-6"> {personelState.last_name}</p>
+            
+          <p className="col-4"> {personelState.last_name}</p>
+            
+          <p className="col-4"> {personelState.first_name}</p>
+          
+          <p className="col-4"> {grade}</p>
           </div>
-        
-          <div className="row">
-            <h5 className="col-6">Prenom :</h5>
-          <p className="col-6"> {personelState.first_name}</p>
-          </div>
+
         </article>
       ) : null}
     </>

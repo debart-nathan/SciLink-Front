@@ -25,7 +25,7 @@ const Domain = ({ id } : { id: string  }) => {
     <>
     {domainState ? (
       <article className="row">
-            <h5 className="col-md-6 col-12" >{domainState.name}</h5>
+            <h5 className="col-12" >{domainState.name}</h5>
           </article>
     ) : null}
     </>

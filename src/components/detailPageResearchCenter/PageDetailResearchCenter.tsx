@@ -37,7 +37,7 @@ const PageDetailResearchCenters = () => {
           setResearchCenterState={setResearchCenterState}
         />
         <section className="row">
-          <Manages id={id} />
+          <Manages id={id} users={researchCenterState?.users} />
           <Studies id={id} />
           <Locateds id={id} />
         </section>
