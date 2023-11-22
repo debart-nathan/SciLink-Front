@@ -7,4 +7,5 @@ export default interface UserInterface {
     password : string,
     user_name : string,
     location_id : number
+    research_centers : string[]
 }
