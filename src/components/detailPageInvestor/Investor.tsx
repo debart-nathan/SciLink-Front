@@ -1,8 +1,7 @@
 import JsonServerB from "../../services/jsonServerB";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import InvestorInterface from "../../interfaces/InvestorInterface";
 import FormModif from "./FormModif";
-import { useState } from "react";
 
 const Investor = ({
   id,
@@ -14,6 +13,7 @@ const Investor = ({
   setInvestorState: Function;
 }) => {
   const [refresh, setRefresh] = useState(false);
+  const [isConnectedUser, setIsConnectedUser] = useState(false);
 
   const handleRefresh = () => {
     setRefresh(!refresh);
@@ -22,6 +22,19 @@ const Investor = ({
   useEffect(() => {
     investorSelect("Investors", id);
   }, [refresh]);
+
+  useEffect(() => {
+    const checkUser = async () => {
+      if (investorState && investorState.user_id !== null) {
+        const isConnected = await JsonServerB.IsConnectedUser(investorState.user_id.toString());
+        setIsConnectedUser(isConnected);
+      } else {
+        setIsConnectedUser(false);
+      }
+    };
+
+    checkUser();
+  }, [investorState]);
 
   async function investorSelect(entityName: string, id: string) {
     try {
@@ -54,17 +67,19 @@ const Investor = ({
               <p className=" col-12 col-md-8">{String(investorState.label)}</p>
             </div>
             <div className="row">
-              <FormModif
-                id={id}
-                entityName={"Investors"}
-                data={{
-                  nom: investorState.name,
-                  sigle: investorState.sigle,
-                  nature: investorState.type,
-                  label: investorState.label,
-                }}
-                handleRefresh={handleRefresh}
-              />
+              {isConnectedUser && (
+                <FormModif
+                  id={id}
+                  entityName={"Investors"}
+                  data={{
+                    nom: investorState.name,
+                    sigle: investorState.sigle,
+                    nature: investorState.type,
+                    label: investorState.label,
+                  }}
+                  handleRefresh={handleRefresh}
+                />
+              )}
             </div>
           </div>
         </section>

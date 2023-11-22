@@ -31,8 +31,8 @@ const PageDetailResearcher = () => {
       </div>
       <section className="row">
         <Practices id={id} />
-
-        <UserLink id={id} />
+        
+        {researcherState && <UserLink id={researcherState?.user_id.toString()} />}
       </section>
     </>
   );
