@@ -10,7 +10,6 @@ const Location = ({ id }: { id: string }) => {
   async function locationSelect(entityName: string, id: string) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
-      console.log(response);
       setLocationState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);

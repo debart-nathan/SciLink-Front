@@ -17,7 +17,6 @@ const Studies = ({ id }: { id: string }) => {
         conditionName,
         condition
       );
-      console.log(response);
       setStudiesState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);

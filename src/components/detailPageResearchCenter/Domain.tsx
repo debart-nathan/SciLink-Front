@@ -16,7 +16,6 @@ const Domain = ({ id } : { id: string  }) => {
   ) {
     try {
       const response = await JsonServerB.EntitySelect(entityName, id);
-      console.log(response);
       setDomainState(response);
     } catch (error) {
       console.error(`Erreur attrapée dans ${entityName}Select : ` + error);

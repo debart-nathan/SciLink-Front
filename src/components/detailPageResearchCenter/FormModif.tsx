@@ -22,7 +22,6 @@ const FormModif = ({
     try {
       await JsonServerB.EntityUpdate(entityName, id, data);
     } catch (error) {
-      console.error(error);
     } finally {
       setShow(false);
       handleRefresh();
