@@ -181,7 +181,7 @@ const SearchPage = () => {
                 }
             })()}
             {/* Display the pagination controls */}
-            <div className="pagination-container">
+            <div className="pagination-container d-flex justify-content-center align-items-center">
                 <span>
                     Page {pagination.page} of{" "}
                     {Math.ceil(pagination.total / pagination.limit)}
