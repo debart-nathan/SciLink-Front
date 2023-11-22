@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# SciLink-Front
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -35,9 +35,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Running the Server
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+After building the app for production using `npm run build`, you can serve the app using the Node.js server. 
+
+Run the server with the command `node server.js`.
+
+The server will serve the files from the `build` directory at [http://localhost:8080](http://localhost:8080).
 
 ## Learn More
 
