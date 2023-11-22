@@ -32,7 +32,7 @@ const PageDetailResearcher = () => {
       <section className="row">
         <Practices id={id} />
         
-        {researcherState && <UserLink id={researcherState?.user_id.toString()} />}
+        {researcherState && <UserLink id={researcherState?.user_id?.toString()} />}
       </section>
     </>
   );
