@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ResearcherInterface from "../../interfaces/ResearcherInterface";
+import UserInterface from "../../interfaces/UserInterface";
 import Researcher from "./Researcher";
 import UserLink from "./UserLink";
 import Practices from "./Practices";
@@ -7,6 +8,7 @@ import Practices from "./Practices";
 const PageDetailResearcher = () => {
   const id = idSelect();
   const [researcherState, setResearcherState] = useState<ResearcherInterface>();
+  const [userState, setUserState] = useState<UserInterface>();
 
   /**
    * Récupère le dernier segment du chemin d'URL actuel en tant que nombre.
@@ -19,7 +21,6 @@ const PageDetailResearcher = () => {
     const lastSegment = segments[segments.length - 1];
     return lastSegment;
   }
-  //<Investisseur id={id}/>
   return (
     <>
       <div>
@@ -27,12 +28,18 @@ const PageDetailResearcher = () => {
           id={id}
           researcherState={researcherState}
           setResearcherState={setResearcherState}
+          userState={userState}
         />
       </div>
       <section className="row">
         <Practices id={id} />
-        
-        {researcherState && researcherState.user_id && <UserLink id={researcherState?.user_id?.toString()} />}
+
+        {researcherState && researcherState.user_id && (
+          <UserLink 
+          id={researcherState?.user_id?.toString()}
+          userState={userState}
+          setUserState={setUserState} />
+        )}
       </section>
     </>
   );
