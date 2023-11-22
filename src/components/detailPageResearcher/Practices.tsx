@@ -1,7 +1,6 @@
 import JsonServerB from "../../services/jsonServerB";
 import { useEffect, useState } from "react";
 import PracticeInterface from "../../interfaces/PracticeInterface";
-import ResearchCenterLink from "./ResearchCenterLink";
 import Domain from "../detailPageResearcher/Domain";
 const Practices = ({ id  } : { id: string }) => {
 
