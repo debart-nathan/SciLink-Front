@@ -49,7 +49,7 @@ const ResearcherLinks = ({ id , userState }: { id: string , userState: any}) => 
               key={researchers.id}
               href={`/researcher/${researchers.id}`}
             >
-              Profil chercheur de {userState.first_name} {userState.last_name}
+              Profil chercheur de {userState?.first_name} {userState?.last_name}
             </a>
           ))}
         </div>
