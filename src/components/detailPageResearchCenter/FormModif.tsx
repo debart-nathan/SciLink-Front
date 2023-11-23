@@ -4,49 +4,92 @@ import { useForm } from "react-hook-form";
 import JsonServerB from "./../../services/jsonServerB";
 
 const FormModif = ({
-  id,
-  entityName,
-  data,
-  handleRefresh,
+    id,
+    entityName,
+    data,
+    handleRefresh,
 }: {
-  id: string;
-  entityName: string;
-  data: { [key: string]: string };
-  handleRefresh: Function;
+    id: string;
+    entityName: string;
+    data: { [key: string]: string };
+    handleRefresh: Function;
 }) => {
-  const { register, handleSubmit } = useForm();
-  const [show, setShow] = useState<boolean>(false);
-  const keys = Object.keys(data);
+    const { register, handleSubmit, reset } = useForm();
+    const [show, setShow] = useState<boolean>(false);
+    const keys = Object.keys(data);
 
-  const onSubmit = async (data: any) => {
-    try {
-      await JsonServerB.EntityUpdate(entityName, id, data);
-    } catch (error) {
-    } finally {
-      setShow(false);
-      handleRefresh();
-    }
-  };
+    const labels: { [key: string]: string } = {
+        sigle: "Acronym",
+        // Add other keys and their labels here
+    };
 
-  return (
-    <div>
-      {show ? (
+    const onSubmit = async (data: any) => {
+        try {
+            await JsonServerB.EntityUpdate(entityName, id, data);
+        } catch (error) {
+        } finally {
+            setShow(false);
+            handleRefresh();
+        }
+    };
+
+    return (
         <div>
-          <form className="form text-center" onSubmit={handleSubmit(onSubmit)}>
-            {keys.map((key: string) => {
-              return (
-                <input className="form-control" key={key} {...register(key)} defaultValue={data[key]} />
-              );
-            })}
-            <button className="btnx" type="submit"> <span></span><span></span><span></span><span></span>envoyer la modification</button>
-          </form>
+            {show ? (
+                <div>
+                    <form
+                        className="form text-center"
+                        onSubmit={handleSubmit(onSubmit)}>
+                        {keys.map((key: string) => {
+                            return (
+                                <div className="row" key={key}>
+                                    <label
+                                        className="col-sm-4 text-end"
+                                        htmlFor={key}>
+                                        {labels[key] || key}
+                                    </label>
+                                    <div className="col-sm-8">
+                                        <input
+                                            className="form-control"
+                                            id={key}
+                                            {...register(key)}
+                                            defaultValue={data[key]}
+                                        />
+                                    </div>
+                                </div>
+                            );
+                        })}
+                        <button className="btnx" type="submit">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> Envoyer les modifications{" "}
+                        </button>
+                        <button
+                            className="btnx ms-2"
+                            type="button"
+                            onClick={(event) => {
+                                event.preventDefault();
+                                setShow(false);
+                                reset();
+                            }}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> Fermer
+                        </button>
+                    </form>
+                </div>
+            ) : (
+                <Button className="btnx fs-5" onClick={() => setShow(true)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span> Modifier
+                </Button>
+            )}
         </div>
-      ) : (
-          <Button className="btnx fs-4" onClick={() => setShow(true)}>
-            <span></span><span></span><span></span><span></span>Modifier</Button>
-      )}
-    </div>
-  );
+    );
 };
 
 export default FormModif;
