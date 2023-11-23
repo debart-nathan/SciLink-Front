@@ -15,7 +15,7 @@ const Header = () => {
             setIsConnected(isLoggedIn);
             if (isLoggedIn) {
               const user = await JsonServerB.GetConnectedUser();
-              setUserId(user.id);
+              setUserId(user.connected_user_id);
           }
         };
 
