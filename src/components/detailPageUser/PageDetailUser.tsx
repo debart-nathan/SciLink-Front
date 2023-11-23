@@ -4,6 +4,7 @@ import User from "./User";
 import Researcher from "./ResearcherLinks";
 import Investor from "./InvestorLinks";
 import ResearchCenter from "./ResearchCenterLinks";
+import RelationStatus from "./RelationStatusLinks";
 
 const PageDetailUser = () => {
   const id = idSelect();
@@ -26,7 +27,6 @@ const PageDetailUser = () => {
       <main className=" row mt-5 text-center">
         <User id={id} userState={userState} setUserState={setUserState} />
         <section className="row">
-          <h3 className=" mt-5 mb-5">Favoris</h3>
           <article className="col-12 col-md-4">
             <h4 className="">Recherche</h4>
             <Researcher id={id} userState={userState} />
@@ -34,6 +34,7 @@ const PageDetailUser = () => {
           <article className="col-12 col-md-4">
             <h4 className="">Centre de Recherche</h4>
             <ResearchCenter id={id} researchCenters ={userState?.research_centers}  />
+
           </article>
           <article className="col-12 col-md-4">
             <h4 className="">Investisseur</h4>
@@ -41,8 +42,7 @@ const PageDetailUser = () => {
           </article>
         </section>
         <section className="row">
-          <h3 className="text-center  mt-5 mb-5">Messagerie</h3>
-          {/* reste a faire */}
+            <RelationStatus id={id} />
         </section>
       </main>
     </>
