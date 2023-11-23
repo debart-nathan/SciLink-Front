@@ -32,12 +32,10 @@
   padding: 20px;
   text-align: center;
   transform: translateY(100px);
-  opacity: 0.3;
   transition: 0.5s;
 }
  .cardss .card:hover .content {
     transform: translateY(0px);
-    opacity: 1;
 }
  .cardss .card .content h2 {
   position: absolute;
