@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# SciLink-Front
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet a été initialisé avec [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Scripts disponibles
 
-In the project directory, you can run:
+Dans le répertoire du projet, vous pouvez exécuter :
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Lance l'application en mode développement.\
+Ouvrez [http://localhost:3000](http://localhost:3000) pour la visualiser dans le navigateur.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+La page se rechargera si vous faites des modifications.\
+Vous verrez également toutes les erreurs de lint dans la console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lance le test runner en mode interactif.\
+Voir la section sur [l'exécution des tests](https://facebook.github.io/create-react-app/docs/running-tests) pour plus d'informations.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construit l'application pour la production dans le dossier `build`.\
+Il regroupe correctement React en mode production et optimise la construction pour obtenir les meilleures performances.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La construction est minifiée et les noms de fichiers incluent les hachages.\
+Votre application est prête à être déployée !
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Voir la section sur [le déploiement](https://facebook.github.io/create-react-app/docs/deployment) pour plus d'informations.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note : c'est une opération à sens unique. Une fois que vous `eject`, vous ne pouvez pas revenir en arrière !**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si vous n'êtes pas satisfait de l'outil de construction et des choix de configuration, vous pouvez `eject` à tout moment. Cette commande supprimera la dépendance de construction unique de votre projet.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Exécution du serveur
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Après avoir construit l'application pour la production en utilisant `npm run build`, vous pouvez servir l'application en utilisant le serveur Node.js. 
 
-## Learn More
+Exécutez le serveur avec la commande `node server.js`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Le serveur servira les fichiers du répertoire `build` à [http://localhost:8080](http://localhost:8080).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## En savoir plus
+
+Vous pouvez en savoir plus dans la [documentation de Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
+
+Pour apprendre React, consultez la [documentation de React](https://reactjs.org/).

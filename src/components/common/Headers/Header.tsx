@@ -1,13 +1,15 @@
 import React, {useEffect, useState } from "react";
 import JsonServerB from './../../../services/jsonServerB';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LogOut from "./LogOut";
 import logoName from "./../../../assets/img/logoName.png";
 import SearchBar from "./SearchBar";
+import {  } from 'react-router-dom';
 
 const Header = () => {
     const [isConnected, setIsConnected] = useState(false);
     const [userId, setUserId] = useState(null);
+    const location = useLocation();
 
     useEffect(() => {
         const checkLoginStatus = async () => {
@@ -19,8 +21,9 @@ const Header = () => {
           }
         };
 
+
         checkLoginStatus();
-    }, []);
+    }, [location]);
 
     return (
         <header id="nav" className="mt-3 mb-5">

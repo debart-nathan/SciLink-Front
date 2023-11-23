@@ -121,32 +121,43 @@ export default class JsonServerB {
     private static async CheckCondition(
         condition: string,
         id: string = ""
-    ): Promise<boolean> {
+    ): Promise<Response> {
         const response = await fetch(
             `${JsonServerB.url}/${condition}${id ? `/${id}` : ""}`,
             {
                 credentials: "include", // Include credentials (cookies)
             }
         );
-        return response.status === 200;
+        return response;
     }
 
     static async IsLoggedIn(): Promise<boolean> {
-        return this.CheckCondition("is-logged-in");
+        const response = await this.CheckCondition("is-logged-in");
+        const body = await response.json();
+        return body.value;
     }
-
+    
     static async IsAdmin(): Promise<boolean> {
-        return this.CheckCondition("is-admin");
+        const response = await this.CheckCondition("is-admin");
+        const body = await response.json();
+        return body.value;
     }
-
+    
     static async IsFriend(id: string): Promise<boolean> {
-        return this.CheckCondition("is-friend", id);
+        const response = await this.CheckCondition("is-friend", id);
+        const body = await response.json();
+        return body.value;
     }
-
+    
     static async IsConnectedUser(id: string): Promise<boolean> {
-        return this.CheckCondition("is-connected-user", id);
+        const response = await this.CheckCondition("is-connected-user", id);
+        const body = await response.json();
+        return body.value;
     }
+    
     static async IsConnectedUsers(ids: number[]): Promise<any> {
-        return this.PostRequest("is-connected-users", ids);
+        const response = await this.PostRequest("is-connected-users", ids);
+        const body = await response.json();
+        return body.value;
     }
 }
