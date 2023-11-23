@@ -71,7 +71,7 @@ const Researcher = ({
     <>
       {researcherState ? (
         <section className="row mb-2">
-          <h1 className="fs-1 col-12 text-center bg-light  bi bi-piggy-bank-fill mb-5">
+          <h1 className="fs-1 col-12 text-center bg-light  bi bi-mortarboard mb-5">
             {" "}
             {userState?.first_name + " " + userState?.last_name}{" "}
           </h1>
